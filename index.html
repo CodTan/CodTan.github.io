@@ -1,10 +1,12 @@
-<!BEAR WITH ME ON THE CODE, I'LL SORT EVRYTHING SOON>
 <!DOCTYPE html>
 <html>
 <head>
+        <title>Taniya Seth</title>
+        <link rel="icon" href="techniya_png.png" type="image/png" sizes="16x16">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <script type="text/javascript">
 // text description, facts for every area: http://jsfiddle.net/ove4trwa/4/
         $(document).ready(function() {
@@ -45,7 +47,7 @@
 #wrapper {
     position: fixed;
     top: 10px;
-    left: 10px;
+    left: -60px;
     /*width: 100%;
     height: 90vh;*/
 }
@@ -69,11 +71,163 @@
 #div3 {
      display:none;
      position: fixed;
-     top: 100px;
+     top: 120px;
+     left: 575px;
+     right: 20px;
+     border: 0px solid green;
+     line-height: 18pt;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+#div4 {
+     position: fixed;
+     top: 500px;
      left: 650px;
      right: 20px;
      border: 0px solid green;
+     text-align:center;
+     padding: 0px;
+     font-size: 25px;
+     font-family:'Courier New';
+     font-stretch:condensed;
+     font-weight:normal;
 }
+
+#div5 {
+     position: fixed;
+     top: 10px;
+     left: 1125px;
+     right: 5px;
+     height: 45px;
+     bottom: 900px;
+     border: 0px solid green;
+     color: black;
+     font-style:italic;
+     text-align:right;
+     /*background-color:white;*/
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-links {
+	display: flex;
+}
+
+.social-btn {
+	cursor: pointer;
+	height: 30px;
+	width: 30px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #fff;
+	border-radius: 10px;
+	/*box-shadow: 0px 10px 10px rgba(0,0,0,0.1);*/
+	/*background: white;*/
+	margin: 5px;
+	transition: 1s;
+}
+
+.social-btn span {
+	width: 0px;
+	overflow: hidden;
+	transition: 1s;
+	text-align: center;
+}
+
+.social-btn:hover {
+	width: 150px;
+	border-radius: 5px;
+}
+
+.social-btn:hover span {
+	padding: 2px;
+	width: max-content;
+}
+
+#linkedin svg {
+	fill: lightslategray;
+}
+
+#github {
+	fill: lightslategray;
+}
+
+#researchgate {
+	fill: lightslategray;
+}
+
+div[class*=box] {
+	height: 20%;
+	width: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	width: 250px;
+	cursor: pointer;
+}
+
+.btn-one {
+	color: #FFF;
+	transition: all 0.3s;
+	position: relative;
+}
+.btn-one span {
+	transition: all 0.3s;
+}
+.btn-one::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 1;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(255,255,255,0.5);
+	border-bottom-color: rgba(255,255,255,0.5);
+	transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+	letter-spacing: 2px;
+        color: crimson;
+        font-weight: bold;
+}
+.btn-one:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);	
+}
+.btn-one::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	background-color: rgba(255,255,255,0.0);
+}
+.btn-one:hover::after {
+	opacity: 0;	
+	transform: scale(0.1, 1);
+}
+
+
 
 /* slide in animation: https://jsfiddle.net/be6enbvq/1/*/
 /* This doesn't work with maphighlight */
@@ -159,11 +313,21 @@ animation: slidingstep1 2s ease-out;
         font-weight:bold;
 }
 
-body {background-color: black;}
+body {
+background-color: black;
+}
+
+#absolute-wrapper{
+    width:100%;
+    height:100%;
+    overflow:auto;
+    display:flex;
+}
 
 .hidden {
   opacity:0;
 }
+
 .console-container {
  
   display:none;  
@@ -194,7 +358,7 @@ body {background-color: black;}
 }
 .intro-text-one {
   font-family: "Courier New";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   color:silver;
   /*text-align: center;*/
@@ -202,7 +366,7 @@ body {background-color: black;}
 
 .intro-text-two {
   font-family: "Courier New";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   color:darkkhaki;
   /*text-align: center;*/
@@ -210,7 +374,7 @@ body {background-color: black;}
 
 .intro-text-three {
   font-family: "Courier New";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   color:salmon;
  /* text-align: center;*/
@@ -234,8 +398,12 @@ body {background-color: black;}
 <!Animated image pieces: https://tympanus.net/codrops/2017/07/26/animated-image-pieces/>
 <!Cool text effects: https://uicookies.com/css-text-effects/>
 <!Cool animation pre-loaders: https://steelkiwi.com/blog/30-most-captivating-preloaders-for-website/>
+<!Text Scramble effect: https://codepen.io/soulwire/pen/mErPAK>
+<!Modal: https://codepen.io/jasesmith/pen/GmQbME>
+<!Social Media Buttons: https://codepen.io/chancesq/pen/xxwedXB>
 
 <body>
+<div id="absolute-wrapper">
 <div id="wrapper">
 	<div id="div2" style="transform: rotate3d(-0.12462, -0.229868, 0, 3.92214deg);">
 			
@@ -243,7 +411,7 @@ body {background-color: black;}
 
 	<map name="image-map">
 
-    	<div id="hey"><area id="one" target="" alt="" class="one masterTooltip" title="I aspire to become a scientist with work that influences and benefits millions!" coords="224,211,264,202,292,193,309,190,323,191,354,200,367,201,377,193,388,188,400,185,417,185,433,188,445,186,448,198,448,209,443,221,436,237,417,246,396,246,383,238,374,223,365,211,357,213,352,222,348,232,338,243,330,251,315,255,304,253,292,250,281,242,271,224,267,212,259,212,250,216,237,218,224,219" shape="poly"></div>
+    	<area id="one" target="" alt="" class="one masterTooltip" title="I aspire to become a scientist with work that influences and benefits millions!" coords="224,211,264,202,292,193,309,190,323,191,354,200,367,201,377,193,388,188,400,185,417,185,433,188,445,186,448,198,448,209,443,221,436,237,417,246,396,246,383,238,374,223,365,211,357,213,352,222,348,232,338,243,330,251,315,255,304,253,292,250,281,242,271,224,267,212,259,212,250,216,237,218,224,219" shape="poly">
 
         <area id="two" target="" alt="" class="one masterTooltip" title="I am trained in Indian Classical Music." coords="296,141,325,173,282,174,251,195,260,168" shape="poly">
 
@@ -351,9 +519,9 @@ body {background-color: black;}
 
 </map>
 
-	</div>
+	</div> <!-div2->
 
-</div>
+</div> <!-wrapper->
 
 	<div id="div3" class='console-container'>
         <span id='text'></span>
@@ -365,7 +533,41 @@ body {background-color: black;}
 
 <p class='intro-text-three'>I am still building this website, so stay tuned for more updates from me. Till then, feel free to interact with this <b>Techniya ghost</b> on the left. Hover over the highlighted blocks on the ghost to reveal facts about me. Get to know this ghost! :)</p>
 
-        </div>
+<!--Animated Button: https://codepen.io/natalia-reshetnikova/pen/oRRjPP-->
+
+        <div id="div4" class="box-1">
+            <div class="btn btn-one">
+                <span>KNOW ME MORE</span>
+            </div>
+        
+        </div> <!--div4-->
+
+        </div> <!--div3-->
+        
+<a href="https://www.linkedin.com/in/taniyaseth/"><div id="div5" class="social-links">
+           <div class='social-btn flex-center' id="linkedin">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg><span>in/taniyaseth</span>
+		</div></a>
+
+           <a href="https://github.com/CodTan"><div class='social-btn flex-center' id="github">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>CodTan</span>
+	</div></a>
+
+<a href="https://www.researchgate.net/profile/Taniya_Seth"><div class='social-btn flex-center' id="researchgate">
+			<svg mlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24pt" height="24pt" viewBox="0 0 24 24" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(119,136,153);fill-opacity:1;" d="M 3.601562 0 L 20.398438 0 C 22.386719 0 24 1.613281 24 3.601562 L 24 20.398438 C 24 22.386719 22.386719 24 20.398438 24 L 3.601562 24 C 1.613281 24 0 22.386719 0 20.398438 L 0 3.601562 C 0 1.613281 1.613281 0 3.601562 0 Z M 3.601562 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0,0,0);fill-opacity:1;" d="M 12.703125 17.953125 C 12 17.765625 11.625 17.484375 11.015625 16.734375 C 10.59375 16.171875 9.796875 14.90625 9.375 14.25 L 9.09375 13.734375 L 7.96875 13.734375 L 7.96875 15.328125 C 8.015625 17.34375 7.96875 17.296875 8.859375 17.4375 L 9.328125 17.484375 L 9.328125 17.859375 L 5.578125 17.859375 L 5.578125 17.671875 C 5.578125 17.484375 5.625 17.484375 6 17.390625 C 6.46875 17.296875 6.65625 17.15625 6.703125 16.734375 C 6.75 16.546875 6.75 15.28125 6.75 13.03125 C 6.75 9.75 6.703125 9.65625 6.609375 9.421875 C 6.46875 9.1875 6.28125 9.09375 5.765625 9.046875 C 5.578125 9 5.53125 9 5.53125 8.8125 L 5.53125 8.625 L 7.546875 8.578125 C 10.125 8.53125 10.59375 8.578125 11.34375 9.09375 C 12.046875 9.5625 12.375 10.21875 12.28125 11.109375 C 12.234375 12.09375 11.484375 13.078125 10.546875 13.453125 C 10.359375 13.5 10.21875 13.59375 10.21875 13.59375 C 10.21875 13.6875 11.015625 14.90625 11.53125 15.609375 C 12.234375 16.59375 12.796875 17.109375 13.21875 17.34375 C 13.40625 17.4375 13.640625 17.484375 13.6875 17.484375 C 13.828125 17.484375 13.828125 17.53125 13.828125 17.671875 C 13.828125 17.8125 13.78125 17.90625 13.734375 17.90625 C 13.5 18 12.84375 18 12.515625 17.90625 Z M 10.03125 12.84375 C 10.6875 12.515625 11.0625 12 11.109375 11.203125 C 11.15625 10.59375 11.015625 10.171875 10.640625 9.796875 C 10.21875 9.328125 9.46875 9.140625 8.390625 9.234375 L 7.921875 9.28125 L 7.921875 11.109375 C 7.921875 12.796875 7.921875 12.984375 8.015625 12.984375 C 8.0625 12.984375 8.4375 13.03125 8.859375 12.984375 C 9.515625 12.984375 9.65625 12.9375 9.984375 12.796875 Z M 10.03125 12.84375 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0,0,0);fill-opacity:1;" d="M 15.046875 10.6875 C 13.875 10.5 13.453125 9.75 13.546875 7.828125 C 13.59375 6.84375 13.6875 6.421875 14.0625 6.046875 C 14.390625 5.71875 14.671875 5.625 15.234375 5.578125 C 15.84375 5.53125 16.21875 5.671875 16.59375 5.953125 C 16.828125 6.140625 17.015625 6.421875 17.015625 6.5625 C 17.015625 6.609375 16.875 6.65625 16.734375 6.75 L 16.453125 6.890625 L 16.3125 6.75 C 16.078125 6.46875 15.890625 6.328125 15.65625 6.234375 C 15.1875 6.09375 14.71875 6.328125 14.484375 6.75 C 14.34375 6.984375 14.34375 7.03125 14.34375 8.109375 C 14.34375 9.140625 14.34375 9.28125 14.484375 9.46875 C 14.671875 9.796875 15.046875 9.984375 15.46875 9.9375 C 16.078125 9.890625 16.40625 9.46875 16.40625 8.8125 L 16.40625 8.484375 L 15.46875 8.484375 L 15.46875 7.875 L 17.15625 7.875 L 17.15625 8.578125 C 17.15625 9.140625 17.109375 9.328125 17.015625 9.609375 C 16.734375 10.3125 15.9375 10.734375 15.046875 10.640625 Z M 15.046875 10.6875 "/>
+</g></svg><span>Taniya_Seth</span>
+	</div></a>
+
+       </div> <!--div5-->
+
+        
+
+
+</div> <!--absolute-wrapper-->
 
  <script type="text/javascript">
 /* Delay load div: http://jsfiddle.net/paislee/SQhv4/ */
