@@ -70,20 +70,19 @@
 
 #div3 {
      display:none;
-     position: fixed;
-     top: 120px;
+     top: 200px;
      left: 575px;
      right: 20px;
      border: 0px solid green;
-     line-height: 18pt;
+     line-height: 20pt;
 }
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
 #div4 {
      position: fixed;
-     top: 500px;
-     left: 650px;
+     top: 450px;
+     left: 600px;
      right: 20px;
      border: 0px solid green;
      text-align:center;
@@ -204,7 +203,7 @@ div[class*=box] {
 }
 .btn-one:hover span {
 	letter-spacing: 2px;
-        color: crimson;
+        /*color: crimson;*/
         font-weight: bold;
 }
 .btn-one:hover::before {
@@ -333,7 +332,7 @@ background-color: black;
   display:none;  
   font-family:"Courier New";
   font-weight:bold;
-  font-size:3em;
+  font-size:5em;
   text-align:left;
   /*height:200px;
   width:600px;*/
@@ -348,6 +347,7 @@ background-color: black;
   left:0;
   right:0;
   margin:auto;
+  line-height: 20px;
 }
 .console-underscore {
   font-weight: normal;  
@@ -380,6 +380,267 @@ background-color: black;
  /* text-align: center;*/
 }
 
+/********************MODAL************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700italic,700);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+* {
+  /*padding:0;
+  margin:0;*/
+  position:relative;
+  box-sizing:border-box;
+  -webkit-font-smoothing: subpixel-antialiased !important; 
+  -webkit-backface-visibility: hidden; 
+}
+body, html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth:always;
+}
+
+a.modal-open {
+  display:block;
+  padding:5px;
+  color:black;
+  font-weight:normal;
+  margin:50px auto;
+  width:200px;
+  background:black;
+  border-radius:2px;
+  text-align:center;
+  text-decoration:none;
+}
+.modal {
+  background:rgba(0,0,0,0.7);
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  transition:all .5s ease-in-out;
+  opacity:0;
+  z-index:-1;
+}
+.modal:target {
+  opacity:1;
+  transition:all .5s ease-in-out;
+  z-index:+1;
+}
+.modal-content {
+  position:fixed;
+  top:50%;
+  left:50%;
+  height:575px;
+  width:1000px;
+  /*background:silver; /***********CHANGE************/*/
+ background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 15%, rgba(180,58,58,1) 42%, rgba(238,139,0,1) 100%);
+  border-radius:4px;
+  transform:translate(-50%, -200%);
+  transition:all 1s ease-in-out;
+  perspective: 1000;
+  outline:1px solid transparent;
+  opacity:1;
+}
+.modal:target .modal-content {
+  transform:translate(-50%, -50%);
+  transition:all .5s ease-in-out;
+  transition-delay: .5s;
+  z-index:9999;
+  opacity:1;
+}
+.modal-close {
+  float:right;
+  text-decoration:none;
+  padding:15px 15px;
+  color:#424242;
+  font-weight:800;
+  transition:all .5s ease-in-out;
+  z-index:+1;
+  background:rgba(0,0,0,0);
+  text-align:center;
+  border-radius:0 4px 0 0;
+}
+.modal-close:hover {
+  color:#fff;
+  background:rgba(0,0,0,0);
+}
+.modal-content h3 {
+  padding:10px;
+  display:none;
+  text-align:center;
+  border-bottom:1px solid #e0e0e0;
+  text-transform:uppercase;
+  background:rgba(2,162,239,1);
+  color:#fff;
+  border-radius:4px 4px 0 0;
+}
+.modal-area {
+  padding:20px;
+}
+
+.modal-area input[type="radio"] {
+  display:none;
+}
+.modal-area label {
+  margin-right:5px;
+  float:left;
+  display:block;
+  padding:10px 20px;
+  /*height: 20px;
+  width: 100px;*/
+  border-radius:4px 4px 4px 4px;
+  font-weight:700;
+  cursor:pointer;
+  z-index:+2;
+  background:rgba(0,0,0,.3);
+  color:#fff;
+  transition:all 0.3s ease-in-out;
+  font-family:Courier New;
+}
+
+.modal-area label:hover{
+color: white;
+background: black;
+
+}
+
+.modal-area input[type="radio"]:checked + label {
+  background:#fff;
+  color:#424242;
+}
+.tab-list {
+  display:block;
+  padding:0;
+  margin:0;
+  list-style-type:none;
+  width:100%;
+  overflow:hidden;
+  height:500px;
+}
+.tab-list:before {
+  content:"";
+  display:block;
+  height:0;
+  clear:both;
+}
+.modal-tab {
+  display:inline-block;
+  width:100%;
+  padding-top:10px;
+  transform:translateX(-150%);
+  transition:all 0.5s cubic-bezier(0, 0, .40, 1); /*300ms*/
+  opacity:0;
+  top:0px;
+  overflow: auto;
+  position:absolute;
+  height:500px;
+  perspective:1000;
+}
+#opentab1:checked ~ .tab-list .tab1 {
+  transform:translateX(0%);
+  opacity:1;
+}
+
+#opentab2:checked ~ .tab-list .tab2 {
+  transform:translateX(0%);
+  opacity:1;
+}
+
+#opentab3:checked ~ .tab-list .tab3 {
+  transform:translateX(0%);
+  opacity:1;
+}
+
+#opentab4:checked ~ .tab-list .tab4 {
+  transform:translateX(0%);
+  opacity:1;
+}
+
+#opentab5:checked ~ .tab-list .tab5 {
+  transform:translateX(0%);
+  opacity:1;
+}
+
+#opentab6:checked ~ .tab-list .tab6 {
+  transform:translateX(0%);
+  opacity:1;
+}
+
+/* close button*/
+
+.butt {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: transparent;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  left: 0%;
+  letter-spacing: 1.5px;
+  line-height: 20px;
+  outline: none;
+  overflow: hidden;
+  padding: 0px 0 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in;
+  width: 100px;
+}
+
+.butt::before,
+.butt::after {
+  background-color: black;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0%;
+  position: absolute;
+  transform-origin: center;
+  transition: all 0.2s ease-in;
+  width: 100px;
+  z-index: -1;
+}
+
+.butt::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.butt::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.butt:hover {
+  color: #FFF;
+}
+
+.butt:hover::before,
+.butt:hover::after {
+  height: 50px;
+  transform: rotate(0deg);
+}
+
+.cancel {
+position: absolute;
+width: 100%;
+height:100%;
+cursor:default;
+}
+
+
+ /****************************************************************************/
+
+.item {
+ margin:10px;   
+}
+
+
 
 
     /* EOS */
@@ -401,6 +662,11 @@ background-color: black;
 <!Text Scramble effect: https://codepen.io/soulwire/pen/mErPAK>
 <!Modal: https://codepen.io/jasesmith/pen/GmQbME>
 <!Social Media Buttons: https://codepen.io/chancesq/pen/xxwedXB>
+<!Modal Close: https://codepen.io/merrybottle/pen/PdwXYO>
+<!Modal used: https://codepen.io/TomJ1588/pen/raOmRK/>
+<!Modal thought about: https://webdevtrick.com/demos/modal-box-nav/>
+<!Boardal: https://codepen.io/jasesmith/pen/GmQbME>
+<!Close CSS modal on click outside: https://stackoverflow.com/questions/53398600/pure-css-close-modal-when-clicking-outside-content>
 
 <body>
 <div id="absolute-wrapper">
@@ -527,18 +793,21 @@ background-color: black;
         <span id='text'></span>
         <div class='console-underscore' id="console">&#95;            
         </div>
-        <p class='intro-text-one'>I am a Ph.D. student at South Asian University, New Delhi, India. I work in the broader areas and amalgamation of Deep Learning, Computational Linguistics, Fuzzy Logic and Data Science. I am highly interested in the notion of language perception and understandability, as well as the generative behaviour of various deep learning models. I also have avid interests in Data Science and love to scoop deep into data to obtain wonderful insights!</p>
+        <p></p>
+        <p class='intro-text-one'>I am a Doctoral student in the Computational Intelligence Laboratory(CILAB), South Asian University, New Delhi, India. I work in the area of Deep Learning, Computational Linguistics, Fuzzy Logic and Data Science.</p>
 
-<p class='intro-text-two'>When I am not in my 'Ph.D. mode', I paint, sing, dance, cook and help my mom in doing daily chores. I also stand as a strong advocate of diversity within technology.</p>
+<!--<p class='intro-text-two'>When I am not in my 'Ph.D. mode', I paint, sing, dance, cook and help my mom in doing daily chores. I also stand as a strong advocate of diversity within technology.</p>-->
 
-<p class='intro-text-three'>I am still building this website, so stay tuned for more updates from me. Till then, feel free to interact with this <b>Techniya ghost</b> on the left. Hover over the highlighted blocks on the ghost to reveal facts about me. Get to know this ghost! :)</p>
+<p class='intro-text-three'>To know some facts about me, feel free to interact with the <b>Techniya ghost</b> on the left! :)</p>
 
 <!--Animated Button: https://codepen.io/natalia-reshetnikova/pen/oRRjPP-->
 
         <div id="div4" class="box-1">
+            <a class="modal-open" href="#modal-tabbed">
             <div class="btn btn-one">
                 <span>KNOW ME MORE</span>
             </div>
+            </a>
         
         </div> <!--div4-->
 
@@ -564,10 +833,79 @@ background-color: black;
 
        </div> <!--div5-->
 
-        
-
-
+       
 </div> <!--absolute-wrapper-->
+
+<div class="modal" id="modal-tabbed">
+  <a class="cancel" href="#"></a> 
+    <div class="modal-content">
+        <a href="#" class="modal-close" title="Close Modal"><button class="butt">Close</button></a>
+        <div class="modal-area">
+           <input id="opentab1" type="radio" name="modaltabs" checked="checked"/>
+           <label for="opentab1">About me</label>
+           <input id="opentab2" type="radio" name="modaltabs"/>
+           <label for="opentab2">Education</label>
+           <input id="opentab3" type="radio" name="modaltabs"/>
+           <label for="opentab3">Publications</label>
+           <input id="opentab4" type="radio" name="modaltabs"/>
+           <label for="opentab4">Awards</label>
+           <input id="opentab5" type="radio" name="modaltabs"/>
+           <label for="opentab5">Extras</label>
+           <ul class="tab-list">
+               <li class="modal-tab tab1">
+                  <div>
+                   <p>I am currently a Ph.D. student at the Computational Intelligence Laboratory (CILAB), South Asian University, New Delhi, India. My main research areas are deep learning, computational linguistics, fuzzy logic and scientometrics. I research on and develop new models that bring machines closer to humans, either by considering the language or the vision aspect of us humans. Working in the above areas, I gained (and still am gaining) knowledge about linguistic information under uncertainty due to perceptions, deep learning and other real-life processes under uncertainty. Additionally, I work extensively with generative deep models such as Restricted Boltzmann Machines (RBM), variational autoencoders (VAE) and generative adversarial networks (GAN). I also like to study the publication landscapes of important research domains. This study is called the scientometrics and bibliometrics, which is basically a subset of the domain of Data Science.</p>
+
+<p>I also am a strong advocate of diversity in technology. Therefore, I contribute to this notion as much as I can. Focussing on the 'Women in Tech' aspect, I have conducted multiple sessions in my current organization, alma-mater as well at various other community events. I am also associated with various such communities like Google WomenTechmakers, Women Who Code, Systers, IEEE Computational Intelligence Society, AnitaBorg etc. I am also thankful to each of them for helping me grow.</p>
+
+<p>Keeping the tech side aside, I am equally into painting, music and dance. Possessing proffessional training all of these, I spend my free and off-time from work getting engaged with any of these activities. I have recently entered into the domain of graphic designing and have also designed logos for multiple organizations and campaigns.</p>
+
+<p>Do you think we share common interests? Or do you have suggestions for me? Whatever it is, let's connect!</p>
+                  <div>
+               </li>
+               <li class="modal-tab tab2">
+                 <div>
+                   <h2>Bachelors</h2>
+                   <p>Bachelor of Science with Honours, Major: Computer Science</p>
+                   <p>Shaheed Rajguru College of Applied Sciences for Women, University of Delhi</p>
+                   <p>2012-15</p>
+                   <p>Grade: 88.7/100, Equivalent GPA: 3.3/4.0</p>
+                   
+                   <h2>Masters</h2>
+                   <p>Masters of Science, Major: Computer Science</p>
+                   <p>South Asian University</p>
+                   <p>2015-17</p>
+                   <p>Grade: 8.65, Equivalent GPA: 3.84/4.0</p>
+
+                   <h2>Doctoral</h2>
+                   <p>Ph.D. in Computer Science</p>
+                   <p>South Asian University</p>
+                   <p>2017-ongoing</p>
+                   <p>Pre-Ph.D. coursework grade: 8.37/9, Equivalent GPA: 3.72/4.0</p>
+                 </div>
+               </li>
+               <li class="modal-tab tab3">
+                 <div> 
+                   <ol>
+                     <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Perceptual computing with comparative linguistic expressions, <i>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020)</i>, July, Scotland, Glasgow.</li>
+                     <li id="item">Priyanka Mehra, <b>Taniya Seth</b>, Pranab K. Muhuri, Generating quality IF-THEN rules for diabetes using linguistic summarization,  <i>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020)</i>, July, Scotland, Glasgow.</li>
+                     <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Type-2 fuzzy set based hesitant fuzzy linguistic term sets for linguistic decision making, arXiv preprint, 2020.</li>
+                     <li id="item">Amit K. Shukla, Sumit K. Banshal, <b>Taniya Seth</b>, Aparna Basu, Robert John, Pranab K. Muhuri, A bibliometric overview of the field of type-2 fuzzy sets and systems [Discussion Forum], <i>IEEE Computational Intelligence Magazine</i>, vol. 15, no. 1. <b>(IF: 9.083)</b></li>
+                     <li id="item"><b>Taniya Seth</b>, Prashant K. Gupta, Pranab K. Muhuri, A linguistic decision making model for psychometric tests, <i>2019 IEEE International Conference on Fuzzy Systems</i>, July, New Orleans, USA.</li>
+                     <li id="item">Manvendra Janmaijaya, <b>Taniya Seth</b>, Pranab K. Muhuri, Interval type-2 fuzzy restricted Boltzmann machine for the enhancement of deep learning, <i>2019 IEEE International Conference on Fuzzy Systems</i>, July, New Orleans, USA.</li>
+                     <li id="item">Aparna Basu, Deepika Malhotra, <b>Taniya Seth</b>, Pranab K. Muhuri, Global distribution of google scholar citations: A size-independent institution-based analysis, <i>Journal of Scientometric Research</i>, vol. 8, no.2.</li>
+                     <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, A novel solution approach for fuzzy linear bilevel multi-follower programming problems, <i>2018 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2018)</i>, July, Rio de Janeiro, Brazil.</li>
+                     <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Hesitant fuzzy linguistic term sets for group decision making in supplier performance evaluation, <i>2018 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2018)</i>, July, Rio de Janeiro, Brazil.</li>
+                     <li id="item">Amit K. Shukla, <b>Taniya Seth</b>, Pranab K. Muhuri, Interval type-2 fuzzy sets for enhanced learning in deep belief networks, <i>2017 IEEE International Conference on Fuzzy Systems</i>, July, Naples, Italy.</li>
+                   </ol>
+                 </div> 
+               <li class="modal-tab tab4"><p>Coming Soon</p></li>
+               <li class="modal-tab tab5"><p>Coming Soon</p></li>
+           </ul>
+        </div>
+    </div>
+</div> <!--modal-tabbed-->
+
 
  <script type="text/javascript">
 /* Delay load div: http://jsfiddle.net/paislee/SQhv4/ */
@@ -663,13 +1001,25 @@ $(document).ready(function () {
             tilty = - (dx / cx),
             radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2)),
             degree = (radius * 15);
-        
+         	
             shadx = degree*tiltx;   /*horizontal shadow*/
             shady = degree*tilty;   /*vertical shadow*/
 
         $twoo.css(browserPrefix + 'transform', 'rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
         
     });
+});
+
+
+  </script>
+
+ 
+
+
+
+</body>
+</html>
+
 });
 
 
