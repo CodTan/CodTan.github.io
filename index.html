@@ -565,6 +565,25 @@ background: black;
   perspective:1000;
   font-family: 'Montserrat', sans-serif;
 }
+
+.modal-tab::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/*border-radius: 10px;*/
+	background-color: #F5F5F5;
+}
+
+.modal-tab::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.modal-tab::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
 #opentab1:checked ~ .tab-list .tab1 {
   transform:translateX(0%);
   opacity:1;
@@ -672,7 +691,55 @@ cursor:default;
  margin:10px;   
 }
 
+.image-list-small {
+  font-family: 'Montserrat',sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1000px;
+  padding: 0;
+}
 
+.image-list-small li {
+  display: inline-block;
+  width: 181px;
+  /*margin: 0 12px 30px;*/
+  text-align: top;
+}
+
+.image-list-small li > a {
+  display: block;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*height: 137px;*/
+  margin: 0;
+  padding: 0;
+  /*border: 4px solid #ffffff;*/
+  /*outline: 1px solid #d0d0d0;*/
+  /*box-shadow: 0 2px 1px #DDD;*/
+}
+
+.image-list-small .details {
+  margin-top: 13px;
+}
+
+.image-list-small .details p {
+  display: block;
+  font-size: 12px;
+  margin: 0 0 3px 0;
+  /*white-space: nowrap;*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.image-list-small .papers {
+ height: 200px;
+ transition: transform .2s;
+}
+
+.image-list-small .papers:hover {
+ transform: scale(1.2);
+}
 
 
     /* EOS */
@@ -827,7 +894,7 @@ cursor:default;
         <div class='console-underscore' id="console">&#95;            
         </div>
         <p></p>
-        <p class='intro-text-one'>I am a Doctoral student in the Computational Intelligence Laboratory(CILAB), South Asian University, New Delhi, India. I work in the area of Deep Learning, Computational Linguistics, Fuzzy Logic and Data Science.</p>
+        <p class='intro-text-one'>I am a Doctoral student in the <!--<a href="http://sau.int/~cilab/tseth.php">-->Computational Intelligence Laboratory<!--</a>--> (CILAB), South Asian University, New Delhi, India. I work in the area of Deep Learning, Computational Linguistics, Fuzzy Logic and Data Science.</p>
 
 <!--<p class='intro-text-two'>When I am not in my 'Ph.D. mode', I paint, sing, dance, cook and help my mom in doing daily chores. I also stand as a strong advocate of diversity within technology.</p>-->
 
@@ -923,7 +990,7 @@ cursor:default;
                </li>
                <li class="modal-tab tab3">
                  <div> 
-                   <ol>
+                   <!--<ol>
                      <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Perceptual computing with comparative linguistic expressions, <i>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020)</i>, July, Scotland, Glasgow.</li>
                      <li id="item">Priyanka Mehra, <b>Taniya Seth</b>, Pranab K. Muhuri, Generating quality IF-THEN rules for diabetes using linguistic summarization,  <i>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020)</i>, July, Scotland, Glasgow.</li>
                      <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Type-2 fuzzy set based hesitant fuzzy linguistic term sets for linguistic decision making, arXiv preprint, 2020.</li>
@@ -934,7 +1001,81 @@ cursor:default;
                      <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, A novel solution approach for fuzzy linear bilevel multi-follower programming problems, <i>2018 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2018)</i>, July, Rio de Janeiro, Brazil.</li>
                      <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Hesitant fuzzy linguistic term sets for group decision making in supplier performance evaluation, <i>2018 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2018)</i>, July, Rio de Janeiro, Brazil.</li>
                      <li id="item">Amit K. Shukla, <b>Taniya Seth</b>, Pranab K. Muhuri, Interval type-2 fuzzy sets for enhanced learning in deep belief networks, <i>2017 IEEE International Conference on Fuzzy Systems</i>, July, Naples, Italy.</li>
-                   </ol>
+                   </ol>-->
+                   
+                   <ul class="image-list-small">
+                   <li>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/9177664/" target="_blank"><img class="papers" src="images/1.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>Perceptual computing with comparative linguistic expressions</b></p>
+                     <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/9177662/" target="_blank"><img class="papers" src="images/2.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>Generating quality IF-THEN rules for diabetes using linguistic summarization</b></p>
+                     <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="https://arxiv.org/abs/2002.11714" target="_blank"><img class="papers" src="images/3.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>Type-2 fuzzy set based hesitant fuzzy linguistic term sets for linguistic decision making</b></p>
+                     <p>arXiv preprint, 2020</p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="https://ieeexplore.ieee.org/document/8956101" target="_blank"><img class="papers" src="images/4.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>A bibliometric overview of the field of type-2 fuzzy sets and systems</b></p>
+                     <p>IEEE Computational Intelligence Magazine, 2020 <b>(IF:9.083)</b></p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="https://ieeexplore.ieee.org/document/8858794/" target="_blank"><img class="papers" src="images/5.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>A linguistic decision making model for psychometric tests</b></p>
+                     <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/8858804/" target="_blank"><img class="papers" src="images/6.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>Interval type-2 fuzzy restricted Boltzmann machine for the enhancement of deep learning</b></p>
+                     <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="http://jscires.org/article/304" target="_blank"><img class="papers" src="images/7.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>Global distribution of google scholar citations: A size-independent institution-based analysis</b></p>
+                     <p>Journal of Scientometric Research, 2020</p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="https://ieeexplore.ieee.org/document/8491559" target="_blank"><img class="papers" src="images/8.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>A novel solution approach for fuzzy linear bilevel multi-follower programming problems</b></p>
+                     <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="https://ieeexplore.ieee.org/document/8491537/" target="_blank"><img class="papers" src="images/9.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>Hesitant fuzzy linguistic term sets for group decision making in supplier performance evaluation</b></p>
+                     <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
+                   </div>
+                   </li>
+                   <li>
+                   <a href="https://ieeexplore.ieee.org/document/8015638" target="_blank"><img class="papers" src="images/10.png"></a>
+                   <div class="details">
+                     <p style="font-size:1em;"><b>Interval type-2 fuzzy sets for enhanced learning in deep belief networks</b></p>
+                     <p>2017 IEEE International Conference on Fuzzy Systems, Naples, Italy</p>
+                   </div>
+                   </li>
+                   </ul>
+
                  </div> 
                <li class="modal-tab tab4"><p>Coming Soon</p></li>
                <li class="modal-tab tab5"><p>Coming Soon</p></li>
