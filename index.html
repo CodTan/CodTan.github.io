@@ -6,6 +6,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <script type="text/javascript">
 // text description, facts for every area: http://jsfiddle.net/ove4trwa/4/
@@ -314,6 +317,7 @@ animation: slidingstep1 2s ease-out;
 
 body {
 background-color: black;
+display: flex;
 }
 
 #absolute-wrapper{
@@ -357,7 +361,7 @@ background-color: black;
   left:10px;
 }
 .intro-text-one {
-  font-family: "Courier New";
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: normal;
   color:silver;
@@ -373,7 +377,7 @@ background-color: black;
 }
 
 .intro-text-three {
-  font-family: "Courier New";
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: normal;
   color:salmon;
@@ -427,22 +431,42 @@ a.modal-open {
   transition:all .5s ease-in-out;
   z-index:+1;
 }
+
+/* Background animation: https://codepen.io/P1N2O/pen/pyBNzX */
+
 .modal-content {
   position:fixed;
   top:50%;
   left:50%;
   height:575px;
   width:1000px;
-  /*background:silver; /***********CHANGE************/*/
- background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 15%, rgba(180,58,58,1) 42%, rgba(238,139,0,1) 100%);
   border-radius:4px;
   transform:translate(-50%, -200%);
   transition:all 1s ease-in-out;
   perspective: 1000;
   outline:1px solid transparent;
   opacity:1;
+
+  background: rgb(0,0,0);
+  background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 42%, rgba(150,76,29,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient 40s ease infinite;
 }
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 .modal:target .modal-content {
   transform:translate(-50%, -50%);
   transition:all .5s ease-in-out;
@@ -493,6 +517,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 15%, rgba(180,58,58,1) 42%, rgba
   border-radius:4px 4px 4px 4px;
   font-weight:700;
   cursor:pointer;
+  text-align: center;
   z-index:+2;
   background:rgba(0,0,0,.3);
   color:#fff;
@@ -536,7 +561,9 @@ background: black;
   overflow: auto;
   position:absolute;
   height:500px;
+  color: #fff;
   perspective:1000;
+  font-family: 'Montserrat', sans-serif;
 }
 #opentab1:checked ~ .tab-list .tab1 {
   transform:translateX(0%);
@@ -564,6 +591,11 @@ background: black;
 }
 
 #opentab6:checked ~ .tab-list .tab6 {
+  transform:translateX(0%);
+  opacity:1;
+}
+
+#opentab7:checked ~ .tab-list .tab7 {
   transform:translateX(0%);
   opacity:1;
 }
@@ -667,6 +699,7 @@ cursor:default;
 <!Modal thought about: https://webdevtrick.com/demos/modal-box-nav/>
 <!Boardal: https://codepen.io/jasesmith/pen/GmQbME>
 <!Close CSS modal on click outside: https://stackoverflow.com/questions/53398600/pure-css-close-modal-when-clicking-outside-content>
+<!Cool backlight animation: https://codepen.io/georgehastings/pen/xgwxgo>
 
 <body>
 <div id="absolute-wrapper">
@@ -851,6 +884,10 @@ cursor:default;
            <label for="opentab4">Awards</label>
            <input id="opentab5" type="radio" name="modaltabs"/>
            <label for="opentab5">Extras</label>
+           <input id="opentab6" type="radio" name="modaltabs"/>
+           <label for="opentab6">Resume</label>
+           <input id="opentab7" type="radio" name="modaltabs"/>
+           <label for="opentab7">Connect</label>
            <ul class="tab-list">
                <li class="modal-tab tab1">
                   <div>
@@ -901,6 +938,8 @@ cursor:default;
                  </div> 
                <li class="modal-tab tab4"><p>Coming Soon</p></li>
                <li class="modal-tab tab5"><p>Coming Soon</p></li>
+               <li class="modal-tab tab6"><p>Coming Soon</p></li>
+               <li class="modal-tab tab7"><p>Coming Soon</p></li>
            </ul>
         </div>
     </div>
@@ -1019,18 +1058,3 @@ $(document).ready(function () {
 
 </body>
 </html>
-
-});
-
-
-  </script>
-
- 
-
-
-
-</body>
-</html>
-
-
-
