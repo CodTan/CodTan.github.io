@@ -9,6 +9,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <script type="text/javascript">
 // text description, facts for every area: http://jsfiddle.net/ove4trwa/4/
@@ -182,6 +187,8 @@ div[class*=box] {
 	color: #FFF;
 	transition: all 0.3s;
 	position: relative;
+        font-family: 'Raleway', sans-serif;
+
 }
 .btn-one span {
 	transition: all 0.3s;
@@ -362,7 +369,7 @@ display: flex;
 }
 .intro-text-one {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
   color:silver;
   /*text-align: center;*/
@@ -378,7 +385,7 @@ display: flex;
 
 .intro-text-three {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
   color:salmon;
  /* text-align: center;*/
@@ -449,6 +456,7 @@ a.modal-open {
 
   background: rgb(0,0,0);
   background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 42%, rgba(150,76,29,1) 100%);
+  /*background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 16%, rgba(105,61,33,1) 64%, rgba(150,76,29,1) 100%);*/
   background-size: 400% 400%;
   animation: gradient 40s ease infinite;
 }
@@ -519,21 +527,27 @@ a.modal-open {
   cursor:pointer;
   text-align: center;
   z-index:+2;
-  background:rgba(0,0,0,.3);
+  background:rgba(0,0,0,1); /*0.3*/
   color:#fff;
   transition:all 0.3s ease-in-out;
-  font-family:Courier New;
+  font-family: 'Raleway', sans-serif;
+  text-transform:uppercase;
+  font-weight: normal;
+  font-size: 15px;
 }
 
 .modal-area label:hover{
 color: white;
-background: black;
+background: #cc5200;
+font-weight: bold;
+transform: scale(1.05);
 
 }
 
 .modal-area input[type="radio"]:checked + label {
   background:#fff;
   color:#424242;
+  font-weight:bold;
 }
 .tab-list {
   display:block;
@@ -564,24 +578,26 @@ background: black;
   color: #fff;
   perspective:1000;
   font-family: 'Montserrat', sans-serif;
+  text-align:justify;
 }
 
 .modal-tab::-webkit-scrollbar-track
 {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	/*border-radius: 10px;*/
-	background-color: #F5F5F5;
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+	border-radius: 10px;
+	background-color: transparent; /* #F5F5F5 */
 }
 
 .modal-tab::-webkit-scrollbar
 {
 	width: 6px;
-	background-color: #F5F5F5;
+	background-color: transparent; /* #F5F5F5 */
 }
 
 .modal-tab::-webkit-scrollbar-thumb
 {
-	background-color: #000000;
+	background-color: silver;
+        border-radius: 10px;
 }
 
 #opentab1:checked ~ .tab-list .tab1 {
@@ -725,11 +741,13 @@ cursor:default;
 
 .image-list-small .details p {
   display: block;
-  font-size: 12px;
+  font-size: 11.5px;
   margin: 0 0 3px 0;
   /*white-space: nowrap;*/
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
+  color: #fff;
 }
 
 .image-list-small .papers {
@@ -739,6 +757,85 @@ cursor:default;
 
 .image-list-small .papers:hover {
  transform: scale(1.2);
+}
+
+.frame1 {
+  background-color:#ddc;
+  border:solid 5vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  margin:20px; /* 10vh 10vw */
+  height:auto;
+  width:auto;
+  padding:8vmin;
+  position:relative;
+  text-align:center;
+  color: black;
+  transition: transform .2s;
+}
+
+.frame1:hover {
+  transform: scale(1.1);
+}
+
+.frame2 {
+  background-color:#ddc;
+  border:solid 5vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  margin:20px;
+  height:auto;
+  width:auto;
+  padding:8vmin;
+  position:relative;
+  text-align:center;
+  color: black;
+  transition: transform .2s;
+}
+
+.frame2:hover {
+  transform: scale(1.1);
+}
+
+.frame3 {
+  background-color:#ddc;
+  border:solid 5vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  margin:20px;
+  height:auto; /*60vh*/
+  width:auto;
+  padding:8vmin;
+  position:relative;
+  text-align:center;
+  color: black;
+  transition: transform .2s;
+}
+
+.frame3:hover {
+  transform: scale(1.1);
+}
+
+.edu {
+  text-align:center;
 }
 
 
@@ -767,6 +864,7 @@ cursor:default;
 <!Boardal: https://codepen.io/jasesmith/pen/GmQbME>
 <!Close CSS modal on click outside: https://stackoverflow.com/questions/53398600/pure-css-close-modal-when-clicking-outside-content>
 <!Cool backlight animation: https://codepen.io/georgehastings/pen/xgwxgo>
+<!Photo Frame: https://codepen.io/chris22smith/pen/PbBwjp>
 
 <body>
 <div id="absolute-wrapper">
@@ -894,11 +992,11 @@ cursor:default;
         <div class='console-underscore' id="console">&#95;            
         </div>
         <p></p>
-        <p class='intro-text-one'>I am a Doctoral student in the <!--<a href="http://sau.int/~cilab/tseth.php">-->Computational Intelligence Laboratory<!--</a>--> (CILAB), South Asian University, New Delhi, India. I work in the area of Deep Learning, Computational Linguistics, Fuzzy Logic and Data Science.</p>
+        <p class='intro-text-one'>I am a Doctoral student in the <a href="http://sau.int/~cilab/tseth.php" style="color: #fff; text-decoration: none" target="_blank">Computational Intelligence Laboratory</a> (CILAB), South Asian University, New Delhi, India. I work in the area of Deep Learning, Computational Linguistics, Fuzzy Logic and Data Science.</p>
 
 <!--<p class='intro-text-two'>When I am not in my 'Ph.D. mode', I paint, sing, dance, cook and help my mom in doing daily chores. I also stand as a strong advocate of diversity within technology.</p>-->
 
-<p class='intro-text-three'>To know some facts about me, feel free to interact with the <b>Techniya ghost</b> on the left! :)</p>
+<p class='intro-text-three'>To know some interesting facts about me, feel free to interact with the <b>Techniya ghost</b> on the left! :)</p>
 
 <!--Animated Button: https://codepen.io/natalia-reshetnikova/pen/oRRjPP-->
 
@@ -913,16 +1011,16 @@ cursor:default;
 
         </div> <!--div3-->
         
-<a href="https://www.linkedin.com/in/taniyaseth/" target="_blank"><div id="div5" class="social-links">
+<a href="https://www.linkedin.com/in/taniyaseth/" target="_blank" style="text-decoration:none"><div id="div5" class="social-links">
            <div class='social-btn flex-center' id="linkedin">
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg><span>in/taniyaseth</span>
 		</div></a>
 
-           <a href="https://github.com/CodTan" target="_blank"><div class='social-btn flex-center' id="github">
+           <a href="https://github.com/CodTan" target="_blank" style="text-decoration:none"><div class='social-btn flex-center' id="github">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>CodTan</span>
 	</div></a>
 
-<a href="https://www.researchgate.net/profile/Taniya_Seth" target="_blank"><div class='social-btn flex-center' id="researchgate">
+<a href="https://www.researchgate.net/profile/Taniya_Seth" target="_blank" style="text-decoration:none"><div class='social-btn flex-center' id="researchgate">
 			<svg mlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24pt" height="24pt" viewBox="0 0 24 24" version="1.1">
 <g id="surface1">
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(119,136,153);fill-opacity:1;" d="M 3.601562 0 L 20.398438 0 C 22.386719 0 24 1.613281 24 3.601562 L 24 20.398438 C 24 22.386719 22.386719 24 20.398438 24 L 3.601562 24 C 1.613281 24 0 22.386719 0 20.398438 L 0 3.601562 C 0 1.613281 1.613281 0 3.601562 0 Z M 3.601562 0 "/>
@@ -958,17 +1056,16 @@ cursor:default;
            <ul class="tab-list">
                <li class="modal-tab tab1">
                   <div>
-                   <p>I am currently a Ph.D. student at the Computational Intelligence Laboratory (CILAB), South Asian University, New Delhi, India. My main research areas are deep learning, computational linguistics, fuzzy logic and scientometrics. I research on and develop new models that bring machines closer to humans, either by considering the language or the vision aspect of us humans. Working in the above areas, I gained (and still am gaining) knowledge about linguistic information under uncertainty due to perceptions, deep learning and other real-life processes under uncertainty. Additionally, I work extensively with generative deep models such as Restricted Boltzmann Machines (RBM), variational autoencoders (VAE) and generative adversarial networks (GAN). I also like to study the publication landscapes of important research domains. This study is called the scientometrics and bibliometrics, which is basically a subset of the domain of Data Science.</p>
+                   <p>I am a Ph.D. student at the Computational Intelligence Laboratory (CILAB), South Asian University, New Delhi, India. My main research areas are deep learning, computational linguistics, fuzzy logic and scientometrics. I research on and develop new models that bring machines closer to humans, either by considering the language or the vision aspect of us humans. Working in the above areas, I gained (and still am gaining) knowledge about linguistic information under uncertainty due to perceptions, deep learning and other real-life processes under uncertainty. Additionally, I work extensively with generative deep models such as Restricted Boltzmann Machines (RBM), variational autoencoders (VAE) and generative adversarial networks (GAN). I also like to study the publication landscapes of important research domains. This study is called the scientometrics and bibliometrics, which is basically a subset of the domain of Data Science.</p>
 
-<p>I also am a strong advocate of diversity in technology. Therefore, I contribute to this notion as much as I can. Focussing on the 'Women in Tech' aspect, I have conducted multiple sessions in my current organization, alma-mater as well at various other community events. I am also associated with various such communities like Google WomenTechmakers, Women Who Code, Systers, IEEE Computational Intelligence Society, AnitaBorg etc. I am also thankful to each of them for helping me grow.</p>
+<p>I am a strong advocate of diversity in technology. Therefore, I contribute to this notion as much as I can. Focussing on the 'Women in Tech' aspect, I have conducted multiple sessions in my current organization, alma-mater as well at various other community events. I am also associated with various such communities like Google WomenTechmakers, Women Who Code, Systers, IEEE Computational Intelligence Society, AnitaBorg etc. I am also thankful to each of them for helping me grow.</p>
 
-<p>Keeping the tech side aside, I am equally into painting, music and dance. Possessing proffessional training all of these, I spend my free and off-time from work getting engaged with any of these activities. I have recently entered into the domain of graphic designing and have also designed logos for multiple organizations and campaigns.</p>
+<p>Keeping the tech side aside, I am equally into painting, music and dance. Possessing proffessional training in all of these, I spend my off-time from work getting engaged with any of these activities. I have recently entered into the domain of graphic designing and have also designed logos for multiple organizations and campaigns.</p>
 
-<p>Do you think we share common interests? Or do you have suggestions for me? Whatever it is, let's connect!</p>
                   <div>
                </li>
                <li class="modal-tab tab2">
-                 <div>
+                 <!--<div>
                    <h2>Bachelors</h2>
                    <p>Bachelor of Science with Honours, Major: Computer Science</p>
                    <p>Shaheed Rajguru College of Applied Sciences for Women, University of Delhi</p>
@@ -986,10 +1083,38 @@ cursor:default;
                    <p>South Asian University</p>
                    <p>2017-ongoing</p>
                    <p>Pre-Ph.D. coursework grade: 8.37/9, Equivalent GPA: 3.72/4.0</p>
+                 </div>-->
+                 <div class="edu">
+                     <p>Scroll down to view my educational information.</p>
+                     <div class="frame1">
+                         <div style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                        <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Bachelors in Science, with Honors</b></p>
+                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Major in Computer Science</p>
+                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px"><b>Shaheed Rajguru College of Applied Sciences for Women</b></p>
+                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px"><b>University of Delhi</b></p>
+                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">2012-15</p>
+                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">88.7/100</b>, Equivalent GPA: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.3/4.0</b></p>
+                         </div>
+                     </div><div class="frame2">
+                         <div style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                        <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Masters in Science</b></p>
+                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">Major in Computer Science</p>
+                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px"><b>South Asian University</b></p>
+                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">2015-17</p>
+                        <p  style="font-family: 'Fondamento', cursive; color:orange; font-size: 17px"><b>UNIVERSITY GOLD MEDALLIST</b> &#129351;</p>
+                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.65/9</b>, Equivalent GPA: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.84/4.0</b></p>
+                         </div>
+                     </div><div class="frame3">
+                         <div style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                        <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Ph.D. in Computer Science</b></p>
+                        <p style="font-family: 'Baloo 2', cursive; font-size: 17px"><b>South Asian University</b></p>
+                        <p style="font-family: 'Baloo 2', cursive; font-size: 17px">2017-ongoing</p>
+                        <p style="font-family: 'Baloo 2', cursive; font-size: 17px">Ph.D. coursework Grade: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.37/9</b>, Equivalent GPA: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.72/4.0</b></p>
+                     </div>    
                  </div>
                </li>
                <li class="modal-tab tab3">
-                 <div> 
+                 <div class="cols-container"> 
                    <!--<ol>
                      <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Perceptual computing with comparative linguistic expressions, <i>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020)</i>, July, Scotland, Glasgow.</li>
                      <li id="item">Priyanka Mehra, <b>Taniya Seth</b>, Pranab K. Muhuri, Generating quality IF-THEN rules for diabetes using linguistic summarization,  <i>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020)</i>, July, Scotland, Glasgow.</li>
@@ -1005,72 +1130,72 @@ cursor:default;
                    
                    <ul class="image-list-small">
                    <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/9177664/" target="_blank"><img class="papers" src="images/1.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/9177664/" target="_blank"><img class="papers" src="images/1.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>Perceptual computing with comparative linguistic expressions</b></p>
+                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/9177664/" style="color: #fff; text-decoration: none" target="_blank"><b>Perceptual computing with comparative linguistic expressions</b></a></p>
                      <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/9177662/" target="_blank"><img class="papers" src="images/2.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/9177662/" target="_blank"><img class="papers" src="images/2.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>Generating quality IF-THEN rules for diabetes using linguistic summarization</b></p>
+                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/9177662/" style="color: #fff; text-decoration: none" target="_blank"><b>Generating quality IF-THEN rules for diabetes using linguistic summarization</b></a></p>
                      <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://arxiv.org/abs/2002.11714" target="_blank"><img class="papers" src="images/3.PNG?"></a>
+                   <a href="https://arxiv.org/abs/2002.11714" target="_blank"><img class="papers" src="images/3.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>Type-2 fuzzy set based hesitant fuzzy linguistic term sets for linguistic decision making</b></p>
+                     <p style="font-size:0.95em;"><a href="https://arxiv.org/abs/2002.11714" style="color: #fff; text-decoration: none" target="_blank"><b>Type-2 fuzzy set based hesitant fuzzy linguistic term sets for linguistic decision making</b></a></p>
                      <p>arXiv preprint, 2020</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8956101" target="_blank"><img class="papers" src="images/4.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8956101" target="_blank"><img class="papers" src="images/4.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>A bibliometric overview of the field of type-2 fuzzy sets and systems</b></p>
+                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8956101" style="color: #fff; text-decoration: none" target="_blank"><b>A bibliometric overview of the field of type-2 fuzzy sets and systems</b></a></p>
                      <p>IEEE Computational Intelligence Magazine, 2020 <b>(IF:9.083)</b></p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8858794/" target="_blank"><img class="papers" src="images/5.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8858794/" target="_blank"><img class="papers" src="images/5.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>A linguistic decision making model for psychometric tests</b></p>
+                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8858794/" style="color: #fff; text-decoration: none" target="_blank"><b>A linguistic decision making model for psychometric tests</b></a></p>
                      <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/8858804/" target="_blank"><img class="papers" src="images/6.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/8858804/" target="_blank"><img class="papers" src="images/6.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>Interval type-2 fuzzy restricted Boltzmann machine for the enhancement of deep learning</b></p>
+                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/8858804/" style="color: #fff; text-decoration: none" target="_blank"><b>Interval type-2 fuzzy restricted Boltzmann machine for the enhancement of deep learning</b></a></p>
                      <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
                    </div>
                    </li>
                    <li>
-                   <a href="http://jscires.org/article/304" target="_blank"><img class="papers" src="images/7.PNG?"></a>
+                   <a href="http://jscires.org/article/304" target="_blank"><img class="papers" src="images/7.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>Global distribution of google scholar citations: A size-independent institution-based analysis</b></p>
+                     <p style="font-size:0.95em;"><a href="http://jscires.org/article/304" style="color: #fff; text-decoration: none" target="_blank"><b>Global distribution of google scholar citations: A size-independent institution-based analysis</b></a></p>
                      <p>Journal of Scientometric Research, 2020</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8491559" target="_blank"><img class="papers" src="images/8.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8491559" target="_blank"><img class="papers" src="images/8.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>A novel solution approach for fuzzy linear bilevel multi-follower programming problems</b></p>
+                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8491559" style="color: #fff; text-decoration: none" target="_blank"><b>A novel solution approach for fuzzy linear bilevel multi-follower programming problems</b></a></p>
                      <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8491537/" target="_blank"><img class="papers" src="images/9.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8491537/" target="_blank"><img class="papers" src="images/9.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>Hesitant fuzzy linguistic term sets for group decision making in supplier performance evaluation</b></p>
+                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8491537/" style="color: #fff; text-decoration: none" target="_blank"><b>Hesitant fuzzy linguistic term sets for group decision making in supplier performance evaluation</b></a></p>
                      <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8015638" target="_blank"><img class="papers" src="images/10.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8015638" target="_blank"><img class="papers" src="images/10.png"></a>
                    <div class="details">
-                     <p style="font-size:1em;"><b>Interval type-2 fuzzy sets for enhanced learning in deep belief networks</b></p>
+                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8015638" style="color: #fff; text-decoration: none" target="_blank"><b>Interval type-2 fuzzy sets for enhanced learning in deep belief networks</b></a></p>
                      <p>2017 IEEE International Conference on Fuzzy Systems, Naples, Italy</p>
                    </div>
                    </li>
