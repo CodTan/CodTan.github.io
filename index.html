@@ -457,7 +457,7 @@ a.modal-open {
   background: rgb(0,0,0);
   background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 42%, rgba(150,76,29,1) 100%);
   /*background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 16%, rgba(105,61,33,1) 64%, rgba(150,76,29,1) 100%);*/
-  background-size: 400% 400%;
+  background-size: 300% 300%;
   animation: gradient 40s ease infinite;
 }
 
@@ -753,6 +753,9 @@ cursor:default;
 .image-list-small .papers {
  height: 200px;
  transition: transform .2s;
+ -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
 }
 
 .image-list-small .papers:hover {
