@@ -841,6 +841,74 @@ cursor:default;
   text-align:center;
 }
 
+/* Shine effect on hover: https://codepen.io/fishtoyo/pen/VYQVQx */
+
+.first_frame:after{
+   content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255,255,255,1);
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+}
+
+.first_frame:hover:after {
+  width: 120%;
+  background-color: rgba(255,255,255,0);
+  
+	-webkit-transition: all 0.4s ease-in-out;
+	   -moz-transition: all 0.4s ease-in-out;
+	        transition: all 0.4s ease-in-out;
+}
+
+.second_frame:after{
+   content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255,255,255,1);
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+}
+
+.second_frame:hover:after {
+  width: 120%;
+  background-color: rgba(255,255,255,0);
+  
+	-webkit-transition: all 0.4s ease-in-out;
+	   -moz-transition: all 0.4s ease-in-out;
+	        transition: all 0.4s ease-in-out;
+}
+
+.third_frame:after{
+   content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255,255,255,1);
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+}
+
+.third_frame:hover:after {
+  width: 120%;
+  background-color: rgba(255,255,255,0);
+  
+	-webkit-transition: all 0.4s ease-in-out;
+	   -moz-transition: all 0.4s ease-in-out;
+	        transition: all 0.4s ease-in-out;
+}
+
 
     /* EOS */
   </style>
@@ -1090,29 +1158,29 @@ cursor:default;
                  <div class="edu">
                      <p>Scroll down to view my educational information.</p>
                      <div class="frame1">
-                         <div style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                         <div class="first_frame" style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
                         <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Bachelors in Science, with Honors</b></p>
                         <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Major in Computer Science</p>
                         <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px"><b>Shaheed Rajguru College of Applied Sciences for Women</b></p>
                         <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px"><b>University of Delhi</b></p>
                         <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">2012-15</p>
-                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">88.7/100</b>, Equivalent GPA: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.3/4.0</b></p>
+                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">88.7/100</font>, Equivalent GPA: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.3/4.0</font></p>
                          </div>
                      </div><div class="frame2">
-                         <div style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                         <div class="second_frame" style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
                         <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Masters in Science</b></p>
                         <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">Major in Computer Science</p>
                         <p  style="font-family: 'Baloo 2', cursive; font-size: 17px"><b>South Asian University</b></p>
                         <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">2015-17</p>
                         <p  style="font-family: 'Fondamento', cursive; color:orange; font-size: 17px"><b>UNIVERSITY GOLD MEDALLIST</b> &#129351;</p>
-                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.65/9</b>, Equivalent GPA: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.84/4.0</b></p>
+                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.65/9</font>, Equivalent GPA: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.84/4.0</font></p>
                          </div>
                      </div><div class="frame3">
-                         <div style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                         <div class="third_frame" style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
                         <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Ph.D. in Computer Science</b></p>
                         <p style="font-family: 'Baloo 2', cursive; font-size: 17px"><b>South Asian University</b></p>
                         <p style="font-family: 'Baloo 2', cursive; font-size: 17px">2017-ongoing</p>
-                        <p style="font-family: 'Baloo 2', cursive; font-size: 17px">Ph.D. coursework Grade: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.37/9</b>, Equivalent GPA: <b style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.72/4.0</b></p>
+                        <p style="font-family: 'Baloo 2', cursive; font-size: 17px">Ph.D. coursework Grade: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.37/9</font>, Equivalent GPA: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.72/4.0</font></p>
                      </div>    
                  </div>
                </li>
