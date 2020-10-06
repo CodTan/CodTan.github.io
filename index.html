@@ -2,10 +2,12 @@
 <html>
 <head>
         <title>Taniya Seth</title>
-        <link rel="icon" href="images/techniya_png.png" type="image/png" sizes="16x16">
+        <link rel="icon" href="techniya_png.png?" type="image/png" sizes="16x16">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src='https://www.csslab.cl/ejemplos/timelinr/latest/js/jquery.timelinr-0.9.54.js'></script>
+        <script src="script.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
@@ -288,8 +290,9 @@ animation: slidingstep1 2s ease-out;
 	/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
 	transform: translatey(0px);
 	animation: float 4s ease-in-out infinite;
-	img { width: 100%; height: auto; }
 }
+
+#wrapper img { width: 100%; height: auto; }
 
 /* colorize and zoom on hover: https://w3bits.com/css-image-hover-zoom/ */
 #wrapper{
@@ -516,6 +519,7 @@ a.modal-open {
   display:none;
 }
 .modal-area label {
+  margin-bottom: 6px;
   margin-right:5px;
   float:left;
   display:block;
@@ -909,6 +913,235 @@ cursor:default;
 	        transition: all 0.4s ease-in-out;
 }
 
+/*******************************************************************************************************************************************/
+
+#dates a {
+    color: #ffffcc;
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#dates a:hover, #dates a.selected {
+    color: #ffcc00;
+}
+
+#issues h1 {
+    font-size: 15px;
+}
+
+#timeline {
+        padding: 0px;
+		width: 900px;
+		height: 470px;
+		overflow: hidden;
+		margin-top: 20px;
+		position: relative;
+		background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/dot.gif') 3px top repeat-y;
+	}
+		#dates {
+            margin: 0px;
+            padding: 0px;
+			width: 200px;
+			height: auto;
+			overflow: hidden;
+			float: left;
+		}
+			#dates li {
+                margin: 0px;
+                padding: 0px;
+				list-style: none;
+				width: 100px;
+				height: 100px;
+				line-height: 0px;
+				font-size: 22px;
+				padding-left: 20px;
+				background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/biggerdot.png') left center no-repeat;
+			}
+				#dates a {
+					line-height: 22px;
+					padding-bottom: 0px;
+				}
+				#dates .selected {
+			        font-size: 22px;
+                    font-weight: bold;
+				}
+		
+		#issues {
+			width: 700px;
+			height: 500px;
+      padding-top: 30px;
+			overflow: hidden;
+			float: left;
+      vertical-align: middle;
+		}	
+			#issues li {
+				max-width: 750px;
+				height: 500px;
+				list-style: none;
+        text-align: center;
+			}
+				#issues li.selected img {
+					-webkit-transform: scale(1.1,1.1);
+					-moz-transform: scale(1.1,1.1);
+				    -o-transform: scale(1.1,1.1);
+				    -ms-transform: scale(1.1,1.1);
+				    transform: scale(1.1,1.1);
+				}
+				#issues li img {
+					/* float: left; */
+                    /* width: 250px; */
+                    /* margin-bottom: 0px; */
+					margin: 10px 30px 10px 30px;
+					-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */   
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);/* IE 6 & 7 */      
+					zoom: 1;
+					-webkit-transition: all 2s ease-in-out;
+					-moz-transition: all 2s ease-in-out;
+					-o-transition: all 2s ease-in-out;
+					-ms-transition: all 2s ease-in-out; 
+					transition: all 2s ease-in-out;
+					-webkit-transform: scale(0.7,0.7);
+					-moz-transform: scale(0.7,0.7);
+				    -o-transform: scale(0.7,0.7);
+				    -ms-transform: scale(0.7,0.7);
+				    transform: scale(0.7,0.7);
+				}
+                
+				#issues li h1 {
+					color: #ffcc00;
+					font-size: 30px;
+					text-align: center;
+					text-shadow: #000 1px 1px 2px;
+				}
+				#issues li p {
+					font-size: 14px;
+					margin: 10px 20px;
+					font-weight: normal;
+					line-height: 22px;
+					text-shadow: #000 1px 1px 2px;
+				}
+		
+		/* #grad_top,
+		#grad_bottom {
+			width: 900px;
+			height: 80px;
+			position: absolute;
+		}
+			#grad_top {
+		        top: 0;
+		        background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/grad_top.png') repeat-x;
+			}
+			#grad_bottom {
+		        bottom: 0;
+		        background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/grad_bottom.png') repeat-x;
+			} */
+		
+		#next,
+		#prev {
+			position: absolute;
+			left: 61.25%;
+			font-size: 70px;
+			width: 38px;
+			height: 22px;
+			background-position: 0 -44px;
+			background-repeat: no-repeat;
+			text-indent: -9999px;
+			overflow: hidden;
+		}
+			#next:hover,
+			#prev:hover {
+				background-position:  0 0;
+			}
+			#next {
+				bottom: 0;
+				background-image: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/next_v.png');
+			}
+			#prev {
+				top: 0;
+				background-image: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/prev_v.png');
+			}
+				#next.disabled,
+				#prev.disabled {
+					opacity: 0.2;
+        }
+    
+    .extras{
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .extras h2{
+      color:   #ffcc00;
+      font-size: 24px;
+      text-shadow: 2px 2px black;
+    }
+
+    .extras li{
+      text-align: left;
+      margin: 0 0 3px 0;
+    }
+
+    .githubutt{
+      background-color: black;
+      border: none;
+      color: white;
+      padding: 1px 3px 1px 3px; /*top right bottom left*/
+      text-align: center;
+      margin: 5px;
+      text-decoration: none;
+      font-size: 15px;
+      font-style: normal;
+      border-radius: 5px;
+    }
+
+    .githubutt:hover{
+      background-color: rgb(75, 51, 6);
+      box-shadow: 2px 2px black;
+    }
+
+    .hr{
+      display: block;
+      height: 2px;
+      border: black;
+      color: black;
+      background-color: black;
+      /* border-top: 1px solid black; */
+      /* margin-left: 10px;
+      padding-left: 100px; */
+      /* width: 10px; */
+      margin-top: 100px;
+    }
+
+    .height-transition {
+        -webkit-transition: max-height 0.5s ease-in-out;
+        -moz-transition: max-height 0.5s ease-in-out;
+        -o-transition: max-height 0.5s ease-in-out;
+        transition: max-height 0.5s ease-in-out;
+        overflow-y: hidden;            
+    }
+    .height-transition-hidden {            
+        max-height: 0;            
+    }
+
+    .extras-heading {
+      background-color: transparent;
+      color:   #ffcc00;
+      font-size: 24px;
+      text-shadow: 2px 2px black;
+      display: inline-block;
+      border-style: hidden;
+      border-color: transparent;
+      outline: none;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      /* font-style: bold; */
+    }
+
+
 
     /* EOS */
   </style>
@@ -919,30 +1152,32 @@ cursor:default;
 
 </head>
 
-<!MaphiLight Documentation: https://davidlynch.org/projects/maphilight/docs/#overview>
-<!Image Map Generator: https://www.image-map.net/>
-<!Photon for 3D lighting of image: http://photon.attasi.com/docs.html>
-<!Levitating animation: https://codepen.io/MarioDesigns/pen/woJgeo>
-<!Animated image pieces: https://tympanus.net/codrops/2017/07/26/animated-image-pieces/>
-<!Cool text effects: https://uicookies.com/css-text-effects/>
-<!Cool animation pre-loaders: https://steelkiwi.com/blog/30-most-captivating-preloaders-for-website/>
-<!Text Scramble effect: https://codepen.io/soulwire/pen/mErPAK>
-<!Modal: https://codepen.io/jasesmith/pen/GmQbME>
-<!Social Media Buttons: https://codepen.io/chancesq/pen/xxwedXB>
-<!Modal Close: https://codepen.io/merrybottle/pen/PdwXYO>
-<!Modal used: https://codepen.io/TomJ1588/pen/raOmRK/>
-<!Modal thought about: https://webdevtrick.com/demos/modal-box-nav/>
-<!Boardal: https://codepen.io/jasesmith/pen/GmQbME>
-<!Close CSS modal on click outside: https://stackoverflow.com/questions/53398600/pure-css-close-modal-when-clicking-outside-content>
-<!Cool backlight animation: https://codepen.io/georgehastings/pen/xgwxgo>
-<!Photo Frame: https://codepen.io/chris22smith/pen/PbBwjp>
+<!--MaphiLight Documentation: https://davidlynch.org/projects/maphilight/docs/#overview-->
+<!--Image Map Generator: https://www.image-map.net/-->
+<!--Photon for 3D lighting of image: http://photon.attasi.com/docs.html-->
+<!--Levitating animation: https://codepen.io/MarioDesigns/pen/woJgeo-->
+<!--Animated image pieces: https://tympanus.net/codrops/2017/07/26/animated-image-pieces/-->
+<!--Cool text effects: https://uicookies.com/css-text-effects/-->
+<!--Cool animation pre-loaders: https://steelkiwi.com/blog/30-most-captivating-preloaders-for-website/-->
+<!--Text Scramble effect: https://codepen.io/soulwire/pen/mErPAK-->
+<!--Modal: https://codepen.io/jasesmith/pen/GmQbME-->
+<!--Social Media Buttons: https://codepen.io/chancesq/pen/xxwedXB-->
+<!--Modal Close: https://codepen.io/merrybottle/pen/PdwXYO-->
+<!--Modal used: https://codepen.io/TomJ1588/pen/raOmRK/-->
+<!--Modal thought about: https://webdevtrick.com/demos/modal-box-nav/-->
+<!--Boardal: https://codepen.io/jasesmith/pen/GmQbME-->
+<!--Close CSS modal on click outside: https://stackoverflow.com/questions/53398600/pure-css-close-modal-when-clicking-outside-content-->
+<!--Cool backlight animation: https://codepen.io/georgehastings/pen/xgwxgo-->
+<!--Photo Frame: https://codepen.io/chris22smith/pen/PbBwjp-->
+<!--Timeline: https://codepen.io/TylerBerry/pen/LEzrXm -->
+<!--Slide up down for Extras: http://plnkr.co/edit/Wpcgjs3FS4ryrhQUAOcU?p=preview&preview -->
 
 <body>
 <div id="absolute-wrapper">
 <div id="wrapper">
 	<div id="div2" style="transform: rotate3d(-0.12462, -0.229868, 0, 3.92214deg);">
 			
-	<img src="images/techniya_w656x_h655.png?" usemap="#image-map" class="map">
+	<img src="techniya_w656x_h655.png" usemap="#image-map" class="map">
 
 	<map name="image-map">
 
@@ -1067,7 +1302,7 @@ cursor:default;
 
 <!--<p class='intro-text-two'>When I am not in my 'Ph.D. mode', I paint, sing, dance, cook and help my mom in doing daily chores. I also stand as a strong advocate of diversity within technology.</p>-->
 
-<p class='intro-text-three'>To know some interesting facts about me, hover over the <b>Techniya ghost</b> on the left! :)</p>
+<p class='intro-text-three'>To know some interesting facts about me, feel free to interact with the <b>Techniya ghost</b> on the left! :)</p>
 
 <!--Animated Button: https://codepen.io/natalia-reshetnikova/pen/oRRjPP-->
 
@@ -1136,26 +1371,7 @@ cursor:default;
                   <div>
                </li>
                <li class="modal-tab tab2">
-                 <!--<div>
-                   <h2>Bachelors</h2>
-                   <p>Bachelor of Science with Honours, Major: Computer Science</p>
-                   <p>Shaheed Rajguru College of Applied Sciences for Women, University of Delhi</p>
-                   <p>2012-15</p>
-                   <p>Grade: 88.7/100, Equivalent GPA: 3.3/4.0</p>
-                   
-                   <h2>Masters</h2>
-                   <p>Masters of Science, Major: Computer Science</p>
-                   <p>South Asian University</p>
-                   <p>2015-17</p>
-                   <p>Grade: 8.65, Equivalent GPA: 3.84/4.0</p>
-
-                   <h2>Doctoral</h2>
-                   <p>Ph.D. in Computer Science</p>
-                   <p>South Asian University</p>
-                   <p>2017-ongoing</p>
-                   <p>Pre-Ph.D. coursework grade: 8.37/9, Equivalent GPA: 3.72/4.0</p>
-                 </div>-->
-                 <div class="edu">
+                  <div class="edu">
                      <p>Scroll down to view my educational information.</p>
                      <div class="frame1">
                          <div class="first_frame" style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
@@ -1201,70 +1417,70 @@ cursor:default;
                    
                    <ul class="image-list-small">
                    <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/9177664/" target="_blank"><img class="papers" src="images/1.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/9177664/" target="_blank"><img class="papers" src="images/1.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/9177664/" style="color: #fff; text-decoration: none" target="_blank"><b>Perceptual computing with comparative linguistic expressions</b></a></p>
                      <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/9177662/" target="_blank"><img class="papers" src="images/2.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/9177662/" target="_blank"><img class="papers" src="images/2.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/9177662/" style="color: #fff; text-decoration: none" target="_blank"><b>Generating quality IF-THEN rules for diabetes using linguistic summarization</b></a></p>
                      <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://arxiv.org/abs/2002.11714" target="_blank"><img class="papers" src="images/3.PNG?"></a>
+                   <a href="https://arxiv.org/abs/2002.11714" target="_blank"><img class="papers" src="images/3.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://arxiv.org/abs/2002.11714" style="color: #fff; text-decoration: none" target="_blank"><b>Type-2 fuzzy set based hesitant fuzzy linguistic term sets for linguistic decision making</b></a></p>
                      <p>arXiv preprint, 2020</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8956101" target="_blank"><img class="papers" src="images/4.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8956101" target="_blank"><img class="papers" src="images/4.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8956101" style="color: #fff; text-decoration: none" target="_blank"><b>A bibliometric overview of the field of type-2 fuzzy sets and systems</b></a></p>
                      <p>IEEE Computational Intelligence Magazine, 2020 <b>(IF:9.083)</b></p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8858794/" target="_blank"><img class="papers" src="images/5.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8858794/" target="_blank"><img class="papers" src="images/5.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8858794/" style="color: #fff; text-decoration: none" target="_blank"><b>A linguistic decision making model for psychometric tests</b></a></p>
                      <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/8858804/" target="_blank"><img class="papers" src="images/6.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/abstract/document/8858804/" target="_blank"><img class="papers" src="images/6.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/8858804/" style="color: #fff; text-decoration: none" target="_blank"><b>Interval type-2 fuzzy restricted Boltzmann machine for the enhancement of deep learning</b></a></p>
                      <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
                    </div>
                    </li>
                    <li>
-                   <a href="http://jscires.org/article/304" target="_blank"><img class="papers" src="images/7.PNG?"></a>
+                   <a href="http://jscires.org/article/304" target="_blank"><img class="papers" src="images/7.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="http://jscires.org/article/304" style="color: #fff; text-decoration: none" target="_blank"><b>Global distribution of google scholar citations: A size-independent institution-based analysis</b></a></p>
                      <p>Journal of Scientometric Research, 2020</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8491559" target="_blank"><img class="papers" src="images/8.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8491559" target="_blank"><img class="papers" src="images/8.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8491559" style="color: #fff; text-decoration: none" target="_blank"><b>A novel solution approach for fuzzy linear bilevel multi-follower programming problems</b></a></p>
                      <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8491537/" target="_blank"><img class="papers" src="images/9.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8491537/" target="_blank"><img class="papers" src="images/9.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8491537/" style="color: #fff; text-decoration: none" target="_blank"><b>Hesitant fuzzy linguistic term sets for group decision making in supplier performance evaluation</b></a></p>
                      <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
                    </div>
                    </li>
                    <li>
-                   <a href="https://ieeexplore.ieee.org/document/8015638" target="_blank"><img class="papers" src="images/10.PNG?"></a>
+                   <a href="https://ieeexplore.ieee.org/document/8015638" target="_blank"><img class="papers" src="images/10.png"></a>
                    <div class="details">
                      <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8015638" style="color: #fff; text-decoration: none" target="_blank"><b>Interval type-2 fuzzy sets for enhanced learning in deep belief networks</b></a></p>
                      <p>2017 IEEE International Conference on Fuzzy Systems, Naples, Italy</p>
@@ -1272,11 +1488,197 @@ cursor:default;
                    </li>
                    </ul>
 
-                 </div> 
-               <li class="modal-tab tab4"><p>Coming Soon</p></li>
-               <li class="modal-tab tab5"><p>Coming Soon</p></li>
+                 </div>
+               </li>
+               <!-- <li class="modal-tab tab4"><p>Coming Soon</p></li> -->
+               <li  class="modal-tab tab4">
+                   <div>
+                       <div id="timeline">
+                           <ul id="dates">
+                               <li><a href="#award-14" class="selected">June 2020</a></li>
+                               <li><a href="#award-13">February 2020</a></li>
+                               <li><a href="#award-12">July 2019</a></li>
+                               <li><a href="#award-11">May 2019</a></li>
+                               <li><a href="#award-10">September 2018</a></li>
+                               <li><a href="#award-9">May 2018</a></li>
+                               <li><a href="#award-8">May 2018</a></li>
+                               <li><a href="#award-7">July 2017</a></li>
+                               <li><a href="#award-6">July 2017</a></li>
+                               <li><a href="#award-5">June 2017</a></li>
+                               <li><a href="#award-4">May 2017</a></li>
+                               <li><a href="#award-3">September 2016</a></li>
+                               <li><a href="#award-2">July 2016</a></li>
+                               <li><a href="#award-1">April 2015</a></li>
+                           </ul>
+                           <ul id="issues">
+                               <li id="award-14" class="selected">
+                                   <img class="award-14" src="images/final_awards/GHC.png"/>
+                                   <h1>Grace Hopper Celebration 2020 Scholar</h1>
+                                   <p>I am one of the 1300 Grace Hopper Celebration Scholars for the year 2020. My scholarship was generously sponsored by <b style="color:aqua">Nuance Communications</b>. Grace Hopper Celebration Scholars are enthusiastic young women who are committed to grow in their technical careers while contributing to increasing diversity within technology. Grace Hopper Celebration is the flagship event of AnitaB.org that brings interests of women in computing to the forefront. Grace Hopper Celebration went virtual in 2020 for the first time.</p>
+                               </li>
+                               <li id="award-13">
+                                   <img src="images/CIS.png"/>
+                                   <h1>IEEE Computational Intelligence Society 2020 Full Registration Grant</h1>
+                                   <p>The IEEE CIS 2020 full registration grant was awarded to deserving students to cover their entire full registration costs for the 2020 IEEE World Congress on Computational Intelligence, which was held virtually. The students were selected on the basis of paper quality and reviews.</p>
+                               </li>
+                               <li id="award-12">
+                                   <img src="images/final_awards/INSPIRE.png"/>
+                                   <h1>Junior Research Fellowship, INSPIRE</h1>
+                                   <p>The INSPIRE fellowship, under the "Innovation in Science Pursuit for Inspired Research" scheme of the Government of India is awarded to Masters first rank holders, for carrying out doctoral degree in engineering sciences. This fellowship is awarded directly by the Department of Science and Technology, Ministry of Science and Technology, Government of India.</p>
+                               </li>
+                               <li id="award-11">
+                                   <img src="images/CIS.png"/>
+                                   <h1>IEEE Computational Intelligence Society 2019 Travel Grant</h1>
+                                   <p>The IEE CIS 2019 travel grant was awarded to deserving students to cover their travel costs of upto 800 USD for the 2019 IEEE International Conference on Fuzzy Systems, organized at New Orleans, USA. The students were selected on the basis of paper quality and reviews.</p>
+                               </li>
+                               <li id="award-10">
+                                   <img src="images/final_awards/WTM.png"/>
+                                   <h1>Google Women TechMakers APAC Scholar</h1>
+                                   <p>I was one of the ~70 Women Techmakers Scholars from the Asia-Pacific Region, awarded by Google in the year 2018. This scholarship is awarded to young female students within technology to recognize their outstanding contributions towards increasing diversity in technology. The WTM scholarship included a monetary award along with a fully paid trip to the Google APAC headquarters in Singapore to attend the Scholarship retreat.</p>
+                               </li>
+                               <li id="award-9">
+                                   <img src="images/CIS.png"/>
+                                   <h1>IEEE Computational Intelligence Society 2018 Travel Grant</h1>
+                                   <p>The IEEE CIS 2018 travel grant was awarded to deserving students to cover their travel and registration costs of upto 800 USD for the 2018 IEEE World Congress on Computational Intelligence, organized at Rio de Janeiro, Brazil. The students were selected on the basis of paper quality and reviews.</p>
+                               </li>
+                               <li id="award-8">
+                                   <img src="images/award_8_WIE_Travel_Grant_2018.png"/>
+                                   <h1>IEEE Women in Engineering 2018 Travel Grant</h1>
+                                   <p>I was awarded the IEEE WiE 2018 travel grant to cover my travel and registration costs of upto 750 USD for the 2018 IEEE World Congress on Computational Intelligence, organized at Rio de Janeiro, Brazil. The selection criteria was based on my papers' quality, reviews and involvement in technology and engineering.</p>
+                               </li>
+                               <li id="award-7">
+                                   <img src="images/final_awards/YTD.png"/>
+                                   <h1>Winner, Your Thesis in a Dram Contest</h1>
+                                   <p>I was declared as the winner amongst 9 participants, in the YTD contest at the III European Summer School on Fuzzy Logic and Applications (SFLA) organized by University of Santiago de Compostela and European Society for Fuzzy Logic and Technology (EUSFLAT) in 2017. It focussed on the dissemination of the ongoing research of the participants in their course of study. The award, which was generously sponsored by <b style="color: rgb(255, 72, 0); text-shadow: whitesmoke">Vodafone</b>, included a one-month visting research program under the eminent researchers of University of Santiago de Compostela, Spain.</p>
+                               </li>
+                               <li id="award-6">
+                                   <img src="images/final_awards/EUSFLAT.png"/>
+                                   <h1>EUSFLAT Registration Grant</h1>
+                                   <p>I was selected as one of the 9 students worldwide to receive the EUSFLAT registration grant to cover the registration and accomodation expenses towards the III European Summer School on Fuzzy Logic and Applications (SFLA) organized by University of Santiago de Compostela and European Society for Fuzzy Logic and Technology (EUSFLAT) in 2017. The grant was awarded on the basis of merit of research study.</p>
+                               </li>
+                               <li id="award-5">
+                                   <img src="images/final_awards/SAU.png"/>
+                                   <h1>University Masters Gold Medallist</h1>
+                                   <p>I received the Masters Gold Medal for securing the first position in Masters in Science, Computer Science as the University academic topper.</p>
+                               </li>
+                               <li id="award-4">
+                                   <img src="images/final_awards/ACM.png"/>
+                                   <h1>ACM-W Scholarship</h1>
+                                   <p>I received the ACM-W scholarship, an equivalent of 1200 USD to cover miscellaneous expenses while participating in the 2017 IEEE International Conference on Fuzzy Systems, held at Naples, Italy in 2017. The selection was made on the basis of academic merit, as well as contribution towards increasing diversity in technology.</p>
+                               </li>
+                               <li id="award-3">
+                                   <img src="images/final_awards/GHCI.png"/>
+                                   <h1>Grace Hopper Celebration India, Women in Computing Scholar</h1>
+                                   <p>I was one of the recepients of the GHCI 2016 scholarship to attend the Grace Hopper Celebration in Bangalore, India in 2016. The scholars were selected on the basis of multiple criteria such as academic merit, contribution to technology etc.</p>
+                               </li>
+                               <li id="award-2">
+                                   <img src="images/final_awards/SAU.png"/>
+                                   <h1>South Asian University Merit Scholarship</h1>
+                                   <p>I was awarded the Merit Scholarship from South Asian University for securing first position in the first year of Masters in Science, Computer Science.</p>
+                               </li>
+                               <li id="award-1">
+                                   <img src="images/final_awards/SRCASW.png"/>
+                                   <h1>All Rounder Student Award, Shaheed Rajguru College of Applied Sciences for Women</h1>
+                                   <p>I received the all-rounder student award at Shaheed College of Applied Sciences for Women, on the basis of participation in various cultural activities, administrative tasks as well as academic merit.</p>
+                               </li>
+                           </ul>
+                           <div id="grad_top"></div>
+                           <div id="grad_bottom"></div>
+                           <a href="#" id="next">+</a>
+		                   <a href="#" id="prev">-</a>
+                       </div>               
+                   </div>               
+                </li>
+               <!-- <li class="modal-tab tab5"><p>Coming Soon</p></li> -->
+               <li class="modal-tab tab5">
+                  <div class="extras">
+                      <p style="text-align: left">Here's some more information about what I've done outside curricular activites.</p>
+
+                      <button id="Trigger1" class="extras-heading"><h2>Open Source Contribution</h2></button>
+                      <div id="SlideWrapper1" class="height-transition height-transition-hidden">
+                        <!-- <h2>Open Source Contributor</h2> -->
+                      <div class="Actual">
+                      <p><a href="https://github.com/CodTan" target="_blank" class="githubutt">GitHub</a></p>
+                      <p>Recently as a virtual Grace Hopper Celebration (vGHC) 2020 scholar, I participated in the Open Source Day organized at vGHC and contributed to the OpenStreetMap. Since then, I have been an active "Mapper" in the organization.</p>
+                      <p>I also am an active contributor to the <font style="background-color: black; font-family: 'Courier New', Courier, monospace">datascience</font> package which was written for use in Berkeley's DS 8 course.</p>
+                      </div>
+                    </div>
+
+                      <hr width=50 color="darkgrey"/>
+                      
+                      <button id="Trigger2" class="extras-heading"><h2>This Website</h2></button>
+                      <div id="SlideWrapper2" class="height-transition height-transition-hidden">
+                      <!-- <h2>This Website</h2> -->
+                      <div class="Actual">
+                      <p><a href="https://github.com/CodTan/CodTan.github.io" target="_blank" class="githubutt">GitHub</a></p>
+                      <p>I created this website from scratch using basic HTML, CSS, JavaScript and JQuery.</p>
+                      </div>
+                      </div>
+
+                      <hr width=50 color="darkgrey"/>
+
+                      <button id="Trigger3" class="extras-heading"><h2>Artist, Painting Course for National Institute for Open Schooling (NIOS)</h2></button>
+                      <div id="SlideWrapper3" class="height-transition height-transition-hidden">
+                      <!-- <h2>Artist, Painting Course for National Institute for Open Schooling (NIOS)</h2> -->
+                      <div>
+                      <p>Youtube Links</p><p><a href="https://www.youtube.com/watch?v=jwCZXpZa7XU&t=16s&ab_channel=Ch-27SecondarySchoolEducation" target="_blank" class="githubutt">Object Study 1</a> <a href="https://www.youtube.com/watch?v=QgpL5hz4rvc&t=3s&ab_channel=Ch-27SecondarySchoolEducation" target="_blank" class="githubutt">Composition Drawing 1</a> <a href="https://www.youtube.com/watch?v=Dq2njbChR20&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=11&ab_channel=NIOSSeniorSecondaryCourses" target="_blank" class="githubutt">Object Study 2: Pencil</a> <a href="https://www.youtube.com/watch?v=IJ1JFxQobXs&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=12&ab_channel=NIOSSeniorSecondaryCourses" target="_blank" class="githubutt">Object Study 2: Color</a> <a href="https://www.youtube.com/watch?v=k0wAefCRl0s&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=8&ab_channel=NIOSSeniorSecondaryCourses" target="_blank" class="githubutt">Composition Drawing 2</a> </p>
+                      <p>I was responsible for demonstrating various painting techniques as a part of the MOOC for the Painting Course in NIOS. The course instructor is Prof. K.M. Chaudhuri.</p>
+                      </div>
+                      </div>
+                    
+
+                      <hr width=50 color="darkgrey"/>
+                      
+                      <button id="Trigger4" class="extras-heading"><h2>Visiting Researcher, Universidade de Santiago de Compostela, Spain</h2></button>
+                      <div id="SlideWrapper4" class="height-transition height-transition-hidden">
+                      <!-- <h2>Visiting Researcher, Universidade de Santiago de Compostela, Spain</h2> -->
+                      <div>
+                      <p><a href="https://github.com/CodTan/LPP_NLG" target="_blank" class="githubutt">GitHub</a></p>
+                      <p>Being the winner in the Your Thesis in a Dram contest at III European Summer School on Fuzzy Logic and Applications (SFLA) 2017, I worked as a visiting researcher on project based on Natural Language Generation (NLG). Within this project, automatic explanations were generated for solutions to linear programming problems (LPP) using the SimpleNLG API. The project was implemented in JAVA and MATLAB.</p>
+                      </div>
+                      </div>
+
+                      <hr width=50 color="darkgrey"/>
+                      
+                      <button id="Trigger5" class="extras-heading"><h2>Volunteering</h2></button>
+                      <div id="SlideWrapper5" class="height-transition height-transition-hidden">
+                      <!-- <h2>Volunteering</h2> -->
+                      <div>
+                      <p>Volunteering is my passion, and I consider it as one of the best sources for learning. Till date I have volunteered in various kinds of activities and in diverse organzations. A small list of my volunteering experiences is given below:</p>
+                      <ul>
+                        <li><b>Volunteer, Connect 2020, OpenStreetMap US: </b>I am volunteering in this community virtual event of OpenStreetMap US.</li>
+                        <li><b>Student Volunteer, Empirical Methods in Natural Language Processing 2020 (EMNLP): </b>I am volunteering in this upcoming conference. Responsibilities yet to be assigned.</li>
+                        <li><b>Former Chapter Leader, GirlScript: </b>I helped set-up the Delhi Chapter of GirlScript, while representing the same to various outreach events.</li>
+                        <li><b>Former Outreach Manager, Lean In India: </b>I served as the outreach manager for the Indian chapter of the organization to manage the social and outreach aspects.</li>
+                        <li><b>Founder, Lean In, South Asian University Circle: </b>I set-up the Lean In circle for South Asian University to motivate the members to contribute towards diversity in technology.</li>
+                        <li><b>Founder, SAU Programming Club: </b>I founded the SAU Programming Club with a bunch of enthusiastic members that were responsible for contributing to enhance the technical knowledge of everyone within the University.</li>
+                        <li><b>Former Community Head, Women in Machine Learning and Data Science (WiMLDS), Delhi: </b>I served as the Community head for the organization. My responsibilities involved managing the connected community through proper outreach while also organizing successful technical events.</li>
+                        <li><b>Admissions Volunteer, South Asian University: </b>I volunteered for this role twice, where I was responsible for guiding new applicants about the admission process to South Asian University, while helping new aspirants witht their doubts and queries.</li>
+                        <li><b>Volunteer, First Convocation of South Asian University: </b>I was responsible for ensuring the smooth flow of the large scale event that was held in Vigyan Bhawan in 2017.</li>
+                        <li><b>Volunteer, The Role of The Media in South Asia: </b>This was a conference organized at South Asian University, where I was responsible for managing the schedules and whereabouts of high-profile guests such as Subina Shrestha.</li>
+                      </ul>
+                      </div>
+                      </div>
+
+                      <hr width=50 color="darkgrey"/>
+
+                      <button id="Trigger6" class="extras-heading"><h2>Extra-Curricular Activities</h2></button>
+                      <div id="SlideWrapper6" class="height-transition height-transition-hidden">
+                      <!-- <h2>Extra-Curricular Activities</h2> -->
+                      <div>
+                      <p>Since childhood I have been extremely involved with extra-curricular activities (as you might already know by now) like music, fine arts and dance. I have also gained professional training in all of these activities. Additionally, I received professional degrees for completing courses in various Indian styles of music. As a result, I have performed at various events such as the closing ceremony of the XIX Commonwealth Games, 2010 (a dance piece choreographed by Shiamak Davar), inaugural ceremony of the art exhibition of Kirti Chandak (an Indian Classical piece in music, Raag Malkosh), etc.</p>
+                      <p>As an artist, I have participated in multiple art-exhibitions and have also won numerous awards for the same till date. I love to draw pencil-sketches (inanimate objects, especially complex objects and those made of steel), realistic landscapes.</p>
+                      </div>
+                      </div>
+
+                  </div>
+                </li>
                <li class="modal-tab tab6"><p>Coming Soon</p></li>
-               <li class="modal-tab tab7"><p>Coming Soon</p></li>
+               <li class="modal-tab tab7">
+                 <div>
+                  Coming Soon
+                 </div>
+               </li>
            </ul>
         </div>
     </div>
@@ -1289,6 +1691,73 @@ cursor:default;
     $('#div3').delay(700).fadeIn(400);
 });
         </script>
+
+
+<script type="text/javascript">
+    
+  $("#Trigger1").click(function () {
+      if ($("#SlideWrapper1").hasClass("height-transition-hidden"))
+          $("#SlideWrapper1").slideDownTransition();
+      else
+          $("#SlideWrapper1").slideUpTransition();
+  });
+
+  </script>
+
+<script type="text/javascript">
+    
+  $("#Trigger2").click(function () {
+      if ($("#SlideWrapper2").hasClass("height-transition-hidden"))
+          $("#SlideWrapper2").slideDownTransition();
+      else
+          $("#SlideWrapper2").slideUpTransition();
+  });
+
+  </script>
+
+<script type="text/javascript">
+    
+  $("#Trigger3").click(function () {
+      if ($("#SlideWrapper3").hasClass("height-transition-hidden"))
+          $("#SlideWrapper3").slideDownTransition();
+      else
+          $("#SlideWrapper3").slideUpTransition();
+  });
+
+  </script>
+
+<script type="text/javascript">
+    
+  $("#Trigger4").click(function () {
+      if ($("#SlideWrapper4").hasClass("height-transition-hidden"))
+          $("#SlideWrapper4").slideDownTransition();
+      else
+          $("#SlideWrapper4").slideUpTransition();
+  });
+
+  </script>
+
+<script type="text/javascript">
+    
+  $("#Trigger5").click(function () {
+      if ($("#SlideWrapper5").hasClass("height-transition-hidden"))
+          $("#SlideWrapper5").slideDownTransition();
+      else
+          $("#SlideWrapper5").slideUpTransition();
+  });
+
+  </script>
+
+<script type="text/javascript">
+    
+  $("#Trigger6").click(function () {
+      if ($("#SlideWrapper6").hasClass("height-transition-hidden"))
+          $("#SlideWrapper6").slideDownTransition();
+      else
+          $("#SlideWrapper6").slideUpTransition();
+  });
+
+  </script>
 
 
 <script type="text/javascript">
@@ -1387,6 +1856,18 @@ $(document).ready(function () {
 });
 
 
+  </script>
+
+  <script type="text/javascript">
+  $(function(){
+			$().timelinr({
+				orientation: 	'vertical',
+				issuesSpeed: 	300,
+				datesSpeed: 	100,
+				arrowKeys: 		'true',
+				startAt:		1
+			})
+		});
   </script>
 
  
