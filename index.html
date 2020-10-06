@@ -1176,7 +1176,27 @@ cursor:default;
       -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
       box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
       transform: scale(1.05);
-    }	
+    }
+		
+    .vertical-info {
+      border: 1px green;
+      position: fixed;
+      left: 2px;
+      top: 10px;
+      bottom: 0px;
+      float: left;
+      writing-mode: tb-rl;
+      text-orientation: mixed;
+      font-size: 12px;
+      font-style: normal;
+      letter-spacing: 3px;
+    }
+
+    .vertical-line {
+      border-left: 0.5px solid white;
+      left: 11.5px;
+      top: 600px;
+    }
 
 
 
@@ -1331,6 +1351,7 @@ cursor:default;
 </div> <!-wrapper->
 
 	<div id="div3" class='console-container'>
+        <div class="vertical-info" style="font-stretch: extra-expanded; font-style: normal; font-family: 'Montserrat', sans-serif"><a href="mailto:taniyaseth.sau@gmail.com" style="text-decoration: none; color:white">taniyaseth.sau@gmail.com</a>, <font style="color: grey">&#169Techniya Ghost owned by Taniya Seth</font><div class="vertical-line"></div></div>
         <span id='text'></span>
         <div class='console-underscore' id="console">&#95;            
         </div>
