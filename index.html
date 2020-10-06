@@ -1140,6 +1140,43 @@ cursor:default;
       font-family: 'Montserrat', sans-serif;
       /* font-style: bold; */
     }
+		
+    .resume{
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .resume-button{
+      background: black;
+      color: white;
+      font-size: 20px;
+      display: inline-block;
+      border-style: hidden;
+      border-color: transparent;
+      outline: none;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      border-radius: 5px;
+    }
+
+    .resume-button:hover {
+      background-color: white;
+      color: black;
+      font-style: bold;
+      
+    }
+
+    .resume-image {
+      transition: transform .2s;
+      
+    }
+
+    .resume-image:hover {
+      -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+      box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+    }	
 
 
 
@@ -1673,7 +1710,14 @@ cursor:default;
 
                   </div>
                 </li>
-               <li class="modal-tab tab6"><p>Coming Soon</p></li>
+               <li class="modal-tab tab6">
+                  <div class="resume">
+                    <p>Download my current resume below.</p>
+                    <a href="TaniyaS_CV.pdf" target="_blank"><img class="resume-image" style="height: 25%; width: 25%" src="images/CV.png"/></a>
+                    <p><a href="TaniyaS_CV.pdf" target="_blank"><button class="resume-button">Download</button></a></p>
+                    <p style="text-align: left; font-style: italic; font-size: 10px">Last updated: July 2020</p>
+                  </div> 
+                </li>
                <li class="modal-tab tab7">
                  <div>
                   Coming Soon
