@@ -1,1031 +1,1085 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-        <title>Taniya Seth</title>
-        <link rel="icon" href="images/techniya_png.png" type="image/png" sizes="16x16">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src='https://www.csslab.cl/ejemplos/timelinr/latest/js/jquery.timelinr-0.9.54.js'></script>
-        <script src="/script.js" type="text/javascript"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <script type="text/javascript">
-// text description, facts for every area: http://jsfiddle.net/ove4trwa/4/
-        $(document).ready(function() {
-        // Tooltip only Text
-        $('.masterTooltip').hover(function(){
-                // Hover over code
-                var title = $(this).attr('title');
-                $(this).data('tipText', title).removeAttr('title');
-                $('<p class="tooltip"></p>')
-                .text(title)
-                .appendTo('body')
-                .fadeIn('slow');
-        }, function() {
-                // Hover out code
-                $(this).attr('title', $(this).data('tipText'));
-                $('.tooltip').remove();
-        }).mousemove(function(e) {
-                var mousex = e.pageX + 20; //Get X coordinates
-                var mousey = e.pageY - 5; //Get Y coordinates
-                $('.tooltip')
-                .css({ top: mousey, left: mousex })
-        });
-});
-        </script>
-	<script type="text/javascript">
-  	$(function() {
-    	$('.map').maphilight({
-	fillColor: 'ffffff',
-	stroke: true,
-	strokeColor: '000000'
-	});
- 	});
-	</script>
-        
+  <title>Taniya Seth</title>
+  <link rel="icon" href="images/techniya_png.png" type="image/png" sizes="16x16">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src='https://www.csslab.cl/ejemplos/timelinr/latest/js/jquery.timelinr-0.9.54.js'></script>
+  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+  <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+  <script src='https://mreq.github.io/slick-lightbox/dist/slick-lightbox.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/packery/2.1.2/packery.pkgd.min.js'></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script type="text/javascript">
+    // text description, facts for every area: http://jsfiddle.net/ove4trwa/4/
+    $(document).ready(function () {
+      // Tooltip only Text
+      $('.masterTooltip').hover(function () {
+        // Hover over code
+        var title = $(this).attr('title');
+        $(this).data('tipText', title).removeAttr('title');
+        $('<p class="tooltip"></p>')
+          .text(title)
+          .appendTo('body')
+          .fadeIn('slow');
+      }, function () {
+        // Hover out code
+        $(this).attr('title', $(this).data('tipText'));
+        $('.tooltip').remove();
+      }).mousemove(function (e) {
+        var mousex = e.pageX + 20; //Get X coordinates
+        var mousey = e.pageY - 5; //Get Y coordinates
+        $('.tooltip')
+          .css({ top: mousey, left: mousex })
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $('.map').maphilight({
+        fillColor: 'ffffff',
+        stroke: true,
+        strokeColor: '000000'
+      });
+    });
+  </script>
 
-	<style id="compiled-css" type="text/css">
-      
-#wrapper {
-    position: fixed;
-    top: 10px;
-    left: -60px;
-    /*width: 100%;
+
+  <style id="compiled-css" type="text/css">
+    #wrapper {
+      position: fixed;
+      top: 10px;
+      left: -60px;
+      /*width: 100%;
     height: 90vh;*/
-}
+    }
 
-#wrapper:hover #div2 {
-    transition: transform 0.1s linear;
-}
+    #wrapper:hover #div2 {
+      transition: transform 0.1s linear;
+    }
 
-#div2 {
-    transform: rotate3d(0,0,0,0deg);
-    transition: transform 0.3s linear;
-}
+    #div2 {
+      transform: rotate3d(0, 0, 0, 0deg);
+      transition: transform 0.3s linear;
+    }
 
-#div2 {
-    /*width:700px;
-    height:700px;*/    
-    color:white;
-    transform: rotate3d(0,0,0,0deg);
-}
+    #div2 {
+      /*width:700px;
+    height:700px;*/
+      color: white;
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
 
-#div3 {
-     display:none;
-     top: 200px;
-     left: 575px;
-     right: 20px;
-     border: 0px solid green;
-     line-height: 20pt;
-}
+    #div3 {
+      display: none;
+      top: 200px;
+      left: 575px;
+      right: 20px;
+      border: 0px solid green;
+      line-height: 20pt;
+    }
 
-@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+    @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
-#div4 {
-     position: fixed;
-     top: 450px;
-     left: 600px;
-     right: 20px;
-     border: 0px solid green;
-     text-align:center;
-     padding: 0px;
-     font-size: 25px;
-     font-family:'Courier New';
-     font-stretch:condensed;
-     font-weight:normal;
-}
+    #div4 {
+      position: fixed;
+      top: 450px;
+      left: 600px;
+      right: 20px;
+      border: 0px solid green;
+      text-align: center;
+      padding: 0px;
+      font-size: 25px;
+      font-family: 'Courier New';
+      font-stretch: condensed;
+      font-weight: normal;
+    }
 
-#div5 {
-     position: fixed;
-     top: 10px;
-     left: 1125px;
-     right: 5px;
-     height: 45px;
-     bottom: 900px;
-     border: 0px solid green;
-     color: black;
-     font-style:italic;
-     text-align:right;
-     /*background-color:white;*/
-}
+    #div5 {
+      position: fixed;
+      top: 10px;
+      left: 1125px;
+      right: 5px;
+      height: 45px;
+      bottom: 900px;
+      border: 0px solid green;
+      color: black;
+      font-style: italic;
+      text-align: right;
+      /*background-color:white;*/
+    }
 
-.flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.social-links {
-	display: flex;
-}
+    .social-links {
+      display: flex;
+    }
 
-.social-btn {
-	cursor: pointer;
-	height: 30px;
-	width: 30px;
-	font-family: 'Titillium Web', sans-serif;
-	color: #fff;
-	border-radius: 10px;
-	/*box-shadow: 0px 10px 10px rgba(0,0,0,0.1);*/
-	/*background: white;*/
-	margin: 5px;
-	transition: 1s;
-}
+    .social-btn {
+      cursor: pointer;
+      height: 30px;
+      width: 30px;
+      font-family: 'Titillium Web', sans-serif;
+      color: #fff;
+      border-radius: 10px;
+      /*box-shadow: 0px 10px 10px rgba(0,0,0,0.1);*/
+      /*background: white;*/
+      margin: 5px;
+      transition: 1s;
+    }
 
-.social-btn span {
-	width: 0px;
-	overflow: hidden;
-	transition: 1s;
-	text-align: center;
-}
+    .social-btn span {
+      width: 0px;
+      overflow: hidden;
+      transition: 1s;
+      text-align: center;
+    }
 
-.social-btn:hover {
-	width: 150px;
-	border-radius: 5px;
-}
+    .social-btn:hover {
+      width: 150px;
+      border-radius: 5px;
+    }
 
-.social-btn:hover span {
-	padding: 2px;
-	width: max-content;
-}
+    .social-btn:hover span {
+      padding: 2px;
+      width: max-content;
+    }
 
-#linkedin svg {
-	fill: lightslategray;
-}
+    #linkedin svg {
+      fill: lightslategray;
+    }
 
-#github {
-	fill: lightslategray;
-}
+    #github {
+      fill: lightslategray;
+    }
 
-#researchgate {
-	fill: lightslategray;
-}
+    #researchgate {
+      fill: lightslategray;
+    }
 
-div[class*=box] {
-	height: 20%;
-	width: 50%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    div[class*=box] {
+      height: 20%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.btn {
-	line-height: 50px;
-	height: 50px;
-	text-align: center;
-	width: 250px;
-	cursor: pointer;
-}
+    .btn {
+      line-height: 50px;
+      height: 50px;
+      text-align: center;
+      width: 250px;
+      cursor: pointer;
+    }
 
-.btn-one {
-	color: #FFF;
-	transition: all 0.3s;
-	position: relative;
-        font-family: 'Raleway', sans-serif;
+    .btn-one {
+      color: #FFF;
+      transition: all 0.3s;
+      position: relative;
+      font-family: 'Raleway', sans-serif;
 
-}
-.btn-one span {
-	transition: all 0.3s;
-}
-.btn-one::before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	opacity: 1;
-	transition: all 0.3s;
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
-	border-top-color: rgba(255,255,255,0.5);
-	border-bottom-color: rgba(255,255,255,0.5);
-	transform: scale(0.1, 1);
-}
-.btn-one:hover span {
-	letter-spacing: 2px;
-        /*color: crimson;*/
-        font-weight: bold;
-}
-.btn-one:hover::before {
-	opacity: 1;	
-	transform: scale(1, 1);	
-}
-.btn-one::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	transition: all 0.3s;
-	background-color: rgba(255,255,255,0.0);
-}
-.btn-one:hover::after {
-	opacity: 0;	
-	transform: scale(0.1, 1);
-}
+    }
 
+    .btn-one span {
+      transition: all 0.3s;
+    }
 
+    .btn-one::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 1;
+      transition: all 0.3s;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+      border-top-style: solid;
+      border-bottom-style: solid;
+      border-top-color: rgba(255, 255, 255, 0.5);
+      border-bottom-color: rgba(255, 255, 255, 0.5);
+      transform: scale(0.1, 1);
+    }
 
-/* slide in animation: https://jsfiddle.net/be6enbvq/1/*/
-/* This doesn't work with maphighlight */
+    .btn-one:hover span {
+      letter-spacing: 2px;
+      /*color: crimson;*/
+      font-weight: bold;
+    }
 
-@keyframes slidingstep1 {
-  0% {
-    left: -100px;
-    opacity: 0;
-  }
-  5% {
-    left: -75px;
-    opacity: 0.2;
-  }
-  100% {
-    left: 0px;
-    opacity: 1;
-  }
-}
+    .btn-one:hover::before {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
 
-#div2{
-animation: slidingstep1 2s ease-out;
-  animation-iteration-count: 1;
-  animation-direction: left; /*normal*/
-  animation-fill-mode: forwards;
-}
+    .btn-one::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: all 0.3s;
+      background-color: rgba(255, 255, 255, 0.0);
+    }
 
-/* levitation effect */
-
-@keyframes float {
-	0% {
-		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-		transform: translatey(0px);
-	}
-	50% {
-		/*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
-		transform: translatey(-20px);
-	}
-	100% {
-		/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-		transform: translatey(0px);
-	}
-}
+    .btn-one:hover::after {
+      opacity: 0;
+      transform: scale(0.1, 1);
+    }
 
 
-/* levitation effect */
-#wrapper {
-	/*box-sizing: border-box;*/
-	/*overflow: hidden;*/
-	/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
-	transform: translatey(0px);
-	animation: float 4s ease-in-out infinite;
-}
 
-#wrapper img { width: 100%; height: auto; }
+    /* slide in animation: https://jsfiddle.net/be6enbvq/1/*/
+    /* This doesn't work with maphighlight */
 
-/* colorize and zoom on hover: https://w3bits.com/css-image-hover-zoom/ */
-#wrapper{
-  transition: transform .1s, filter 0.1s ease-in-out;
-  filter: grayscale(62.5%);
-}
+    @keyframes slidingstep1 {
+      0% {
+        left: -100px;
+        opacity: 0;
+      }
 
-/* stop levitation animation on hover: http://jsfiddle.net/j4Abq/2/ */
-#wrapper:hover{
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    animation-play-state: paused;
-    filter: grayscale(0);
-    transform:scale(1.1);
+      5% {
+        left: -75px;
+        opacity: 0.2;
+      }
 
-}
+      100% {
+        left: 0px;
+        opacity: 1;
+      }
+    }
 
-.tooltip {
-	/*display:none;*/
-	position:fixed;
-	border:0px solid #333;
-	background-color:white;
-	opacity:0.8;
-	border-radius:5px;
-	padding:30px;
-	color:black;
-        font-family:Papyrus,fantasy;
-	font-size:20px; /* space Arial */
-        font-weight:bold;
-}
+    #div2 {
+      animation: slidingstep1 2s ease-out;
+      animation-iteration-count: 1;
+      animation-direction: left;
+      /*normal*/
+      animation-fill-mode: forwards;
+    }
 
-body {
-background-color: black;
-display: flex;
-}
+    /* levitation effect */
 
-#absolute-wrapper{
-    width:100%;
-    height:100%;
-    overflow:auto;
-    display:flex;
-}
+    @keyframes float {
+      0% {
+        /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+        transform: translatey(0px);
+      }
 
-.hidden {
-  opacity:0;
-}
+      50% {
+        /*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+        transform: translatey(-20px);
+      }
 
-.console-container {
- 
-  display:none;  
-  font-family:"Courier New";
-  font-weight:bold;
-  font-size:5em;
-  text-align:left;
-  /*height:200px;
+      100% {
+        /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+        transform: translatey(0px);
+      }
+    }
+
+
+    /* levitation effect */
+    #wrapper {
+      /*box-sizing: border-box;*/
+      /*overflow: hidden;*/
+      /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+      transform: translatey(0px);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    #wrapper img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* colorize and zoom on hover: https://w3bits.com/css-image-hover-zoom/ */
+    #wrapper {
+      transition: transform .1s, filter 0.1s ease-in-out;
+      filter: grayscale(62.5%);
+    }
+
+    /* stop levitation animation on hover: http://jsfiddle.net/j4Abq/2/ */
+    #wrapper:hover {
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+      filter: grayscale(0);
+      transform: scale(1.1);
+
+    }
+
+    .tooltip {
+      /*display:none;*/
+      position: fixed;
+      border: 0px solid #333;
+      background-color: white;
+      opacity: 0.8;
+      border-radius: 5px;
+      padding: 30px;
+      color: black;
+      font-family: Papyrus, fantasy;
+      font-size: 20px;
+      /* space Arial */
+      font-weight: bold;
+    }
+
+    body {
+      background-color: black;
+      display: flex;
+    }
+
+    #absolute-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      display: flex;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .console-container {
+
+      display: none;
+      font-family: "Courier New";
+      font-weight: bold;
+      font-size: 5em;
+      text-align: left;
+      /*height:200px;
   width:600px;*/
-  display:block;
-  /*position:absolute;*/
-  position: fixed;
-  top: 100px;
-  left: 650px;
-  color:white;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  margin:auto;
-  line-height: 20px;
-}
-.console-underscore {
-  font-weight: normal;  
-  display:inline-block;
-  position:relative;
-  top:-0.14em;
-  left:10px;
-}
-.intro-text-one {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  color:silver;
-  /*text-align: center;*/
-}
+      display: block;
+      /*position:absolute;*/
+      position: fixed;
+      top: 100px;
+      left: 650px;
+      color: white;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      line-height: 20px;
+    }
 
-.intro-text-two {
-  font-family: "Courier New";
-  font-size: 16px;
-  font-weight: normal;
-  color:darkkhaki;
-  /*text-align: center;*/
-}
+    .console-underscore {
+      font-weight: normal;
+      display: inline-block;
+      position: relative;
+      top: -0.14em;
+      left: 10px;
+    }
 
-.intro-text-three {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  color:salmon;
- /* text-align: center;*/
-}
+    .intro-text-one {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: normal;
+      color: silver;
+      /*text-align: center;*/
+    }
 
-/********************MODAL************************************/
+    .intro-text-two {
+      font-family: "Courier New";
+      font-size: 16px;
+      font-weight: normal;
+      color: darkkhaki;
+      /*text-align: center;*/
+    }
 
-@import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700italic,700);
-@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
-* {
-  /*padding:0;
+    .intro-text-three {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: normal;
+      color: salmon;
+      /* text-align: center;*/
+    }
+
+    /********************MODAL************************************/
+
+    @import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700italic,700);
+    @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+    * {
+      /*padding:0;
   margin:0;*/
-  position:relative;
-  box-sizing:border-box;
-  -webkit-font-smoothing: subpixel-antialiased !important; 
-  -webkit-backface-visibility: hidden; 
-}
-body, html{
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smooth:always;
-}
+      position: relative;
+      box-sizing: border-box;
+      -webkit-font-smoothing: subpixel-antialiased !important;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+    }
 
-a.modal-open {
-  display:block;
-  padding:5px;
-  color:black;
-  font-weight:normal;
-  margin:50px auto;
-  width:200px;
-  background:black;
-  border-radius:2px;
-  text-align:center;
-  text-decoration:none;
-}
-.modal {
-  background:rgba(0,0,0,0.7);
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0px;
-  left:0px;
-  bottom:0px;
-  transition:all .5s ease-in-out;
-  opacity:0;
-  z-index:-1;
-}
-.modal:target {
-  opacity:1;
-  transition:all .5s ease-in-out;
-  z-index:+1;
-}
+    body,
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smooth: always;
+    }
 
-/* Background animation: https://codepen.io/P1N2O/pen/pyBNzX */
+    a.modal-open {
+      display: block;
+      padding: 5px;
+      color: black;
+      font-weight: normal;
+      margin: 50px auto;
+      width: 200px;
+      background: black;
+      border-radius: 2px;
+      text-align: center;
+      text-decoration: none;
+    }
 
-.modal-content {
-  position:fixed;
-  top:50%;
-  left:50%;
-  height:575px;
-  width:1000px;
-  border-radius:4px;
-  transform:translate(-50%, -200%);
-  transition:all 1s ease-in-out;
-  perspective: 1000;
-  outline:1px solid transparent;
-  opacity:1;
+    .modal {
+      background: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      transition: all .5s ease-in-out;
+      opacity: 0;
+      z-index: -1;
+    }
 
-  background: rgb(0,0,0);
-  background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 42%, rgba(150,76,29,1) 100%);
-  /*background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 16%, rgba(105,61,33,1) 64%, rgba(150,76,29,1) 100%);*/
-  background-size: 300% 300%;
-  animation: gradient 40s ease infinite;
-}
+    .modal:target {
+      opacity: 1;
+      transition: all .5s ease-in-out;
+      z-index: +1;
+    }
 
+    /* Background animation: https://codepen.io/P1N2O/pen/pyBNzX */
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+    .modal-content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      height: 575px;
+      width: 1000px;
+      border-radius: 4px;
+      transform: translate(-50%, -200%);
+      transition: all 1s ease-in-out;
+      perspective: 1000;
+      outline: 1px solid transparent;
+      opacity: 1;
+
+      background: rgb(0, 0, 0);
+      background: linear-gradient(30deg, rgba(0, 0, 0, 1) 0%, rgba(38, 38, 38, 1) 42%, rgba(150, 76, 29, 1) 100%);
+      /*background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 16%, rgba(105,61,33,1) 64%, rgba(150,76,29,1) 100%);*/
+      background-size: 300% 300%;
+      animation: gradient 40s ease infinite;
+    }
 
 
-.modal:target .modal-content {
-  transform:translate(-50%, -50%);
-  transition:all .5s ease-in-out;
-  transition-delay: .5s;
-  z-index:9999;
-  opacity:1;
-}
-.modal-close {
-  float:right;
-  text-decoration:none;
-  padding:15px 15px;
-  color:#424242;
-  font-weight:800;
-  transition:all .5s ease-in-out;
-  z-index:+1;
-  background:rgba(0,0,0,0);
-  text-align:center;
-  border-radius:0 4px 0 0;
-}
-.modal-close:hover {
-  color:#fff;
-  background:rgba(0,0,0,0);
-}
-.modal-content h3 {
-  padding:10px;
-  display:none;
-  text-align:center;
-  border-bottom:1px solid #e0e0e0;
-  text-transform:uppercase;
-  background:rgba(2,162,239,1);
-  color:#fff;
-  border-radius:4px 4px 0 0;
-}
-.modal-area {
-  padding:20px;
-}
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
 
-.modal-area input[type="radio"] {
-  display:none;
-}
-.modal-area label {
-  margin-bottom: 6px;
-  margin-right:5px;
-  float:left;
-  display:block;
-  padding:10px 20px;
-  /*height: 20px;
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
+    .modal:target .modal-content {
+      transform: translate(-50%, -50%);
+      transition: all .5s ease-in-out;
+      transition-delay: .5s;
+      z-index: 9999;
+      opacity: 1;
+    }
+
+    .modal-close {
+      float: right;
+      text-decoration: none;
+      padding: 15px 15px;
+      color: #424242;
+      font-weight: 800;
+      transition: all .5s ease-in-out;
+      z-index: +1;
+      background: rgba(0, 0, 0, 0);
+      text-align: center;
+      border-radius: 0 4px 0 0;
+    }
+
+    .modal-close:hover {
+      color: #fff;
+      background: rgba(0, 0, 0, 0);
+    }
+
+    .modal-content h3 {
+      padding: 10px;
+      display: none;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+      text-transform: uppercase;
+      background: rgba(2, 162, 239, 1);
+      color: #fff;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .modal-area {
+      padding: 20px;
+    }
+
+    .modal-area input[type="radio"] {
+      display: none;
+    }
+
+    .modal-area label {
+      margin-bottom: 6px;
+      margin-right: 5px;
+      float: left;
+      display: block;
+      padding: 10px 20px;
+      /*height: 20px;
   width: 100px;*/
-  border-radius:4px 4px 4px 4px;
-  font-weight:700;
-  cursor:pointer;
-  text-align: center;
-  z-index:+2;
-  background:rgba(0,0,0,1); /*0.3*/
-  color:#fff;
-  transition:all 0.3s ease-in-out;
-  font-family: 'Raleway', sans-serif;
-  text-transform:uppercase;
-  font-weight: normal;
-  font-size: 15px;
-}
+      border-radius: 4px 4px 4px 4px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      z-index: +2;
+      background: rgba(0, 0, 0, 1);
+      /*0.3*/
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 15px;
+    }
 
-.modal-area label:hover{
-color: white;
-background: #cc5200;
-font-weight: bold;
-transform: scale(1.05);
+    .modal-area label:hover {
+      color: white;
+      background: #cc5200;
+      font-weight: bold;
+      transform: scale(1.05);
 
-}
+    }
 
-.modal-area input[type="radio"]:checked + label {
-  background:#fff;
-  color:#424242;
-  font-weight:bold;
-}
-.tab-list {
-  display:block;
-  padding:0;
-  margin:0;
-  list-style-type:none;
-  width:100%;
-  overflow:hidden;
-  height:500px;
-}
-.tab-list:before {
-  content:"";
-  display:block;
-  height:0;
-  clear:both;
-}
-.modal-tab {
-  display:inline-block;
-  width:100%;
-  padding-top:10px;
-  transform:translateX(-150%);
-  transition:all 0.5s cubic-bezier(0, 0, .40, 1); /*300ms*/
-  opacity:0;
-  top:0px;
-  overflow: auto;
-  position:absolute;
-  height:500px;
-  color: #fff;
-  perspective:1000;
-  font-family: 'Montserrat', sans-serif;
-  text-align:justify;
-}
+    .modal-area input[type="radio"]:checked+label {
+      background: #fff;
+      color: #424242;
+      font-weight: bold;
+    }
 
-.modal-tab::-webkit-scrollbar-track
-{
-	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
-	border-radius: 10px;
-	background-color: transparent; /* #F5F5F5 */
-}
+    .tab-list {
+      display: block;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      width: 100%;
+      overflow: hidden;
+      height: 500px;
+    }
 
-.modal-tab::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: transparent; /* #F5F5F5 */
-}
+    .tab-list:before {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+    }
 
-.modal-tab::-webkit-scrollbar-thumb
-{
-	background-color: silver;
-        border-radius: 10px;
-}
+    .modal-tab {
+      display: inline-block;
+      width: 100%;
+      padding-top: 10px;
+      transform: translateX(-150%);
+      transition: all 0.5s cubic-bezier(0, 0, .40, 1);
+      /*300ms*/
+      opacity: 0;
+      top: 0px;
+      overflow: auto;
+      position: absolute;
+      height: 500px;
+      color: #fff;
+      perspective: 1000;
+      font-family: 'Montserrat', sans-serif;
+      text-align: justify;
+    }
 
-#opentab1:checked ~ .tab-list .tab1 {
-  transform:translateX(0%);
-  opacity:1;
-}
+    .modal-tab::-webkit-scrollbar-track {
+      /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+      border-radius: 10px;
+      background-color: transparent;
+      /* #F5F5F5 */
+    }
 
-#opentab2:checked ~ .tab-list .tab2 {
-  transform:translateX(0%);
-  opacity:1;
-}
+    .modal-tab::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+      /* #F5F5F5 */
+    }
 
-#opentab3:checked ~ .tab-list .tab3 {
-  transform:translateX(0%);
-  opacity:1;
-}
+    .modal-tab::-webkit-scrollbar-thumb {
+      background-color: silver;
+      border-radius: 10px;
+    }
 
-#opentab4:checked ~ .tab-list .tab4 {
-  transform:translateX(0%);
-  opacity:1;
-}
+    #opentab1:checked~.tab-list .tab1 {
+      transform: translateX(0%);
+      opacity: 1;
+    }
 
-#opentab5:checked ~ .tab-list .tab5 {
-  transform:translateX(0%);
-  opacity:1;
-}
+    #opentab2:checked~.tab-list .tab2 {
+      transform: translateX(0%);
+      opacity: 1;
+    }
 
-#opentab6:checked ~ .tab-list .tab6 {
-  transform:translateX(0%);
-  opacity:1;
-}
+    #opentab3:checked~.tab-list .tab3 {
+      transform: translateX(0%);
+      opacity: 1;
+    }
 
-#opentab7:checked ~ .tab-list .tab7 {
-  transform:translateX(0%);
-  opacity:1;
-}
+    #opentab4:checked~.tab-list .tab4 {
+      transform: translateX(0%);
+      opacity: 1;
+    }
 
-/* close button*/
+    #opentab5:checked~.tab-list .tab5 {
+      transform: translateX(0%);
+      opacity: 1;
+    }
 
-.butt {
-  background: none;
-  border: 0;
-  box-sizing: border-box;
-  color: transparent;
-  cursor: pointer;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
-  left: 0%;
-  letter-spacing: 1.5px;
-  line-height: 20px;
-  outline: none;
-  overflow: hidden;
-  padding: 0px 0 0;
-  position: absolute;
-  text-transform: uppercase;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.2s ease-in;
-  width: 100px;
-}
+    #opentab6:checked~.tab-list .tab6 {
+      transform: translateX(0%);
+      opacity: 1;
+    }
 
-.butt::before,
-.butt::after {
-  background-color: black;
-  content: '';
-  display: block;
-  height: 1px;
-  left: 0%;
-  position: absolute;
-  transform-origin: center;
-  transition: all 0.2s ease-in;
-  width: 100px;
-  z-index: -1;
-}
+    #opentab7:checked~.tab-list .tab7 {
+      transform: translateX(0%);
+      opacity: 1;
+    }
 
-.butt::before {
-  top: 0;
-  transform: rotate(45deg);
-}
+    /* close button*/
 
-.butt::after {
-  bottom: 0;
-  transform: rotate(-45deg);
-}
+    .butt {
+      background: none;
+      border: 0;
+      box-sizing: border-box;
+      color: transparent;
+      cursor: pointer;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 18px;
+      left: 0%;
+      letter-spacing: 1.5px;
+      line-height: 20px;
+      outline: none;
+      overflow: hidden;
+      padding: 0px 0 0;
+      position: absolute;
+      text-transform: uppercase;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s ease-in;
+      width: 100px;
+    }
 
-.butt:hover {
-  color: #FFF;
-}
+    .butt::before,
+    .butt::after {
+      background-color: black;
+      content: '';
+      display: block;
+      height: 1px;
+      left: 0%;
+      position: absolute;
+      transform-origin: center;
+      transition: all 0.2s ease-in;
+      width: 100px;
+      z-index: -1;
+    }
 
-.butt:hover::before,
-.butt:hover::after {
-  height: 50px;
-  transform: rotate(0deg);
-}
+    .butt::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
 
-.cancel {
-position: absolute;
-width: 100%;
-height:100%;
-cursor:default;
-}
+    .butt::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+
+    .butt:hover {
+      color: #FFF;
+    }
+
+    .butt:hover::before,
+    .butt:hover::after {
+      height: 50px;
+      transform: rotate(0deg);
+    }
+
+    .cancel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: default;
+    }
 
 
- /****************************************************************************/
+    /****************************************************************************/
 
-.item {
- margin:10px;   
-}
+    .item {
+      margin: 10px;
+    }
 
-.image-list-small {
-  font-family: 'Montserrat',sans-serif;
-  margin: 0 auto;
-  text-align: center;
-  max-width: 1000px;
-  padding: 0;
-}
+    .image-list-small {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 1000px;
+      padding: 0;
+    }
 
-.image-list-small li {
-  display: inline-block;
-  width: 181px;
-  /*margin: 0 12px 30px;*/
-  text-align: top;
-}
+    .image-list-small li {
+      display: inline-block;
+      width: 181px;
+      /*margin: 0 12px 30px;*/
+      text-align: top;
+    }
 
-.image-list-small li > a {
-  display: block;
-  text-decoration: none;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /*height: 137px;*/
-  margin: 0;
-  padding: 0;
-  /*border: 4px solid #ffffff;*/
-  /*outline: 1px solid #d0d0d0;*/
-  /*box-shadow: 0 2px 1px #DDD;*/
-}
+    .image-list-small li>a {
+      display: block;
+      text-decoration: none;
+      background-size: cover;
+      background-repeat: no-repeat;
+      /*height: 137px;*/
+      margin: 0;
+      padding: 0;
+      /*border: 4px solid #ffffff;*/
+      /*outline: 1px solid #d0d0d0;*/
+      /*box-shadow: 0 2px 1px #DDD;*/
+    }
 
-.image-list-small .details {
-  margin-top: 13px;
-}
+    .image-list-small .details {
+      margin-top: 13px;
+    }
 
-.image-list-small .details p {
-  display: block;
-  font-size: 11.5px;
-  margin: 0 0 3px 0;
-  /*white-space: nowrap;*/
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-decoration: none;
-  color: #fff;
-}
+    .image-list-small .details p {
+      display: block;
+      font-size: 11.5px;
+      margin: 0 0 3px 0;
+      /*white-space: nowrap;*/
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-decoration: none;
+      color: #fff;
+    }
 
-.image-list-small .papers {
- height: 200px;
- transition: transform .2s;
- -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
-}
+    .image-list-small .papers {
+      height: 200px;
+      transition: transform .2s;
+      -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.2);
+    }
 
-.image-list-small .papers:hover {
- transform: scale(1.2);
-}
+    .image-list-small .papers:hover {
+      transform: scale(1.2);
+    }
 
-.frame1 {
-  background-color:#ddc;
-  border:solid 5vmin #eee;
-  border-bottom-color:#fff;
-  border-left-color:#eee;
-  border-radius:2px;
-  border-right-color:#eee;
-  border-top-color:#ddd;
-  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-  box-sizing:border-box;
-  display:inline-block;
-  margin:20px; /* 10vh 10vw */
-  height:auto;
-  width:auto;
-  padding:8vmin;
-  position:relative;
-  text-align:center;
-  color: black;
-  transition: transform .2s;
-}
+    .frame1 {
+      background-color: #ddc;
+      border: solid 5vmin #eee;
+      border-bottom-color: #fff;
+      border-left-color: #eee;
+      border-radius: 2px;
+      border-right-color: #eee;
+      border-top-color: #ddd;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 20px;
+      /* 10vh 10vw */
+      height: auto;
+      width: auto;
+      padding: 8vmin;
+      position: relative;
+      text-align: center;
+      color: black;
+      transition: transform .2s;
+    }
 
-.frame1:hover {
-  transform: scale(1.1);
-}
+    .frame1:hover {
+      transform: scale(1.1);
+    }
 
-.frame2 {
-  background-color:#ddc;
-  border:solid 5vmin #eee;
-  border-bottom-color:#fff;
-  border-left-color:#eee;
-  border-radius:2px;
-  border-right-color:#eee;
-  border-top-color:#ddd;
-  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-  box-sizing:border-box;
-  display:inline-block;
-  margin:20px;
-  height:auto;
-  width:auto;
-  padding:8vmin;
-  position:relative;
-  text-align:center;
-  color: black;
-  transition: transform .2s;
-}
+    .frame2 {
+      background-color: #ddc;
+      border: solid 5vmin #eee;
+      border-bottom-color: #fff;
+      border-left-color: #eee;
+      border-radius: 2px;
+      border-right-color: #eee;
+      border-top-color: #ddd;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 20px;
+      height: auto;
+      width: auto;
+      padding: 8vmin;
+      position: relative;
+      text-align: center;
+      color: black;
+      transition: transform .2s;
+    }
 
-.frame2:hover {
-  transform: scale(1.1);
-}
+    .frame2:hover {
+      transform: scale(1.1);
+    }
 
-.frame3 {
-  background-color:#ddc;
-  border:solid 5vmin #eee;
-  border-bottom-color:#fff;
-  border-left-color:#eee;
-  border-radius:2px;
-  border-right-color:#eee;
-  border-top-color:#ddd;
-  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-  box-sizing:border-box;
-  display:inline-block;
-  margin:20px;
-  height:auto; /*60vh*/
-  width:auto;
-  padding:8vmin;
-  position:relative;
-  text-align:center;
-  color: black;
-  transition: transform .2s;
-}
+    .frame3 {
+      background-color: #ddc;
+      border: solid 5vmin #eee;
+      border-bottom-color: #fff;
+      border-left-color: #eee;
+      border-radius: 2px;
+      border-right-color: #eee;
+      border-top-color: #ddd;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 20px;
+      height: auto;
+      /*60vh*/
+      width: auto;
+      padding: 8vmin;
+      position: relative;
+      text-align: center;
+      color: black;
+      transition: transform .2s;
+    }
 
-.frame3:hover {
-  transform: scale(1.1);
-}
+    .frame3:hover {
+      transform: scale(1.1);
+    }
 
-.edu {
-  text-align:center;
-}
+    .edu {
+      text-align: center;
+    }
 
-/* Shine effect on hover: https://codepen.io/fishtoyo/pen/VYQVQx */
+    /* Shine effect on hover: https://codepen.io/fishtoyo/pen/VYQVQx */
 
-.first_frame:after{
-   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: rgba(255,255,255,1);
-	-webkit-transition: none;
-	   -moz-transition: none;
-	        transition: none;
-}
+    .first_frame:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 1);
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+    }
 
-.first_frame:hover:after {
-  width: 120%;
-  background-color: rgba(255,255,255,0);
-  
-	-webkit-transition: all 0.4s ease-in-out;
-	   -moz-transition: all 0.4s ease-in-out;
-	        transition: all 0.4s ease-in-out;
-}
+    .first_frame:hover:after {
+      width: 120%;
+      background-color: rgba(255, 255, 255, 0);
 
-.second_frame:after{
-   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: rgba(255,255,255,1);
-	-webkit-transition: none;
-	   -moz-transition: none;
-	        transition: none;
-}
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
 
-.second_frame:hover:after {
-  width: 120%;
-  background-color: rgba(255,255,255,0);
-  
-	-webkit-transition: all 0.4s ease-in-out;
-	   -moz-transition: all 0.4s ease-in-out;
-	        transition: all 0.4s ease-in-out;
-}
+    .second_frame:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 1);
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+    }
 
-.third_frame:after{
-   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: rgba(255,255,255,1);
-	-webkit-transition: none;
-	   -moz-transition: none;
-	        transition: none;
-}
+    .second_frame:hover:after {
+      width: 120%;
+      background-color: rgba(255, 255, 255, 0);
 
-.third_frame:hover:after {
-  width: 120%;
-  background-color: rgba(255,255,255,0);
-  
-	-webkit-transition: all 0.4s ease-in-out;
-	   -moz-transition: all 0.4s ease-in-out;
-	        transition: all 0.4s ease-in-out;
-}
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
 
-/*******************************************************************************************************************************************/
+    .third_frame:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 1);
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+    }
 
-#dates a {
-    color: #ffffcc;
-	text-decoration: none;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
-	-ms-transition: 0.5s;
-	transition: 0.5s;
-}
+    .third_frame:hover:after {
+      width: 120%;
+      background-color: rgba(255, 255, 255, 0);
 
-#dates a:hover, #dates a.selected {
-    color: #ffcc00;
-}
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
 
-#issues h1 {
-    font-size: 15px;
-}
+    /*******************************************************************************************************************************************/
 
-#timeline {
-        padding: 0px;
-		width: 900px;
-		height: 470px;
-		overflow: hidden;
-		margin-top: 20px;
-		position: relative;
-		background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/dot.gif') 3px top repeat-y;
-	}
-		#dates {
-            margin: 0px;
-            padding: 0px;
-			width: 200px;
-			height: auto;
-			overflow: hidden;
-			float: left;
-		}
-			#dates li {
-                margin: 0px;
-                padding: 0px;
-				list-style: none;
-				width: 100px;
-				height: 100px;
-				line-height: 0px;
-				font-size: 22px;
-				padding-left: 20px;
-				background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/biggerdot.png') left center no-repeat;
-			}
-				#dates a {
-					line-height: 22px;
-					padding-bottom: 0px;
-				}
-				#dates .selected {
-			        font-size: 22px;
-                    font-weight: bold;
-				}
-		
-		#issues {
-			width: 700px;
-			height: 500px;
+    #dates a {
+      color: #ffffcc;
+      text-decoration: none;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+      -ms-transition: 0.5s;
+      transition: 0.5s;
+    }
+
+    #dates a:hover,
+    #dates a.selected {
+      color: #ffcc00;
+    }
+
+    #issues h1 {
+      font-size: 15px;
+    }
+
+    #timeline {
+      padding: 0px;
+      width: 900px;
+      height: 470px;
+      overflow: hidden;
+      margin-top: 20px;
+      position: relative;
+      background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/dot.gif') 3px top repeat-y;
+    }
+
+    #dates {
+      margin: 0px;
+      padding: 0px;
+      width: 200px;
+      height: auto;
+      overflow: hidden;
+      float: left;
+    }
+
+    #dates li {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      width: 100px;
+      height: 100px;
+      line-height: 0px;
+      font-size: 22px;
+      padding-left: 20px;
+      background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/biggerdot.png') left center no-repeat;
+    }
+
+    #dates a {
+      line-height: 22px;
+      padding-bottom: 0px;
+    }
+
+    #dates .selected {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    #issues {
+      width: 700px;
+      height: 500px;
       padding-top: 30px;
-			overflow: hidden;
-			float: left;
+      overflow: hidden;
+      float: left;
       vertical-align: middle;
-		}	
-			#issues li {
-				max-width: 750px;
-				height: 500px;
-				list-style: none;
-        text-align: center;
-			}
-				#issues li.selected img {
-					-webkit-transform: scale(1.1,1.1);
-					-moz-transform: scale(1.1,1.1);
-				    -o-transform: scale(1.1,1.1);
-				    -ms-transform: scale(1.1,1.1);
-				    transform: scale(1.1,1.1);
-				}
-				#issues li img {
-					/* float: left; */
-                    /* width: 250px; */
-                    /* margin-bottom: 0px; */
-					margin: 10px 30px 10px 30px;
-					-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */   
-					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);/* IE 6 & 7 */      
-					zoom: 1;
-					-webkit-transition: all 2s ease-in-out;
-					-moz-transition: all 2s ease-in-out;
-					-o-transition: all 2s ease-in-out;
-					-ms-transition: all 2s ease-in-out; 
-					transition: all 2s ease-in-out;
-					-webkit-transform: scale(0.7,0.7);
-					-moz-transform: scale(0.7,0.7);
-				    -o-transform: scale(0.7,0.7);
-				    -ms-transform: scale(0.7,0.7);
-				    transform: scale(0.7,0.7);
-				}
-                
-				#issues li h1 {
-					color: #ffcc00;
-					font-size: 30px;
-					text-align: center;
-					text-shadow: #000 1px 1px 2px;
-				}
-				#issues li p {
-					font-size: 14px;
-					margin: 10px 20px;
-					font-weight: normal;
-					line-height: 22px;
-					text-shadow: #000 1px 1px 2px;
-				}
-		
-		/* #grad_top,
+    }
+
+    #issues li {
+      max-width: 750px;
+      height: 500px;
+      list-style: none;
+      text-align: center;
+    }
+
+    #issues li.selected img {
+      -webkit-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      -o-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+      transform: scale(1.1, 1.1);
+    }
+
+    #issues li img {
+      /* float: left; */
+      /* width: 250px; */
+      /* margin-bottom: 0px; */
+      margin: 10px 30px 10px 30px;
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
+      /* IE 8 */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+      /* IE 6 & 7 */
+      zoom: 1;
+      -webkit-transition: all 2s ease-in-out;
+      -moz-transition: all 2s ease-in-out;
+      -o-transition: all 2s ease-in-out;
+      -ms-transition: all 2s ease-in-out;
+      transition: all 2s ease-in-out;
+      -webkit-transform: scale(0.7, 0.7);
+      -moz-transform: scale(0.7, 0.7);
+      -o-transform: scale(0.7, 0.7);
+      -ms-transform: scale(0.7, 0.7);
+      transform: scale(0.7, 0.7);
+    }
+
+    #issues li h1 {
+      color: #ffcc00;
+      font-size: 30px;
+      text-align: center;
+      text-shadow: #000 1px 1px 2px;
+    }
+
+    #issues li p {
+      font-size: 14px;
+      margin: 10px 20px;
+      font-weight: normal;
+      line-height: 22px;
+      text-shadow: #000 1px 1px 2px;
+    }
+
+    /* #grad_top,
 		#grad_bottom {
 			width: 900px;
 			height: 80px;
@@ -1039,57 +1093,62 @@ cursor:default;
 		        bottom: 0;
 		        background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/grad_bottom.png') repeat-x;
 			} */
-		
-		#next,
-		#prev {
-			position: absolute;
-			left: 61.25%;
-			font-size: 70px;
-			width: 38px;
-			height: 22px;
-			background-position: 0 -44px;
-			background-repeat: no-repeat;
-			text-indent: -9999px;
-			overflow: hidden;
-		}
-			#next:hover,
-			#prev:hover {
-				background-position:  0 0;
-			}
-			#next {
-				bottom: 0;
-				background-image: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/next_v.png');
-			}
-			#prev {
-				top: 0;
-				background-image: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/prev_v.png');
-			}
-				#next.disabled,
-				#prev.disabled {
-					opacity: 0.2;
-        }
-    
-    .extras{
+
+    #next,
+    #prev {
+      position: absolute;
+      left: 61.25%;
+      font-size: 70px;
+      width: 38px;
+      height: 22px;
+      background-position: 0 -44px;
+      background-repeat: no-repeat;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+
+    #next:hover,
+    #prev:hover {
+      background-position: 0 0;
+    }
+
+    #next {
+      bottom: 0;
+      background-image: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/next_v.png');
+    }
+
+    #prev {
+      top: 0;
+      background-image: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/prev_v.png');
+    }
+
+    #next.disabled,
+    #prev.disabled {
+      opacity: 0.2;
+    }
+
+    .extras {
       text-align: center;
       font-size: 15px;
     }
 
-    .extras h2{
-      color:   #ffcc00;
+    .extras h2 {
+      color: #ffcc00;
       font-size: 24px;
       text-shadow: 2px 2px black;
     }
 
-    .extras li{
+    .extras li {
       text-align: left;
       margin: 0 0 3px 0;
     }
 
-    .githubutt{
+    .githubutt {
       background-color: black;
       border: none;
       color: white;
-      padding: 1px 3px 1px 3px; /*top right bottom left*/
+      padding: 1px 3px 1px 3px;
+      /*top right bottom left*/
       text-align: center;
       margin: 5px;
       text-decoration: none;
@@ -1098,12 +1157,12 @@ cursor:default;
       border-radius: 5px;
     }
 
-    .githubutt:hover{
+    .githubutt:hover {
       background-color: rgb(75, 51, 6);
       box-shadow: 2px 2px black;
     }
 
-    .hr{
+    .hr {
       display: block;
       height: 2px;
       border: black;
@@ -1117,19 +1176,33 @@ cursor:default;
     }
 
     .height-transition {
-        -webkit-transition: max-height 0.5s ease-in-out;
-        -moz-transition: max-height 0.5s ease-in-out;
-        -o-transition: max-height 0.5s ease-in-out;
-        transition: max-height 0.5s ease-in-out;
-        overflow-y: hidden;            
+      -webkit-transition: max-height 0.5s ease-in-out;
+      -moz-transition: max-height 0.5s ease-in-out;
+      -o-transition: max-height 0.5s ease-in-out;
+      transition: max-height 0.5s ease-in-out;
+      overflow-y: hidden;
     }
-    .height-transition-hidden {            
-        max-height: 0;            
+
+    .height-transition-hidden {
+      max-height: 0;
+    }
+
+    .height-transition1 {
+      -webkit-transition: max-height 0.5s ease-in-out;
+      -moz-transition: max-height 0.5s ease-in-out;
+      -o-transition: max-height 0.5s ease-in-out;
+      transition: max-height 0.5s ease-in-out;
+      overflow-y: hidden;
+      /* display: flex; */
+    }
+
+    .height-transition-hidden1 {
+      max-height: 0;
     }
 
     .extras-heading {
       background-color: transparent;
-      color:   #ffcc00;
+      color: #ffcc00;
       font-size: 24px;
       text-shadow: 2px 2px black;
       display: inline-block;
@@ -1140,13 +1213,13 @@ cursor:default;
       font-family: 'Montserrat', sans-serif;
       /* font-style: bold; */
     }
-		
-    .resume{
+
+    .resume {
       vertical-align: middle;
       text-align: center;
     }
 
-    .resume-button{
+    .resume-button {
       background: black;
       color: white;
       font-size: 20px;
@@ -1163,12 +1236,12 @@ cursor:default;
       background-color: white;
       color: black;
       font-style: bold;
-      
+
     }
 
     .resume-image {
       transition: transform .2s;
-      
+
     }
 
     .resume-image:hover {
@@ -1177,7 +1250,7 @@ cursor:default;
       box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
       transform: scale(1.05);
     }
-		
+
     .vertical-info {
       border: 1px green;
       position: fixed;
@@ -1198,13 +1271,293 @@ cursor:default;
       top: 600px;
     }
 
+    /******************************************************************************************************************************************
+     ARTWORK *****************************************************************************************************************************************/
+
+    .masonry {
+      box-sizing: border-box;
+    }
+
+    .masonry,
+    .masonry-item,
+    .masonry:before,
+    .masonry:after,
+    .masonry-item:before,
+    .masonry-item:after {
+      box-sizing: inherit;
+    }
+
+    .masonry {
+      margin: auto;
+      max-width: 768px;
+      column-gap: 0.075em;
+    }
+
+    /* The Masonry Brick */
+    .masonry-item {
+      background: transparent;
+      padding: 0.1em;
+      /* margin: 0 0 0.05em; */
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+    }
+
+    .masonry-horizontal {
+      background: transparent;
+      padding: 0.1em;
+      /* margin: 0 0 0.05em; */
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+    }
+
+    .masonry:hover .masonry-item {
+      /* background-color: rgba(0,0,0,0.9); */
+      opacity: 1;
+    }
+
+    .masonry:hover .masonry-horizontal {
+      /* background-color: rgba(0,0,0,0.9); */
+      opacity: 1;
+    }
+
+    .masonry-item .content-details {
+      background-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      top: 80%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .masonry-horizontal .content-details {
+      /* background-color: rgba(0,0,0,0.9); */
+      position: absolute;
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 80%;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      top: 80%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .masonry-item:hover .content-details {
+      background-color: rgba(0, 0, 0, 0.9);
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+
+    .masonry-horizontal:hover .content-details {
+      background-color: rgba(0, 0, 0, 0.9);
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+
+    .content-details .content-text {
+      color: #fff;
+      font-size: 1.5em;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* Masonry on large screens */
+    @media only screen and (min-width: 1024px) {
+      .masonry {
+        column-count: 2;
+      }
+    }
+
+    /* Masonry on medium-sized screens */
+    @media only screen and (max-width: 1023px) and (min-width: 768px) {
+      .masonry {
+        column-count: 2;
+      }
+    }
+
+    /* Masonry on small screens */
+    @media only screen and (max-width: 767px) and (min-width: 540px) {
+      .masonry {
+        column-count: 2;
+      }
+    }
+
+    .masonry-item img {
+      background: rgba(0, 0, 0, 0.7);
+      -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+      box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .masonry-horizontal img {
+      -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+      box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .social-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+    }
+
+    .social-button {
+      opacity: 0;
+      font-size: 28px;
+      color: #dcdfff;
+      will-change: transform;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+
+    /* .social-button:hover {
+      /* will-change: transform; */
+      /* -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    } */ 
+
+    .social-wrap {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      left: 38%;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      overflow: hidden;
+      cursor: pointer;
+      width: 240px;
+      height: 72px;
+      background-color: black;
+      border-radius: 80px;
+      padding: 0 18px;
+      will-change: transform;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+    .social-wrap:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    .social-wrap span {
+      position: absolute;
+      z-index: 99;
+      width: 240px;
+      height: 72px;
+      border-radius: 80px;
+      text-align: center;
+      line-height: 70px;
+      letter-spacing: 2px;
+      color:  #1F1E1E;
+      background-color:  #EEEEED;
+      padding: 0 18px;
+      -webkit-transition: all 1.2s ease;
+      transition: all 1.2s ease;
+      font-style: bold;
+    }
+
+    .social-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 240px;
+      height: 64px;
+      border-radius: 80px;
+    }
+
+    .social-container .social-button:nth-of-type() {
+      -webkit-transition-delay: 1.1s;
+      transition-delay: 1.1s;
+    }
+
+    .social-container .social-button:nth-of-type() {
+      -webkit-transition-delay: .9s;
+      transition-delay: .9s;
+    }
+
+    .social-container .social-button:nth-of-type() {
+      -webkit-transition-delay: .7s;
+      transition-delay: .7s;
+    }
+
+    .social-container .social-button:nth-of-type() {
+      -webkit-transition-delay: .4s;
+      transition-delay: .4s;
+    }
+
+    .social-wrap:hover span {
+      -webkit-transition-delay: .25s;
+      transition-delay: .25s;
+      -webkit-transform: translateX(-280px);
+      transform: translateX(-280px)
+    }
+
+    .social-wrap:hover .social-button {
+      opacity: 1;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    .social {
+      vertical-align: middle;
+      justify-content: center;
+      text-align: center;
+      top: 30%;
+    }
+
+
+
+
+
+
 
 
     /* EOS */
   </style>
 
   <script type="text/css">
-    
+
   </script>
 
 </head>
@@ -1230,237 +1583,361 @@ cursor:default;
 <!--Slide up down for Extras: http://plnkr.co/edit/Wpcgjs3FS4ryrhQUAOcU?p=preview&preview -->
 
 <body>
-<div id="absolute-wrapper">
-<div id="wrapper">
-	<div id="div2" style="transform: rotate3d(-0.12462, -0.229868, 0, 3.92214deg);">
-			
-	<img src="images/techniya_w656x_h655.png" usemap="#image-map" class="map">
+  <div id="absolute-wrapper">
 
-	<map name="image-map">
+    <div id="wrapper">
+      <div id="div2" style="transform: rotate3d(-0.12462, -0.229868, 0, 3.92214deg);">
 
-    	<area id="one" target="" alt="" class="one masterTooltip" title="I aspire to become a scientist with work that influences and benefits millions!" coords="224,211,264,202,292,193,309,190,323,191,354,200,367,201,377,193,388,188,400,185,417,185,433,188,445,186,448,198,448,209,443,221,436,237,417,246,396,246,383,238,374,223,365,211,357,213,352,222,348,232,338,243,330,251,315,255,304,253,292,250,281,242,271,224,267,212,259,212,250,216,237,218,224,219" shape="poly">
+        <img src="images/techniya_w656x_h655.png" usemap="#image-map" class="map">
 
-        <area id="two" target="" alt="" class="one masterTooltip" title="I am trained in Indian Classical Music." coords="296,141,325,173,282,174,251,195,260,168" shape="poly">
+        <map name="image-map">
 
-        <area id="three" target="" alt="" title="" coords="275,189,280,179,302,174,327,175,337,182,340,189" shape="poly">
+          <area id="one" target="" alt="" class="one masterTooltip"
+            title="I aspire to become a scientist whose work would influence and benefit millions!"
+            coords="224,211,264,202,292,193,309,190,323,191,354,200,367,201,377,193,388,188,400,185,417,185,433,188,445,186,448,198,448,209,443,221,436,237,417,246,396,246,383,238,374,223,365,211,357,213,352,222,348,232,338,243,330,251,315,255,304,253,292,250,281,242,271,224,267,212,259,212,250,216,237,218,224,219"
+            shape="poly">
 
-        <area id="four" target="" alt="" class= "one masterTooltip" title="I have received 5500+ USD as travel and registration grants." coords="375,184,387,170,405,163,419,168,415,175,400,179" shape="poly">
+          <area id="two" target="" alt="" class="one masterTooltip" title="I am trained in Indian Classical Music."
+            coords="296,141,325,173,282,174,251,195,260,168" shape="poly">
 
-        <area id="five" target="" alt="" title="" coords="296,142,312,129,365,141,334,151,326,173" shape="poly">
+          <area id="three" target="" alt="" title="" coords="275,189,280,179,302,174,327,175,337,182,340,189"
+            shape="poly">
 
-        <area id="six" target="" alt="" class= "one masterTooltip" title="I am an INSPIRE fellow, awarded by the Government of India." coords="309,316,323,308,346,297,361,294,372,295,389,291,400,292,412,298,407,303,402,315,397,322,392,326,376,332,346,331,325,321" shape="poly">
+          <area id="four" target="" alt="" class="one masterTooltip"
+            title="I have received 5500+ USD as travel and registration grants."
+            coords="375,184,387,170,405,163,419,168,415,175,400,179" shape="poly">
 
-        <area id="seven" target="" alt="" title="" coords="" shape="poly">
+          <area id="five" target="" alt="" title="" coords="296,142,312,129,365,141,334,151,326,173" shape="poly">
 
-        <area id="eight" target="" alt="" class="one masterTooltip" title="I am trained in Rabindra Sangeet." coords="326,174,373,160,380,171,376,183" shape="poly">
+          <area id="six" target="" alt="" class="one masterTooltip"
+            title="I am an INSPIRE fellow, awarded by the Government of India."
+            coords="309,316,323,308,346,297,361,294,372,295,389,291,400,292,412,298,407,303,402,315,397,322,392,326,376,332,346,331,325,321"
+            shape="poly">
 
-        <area id="nine" target="" alt="" class= "one masterTooltip" title="I have travelled to 6 countries till now." coords="358,222,353,231,350,257,363,267,367,256,377,241,366,219" shape="poly">
+          <area id="seven" target="" alt="" title="" coords="" shape="poly">
 
-        <area id="ten" target="" alt="" class= "one masterTooltip" title="I participated in the closing ceremony of the XIX Commonwealth Games in New Delhi." coords="325,101,329,133,396,119" shape="poly">
+          <area id="eight" target="" alt="" class="one masterTooltip" title="I am trained in Rabindra Sangeet."
+            coords="326,174,373,160,380,171,376,183" shape="poly">
 
-        <area id="eleven" target="" alt="" class= "one masterTooltip" title="I'd love to buy a sea-facing home in Barra da Tijuca, Rio de Janeiro!" coords="322,89,345,90,326,102,327,133,279,119" shape="poly">
+          <area id="nine" target="" alt="" class="one masterTooltip" title="I have travelled to 6 countries till now."
+            coords="358,222,353,231,350,257,363,267,367,256,377,241,366,219" shape="poly">
 
-        <area id="twelve" target="" alt="" class= "one masterTooltip" title="I am a Grace Hopper Celebration 2020 scholar, one out of 1300 worldwide." coords="293,89,251,122,246,153,279,120,314,94" shape="poly">
+          <area id="ten" target="" alt="" class="one masterTooltip"
+            title="I participated in the closing ceremony of the XIX Commonwealth Games in New Delhi."
+            coords="325,101,329,133,396,119" shape="poly">
 
-        <area id="thirteen" target="" alt="" class= "one masterTooltip" title="I have obtained 15 years of professional training in Fine Arts." coords="249,61,244,70,258,88,277,88,272,49" shape="poly">
+          <area id="eleven" target="" alt="" class="one masterTooltip"
+            title="I'd love to buy a sea-facing home in Barra da Tijuca, Rio de Janeiro!"
+            coords="322,89,345,90,326,102,327,133,279,119" shape="poly">
 
-        <area id="fourteen" target="" alt="" title="" coords="346,90,326,102,398,118,381,98,356,86" shape="poly">
+          <area id="twelve" target="" alt="" class="one masterTooltip"
+            title="I am a Grace Hopper Celebration 2020 scholar, one out of 1300 worldwide."
+            coords="293,89,251,122,246,153,279,120,314,94" shape="poly">
 
-        <area id="fifteen" target="" alt="" title="" coords="329,134,369,125,394,147" shape="poly">
+          <area id="thirteen" target="" alt="" class="one masterTooltip"
+            title="I have obtained 15 years of professional training in Fine Arts."
+            coords="249,61,244,70,258,88,277,88,272,49" shape="poly">
 
-        <area id="sixteen" target="" alt="" class= "one masterTooltip" title="This is my first website! Yeah, bear with me! :P" coords="369,125,396,120,411,136,423,172" shape="poly">
+          <area id="fourteen" target="" alt="" title="" coords="346,90,326,102,398,118,381,98,356,86" shape="poly">
 
-        <area id="seventeen" target="" alt="" title="" coords="376,158,381,173,403,164,411,161,399,149" shape="poly">
+          <area id="fifteen" target="" alt="" title="" coords="329,134,369,125,394,147" shape="poly">
 
-        <area id="eighteen" target="" alt="" class= "one masterTooltip" title="I have danced with Shiamak Davar's troop." coords="280,120,246,153,243,182" shape="poly">
+          <area id="sixteen" target="" alt="" class="one masterTooltip"
+            title="This is my first website! Yeah, bear with me! :P" coords="369,125,396,120,411,136,423,172"
+            shape="poly">
 
-        <area id="nineteen" target="" alt="" title="" coords="268,141,246,210,244,177" shape="poly">
+          <area id="seventeen" target="" alt="" title="" coords="376,158,381,173,403,164,411,161,399,149" shape="poly">
 
-        <area id="twenty" target="" alt="" class= "one masterTooltip" title="I am a strong advocate of diversity in technology!" oords="243,181,246,205,223,213,226,197" shape="poly">
+          <area id="eighteen" target="" alt="" class="one masterTooltip"
+            title="I have danced with Shiamak Davar's troop." coords="280,120,246,153,243,182" shape="poly">
 
-        <area id="twenty-one" target="" alt="" class= "one masterTooltip" title="I am trained in Nazrul Geeti." coords="223,220,244,215,218,264" shape="poly">
+          <area id="nineteen" target="" alt="" title="" coords="268,141,246,210,244,177" shape="poly">
 
-        <area id="twenty-two" target="" class= "one masterTooltip" alt="" title="I badly want to learn THREE.js! :[]" coords="238,239,254,232,269,228,269,235,275,239,269,263" shape="poly">
+          <area id="twenty" target="" alt="" class="one masterTooltip"
+            title="I am a strong advocate of diversity in technology!" oords="243,181,246,205,223,213,226,197"
+            shape="poly">
 
-        <area id="twenty-three" target="" alt="" title="" coords="237,241,269,259,245,283,229,265" shape="poly">
+          <area id="twenty-one" target="" alt="" class="one masterTooltip" title="I am trained in Nazrul Geeti."
+            coords="223,220,244,215,218,264" shape="poly">
 
-        <area id="twenty-four" target="" alt="" class= "one masterTooltip" title="I started singing at the age of 3." coords="263,269,272,262,296,251,292,283,263,294" shape="poly">
+          <area id="twenty-two" target="" class="one masterTooltip" alt="" title="I badly want to learn THREE.js! :[]"
+            coords="238,239,254,232,269,228,269,235,275,239,269,263" shape="poly">
 
-        <area id="twenty-five" target="" alt="" title="" coords="245,285,262,268,263,293,258,315,243,310" shape="poly">
+          <area id="twenty-three" target="" alt="" title="" coords="237,241,269,259,245,283,229,265" shape="poly">
 
-        <area id="twenty-six" target="" alt="" class= "one masterTooltip" title="I met Ruskin Bond at the age of 11." coords="295,251,294,263,292,284,307,290,314,266,334,245,324,253,312,254,304,254" shape="poly">
+          <area id="twenty-four" target="" alt="" class="one masterTooltip" title="I started singing at the age of 3."
+            coords="263,269,272,262,296,251,292,283,263,294" shape="poly">
 
-        <area id="twenty-seven" target="" alt="" class= "one masterTooltip" title="My super talented brother inspired me to become a Tech enthusiast and a Computer Science student." coords="264,294,291,284,308,290,277,300" shape="poly">
+          <area id="twenty-five" target="" alt="" title="" coords="245,285,262,268,263,293,258,315,243,310"
+            shape="poly">
 
-        <area id="twenty-eight" target="" alt="" title="" coords="279,311,296,363,262,348" shape="poly">
+          <area id="twenty-six" target="" alt="" class="one masterTooltip" title="I met Ruskin Bond at the age of 11."
+            coords="295,251,294,263,292,284,307,290,314,266,334,245,324,253,312,254,304,254" shape="poly">
 
-        <area id="twenty-nine" target="" alt="" title="" coords="279,311,307,303,309,315,317,317,305,334,286,336" shape="poly">
+          <area id="twenty-seven" target="" alt="" class="one masterTooltip"
+            title="My super talented brother inspired me to become a Tech enthusiast and a Computer Science student."
+            coords="264,294,291,284,308,290,277,300" shape="poly">
 
-        <area id="thirty" target="" alt="" class= "one masterTooltip" title="I am a Master's Gold Medallist." coords="410,245,418,244,425,242,442,253,441,271,439,286,412,272,410,259,413,252" shape="poly">
+          <area id="twenty-eight" target="" alt="" title="" coords="279,311,296,363,262,348" shape="poly">
 
-        <area id="thirty-one" target="" alt="" class= "one masterTooltip" title="Techniya ghost is designed and made by me." coords="371,340,388,340,398,344,406,360,399,371,379,369,370,357,379,347" shape="poly">
+          <area id="twenty-nine" target="" alt="" title="" coords="279,311,307,303,309,315,317,317,305,334,286,336"
+            shape="poly">
 
-        <area id="thirty-two" target="" alt="" title="" coords="220,91,237,85,290,93,252,124" shape="poly">
+          <area id="thirty" target="" alt="" class="one masterTooltip" title="I am a Master's Gold Medallist."
+            coords="410,245,418,244,425,242,442,253,441,271,439,286,412,272,410,259,413,252" shape="poly">
 
-        <area id="thirty-three" target="" alt="" title="" coords="200,106,222,91,252,122,220,177" shape="poly">
+          <area id="thirty-one" target="" alt="" class="one masterTooltip"
+            title="Techniya ghost is designed and made by me."
+            coords="371,340,388,340,398,344,406,360,399,371,379,369,370,357,379,347" shape="poly">
 
-        <area id="thirty-four" target="" alt="" class= "one masterTooltip" title="I won my first national level gold medal at in painting at the age of 5!" coords="166,174,215,159,220,175,189,228" shape="poly">
+          <area id="thirty-two" target="" alt="" title="" coords="220,91,237,85,290,93,252,124" shape="poly">
 
-        <area id="thirty-five" target="" alt="" title="" coords="198,107,216,159,164,177" shape="poly">
+          <area id="thirty-three" target="" alt="" title="" coords="200,106,222,91,252,122,220,177" shape="poly">
 
-        <area id="thirty-six" target="" alt="" class= "one masterTooltip"  title="I have 10 publications so far." coords="165,174,190,223,192,291,153,242" shape="poly">
+          <area id="thirty-four" target="" alt="" class="one masterTooltip"
+            title="I won my first national level gold medal at in painting at the age of 5!"
+            coords="166,174,215,159,220,175,189,228" shape="poly">
 
-        <area id="thirty-seven" target="" alt="" title="" coords="155,243,193,294,139,322" shape="poly">
+          <area id="thirty-five" target="" alt="" title="" coords="198,107,216,159,164,177" shape="poly">
 
-        <area id="thirty-eight" target="" alt="" title="" coords="151,349,191,402,207,414,196,462,188,463,149,407,145,389" shape="poly">
+          <area id="thirty-six" target="" alt="" class="one masterTooltip" title="I have 10 publications so far."
+            coords="165,174,190,223,192,291,153,242" shape="poly">
 
-        <area id="thirty-nine" target="" alt="" class= "one masterTooltip" title="I started dancing at the age of 2. Really! :o" coords="190,293,192,271,213,322,242,347,255,389,216,367" shape="poly">
+          <area id="thirty-seven" target="" alt="" title="" coords="155,243,193,294,139,322" shape="poly">
 
-        <area id="forty" target="" alt="" title="" coords="153,328,150,349,193,405,206,391,202,360" shape="poly">
+          <area id="thirty-eight" target="" alt="" title=""
+            coords="151,349,191,402,207,414,196,462,188,463,149,407,145,389" shape="poly">
 
-        <area id="forty-one" target="" alt="" title="" coords="139,321,192,294,201,325,218,370,202,360" shape="poly">
+          <area id="thirty-nine" target="" alt="" class="one masterTooltip"
+            title="I started dancing at the age of 2. Really! :o"
+            coords="190,293,192,271,213,322,242,347,255,389,216,367" shape="poly">
 
-        <area id="forty-two" target="" alt="" class= "one masterTooltip" title="I have conducted many technical and non-technical sessions for young females to motivate them into technology." coords="203,360,253,386,266,459,201,438,207,412,214,400" shape="poly">
+          <area id="forty" target="" alt="" title="" coords="153,328,150,349,193,405,206,391,202,360" shape="poly">
 
-        <area id="forty-three" target="" alt="" title="" coords="122,392,123,418,157,452,158,467,198,509,188,462,149,409,145,391" shape="poly">
+          <area id="forty-one" target="" alt="" title="" coords="139,321,192,294,201,325,218,370,202,360" shape="poly">
 
-        <area id="forty-four" target="" alt="" title="" coords="245,454,266,462,282,552,257,559,226,609,207,565,215,539,228,526,214,509" shape="poly">
+          <area id="forty-two" target="" alt="" class="one masterTooltip"
+            title="I have conducted many technical and non-technical sessions for young females to motivate them into technology."
+            coords="203,360,253,386,266,459,201,438,207,412,214,400" shape="poly">
 
-        <area id="forty-five" target="" alt="" class= "one masterTooltip" title="I am one of the 70 Google WomenTechmaker Scholars (2018) from APAC." coords="258,410,308,436,342,444,358,444,379,438,390,414,399,409,419,447,412,469,377,480,334,480,295,474,267,463" shape="poly">
+          <area id="forty-three" target="" alt="" title=""
+            coords="122,392,123,418,157,452,158,467,198,509,188,462,149,409,145,391" shape="poly">
 
-        <area id="forty-six" target="" alt="" title="" coords="160,468,199,511,188,464,196,460,213,508,229,524,215,539,207,566,153,600" shape="poly">
+          <area id="forty-four" target="" alt="" title=""
+            coords="245,454,266,462,282,552,257,559,226,609,207,565,215,539,228,526,214,509" shape="poly">
 
-        <area id="forty-seven" target="" alt="" class= "one masterTooltip" title="I once recorded music shows for the Delhi University Community Radio." coords="202,435,246,455,214,511,196,462" shape="poly">
+          <area id="forty-five" target="" alt="" class="one masterTooltip"
+            title="I am one of the 70 Google WomenTechmaker Scholars (2018) from APAC."
+            coords="258,410,308,436,342,444,358,444,379,438,390,414,399,409,419,447,412,469,377,480,334,480,295,474,267,463"
+            shape="poly">
 
-        <area id="forty-eight" target="" alt="" title="" coords="350,346,346,352,351,364,373,358,379,346,369,339,359,340" shape="poly">
+          <area id="forty-six" target="" alt="" title=""
+            coords="160,468,199,511,188,464,196,460,213,508,229,524,215,539,207,566,153,600" shape="poly">
 
-        <area id="forty-nine" target="" alt="" class= "one masterTooltip" title="I enjoy graphic designing a lot! Have made multiple logos for various organizations and campaigns till date." coords="371,69,409,101,399,119,361,78" shape="poly">
+          <area id="forty-seven" target="" alt="" class="one masterTooltip"
+            title="I once recorded music shows for the Delhi University Community Radio."
+            coords="202,435,246,455,214,511,196,462" shape="poly">
 
-        <area id="fifty" target="" alt="" title="" coords="450,236,449,260,458,283,487,303,464,220" shape="poly">
+          <area id="forty-eight" target="" alt="" title=""
+            coords="350,346,346,352,351,364,373,358,379,346,369,339,359,340" shape="poly">
 
-        <area id="fifty-one" target="" alt="" class= "one masterTooltip" title="My first art and music teacher is my mother. She's SUUPPPERR DUPPPPEEER talented! :D" coords="458,283,485,303,492,322,509,338,519,390,491,384,452,323" shape="poly">
+          <area id="forty-nine" target="" alt="" class="one masterTooltip"
+            title="I enjoy graphic designing a lot! Have made multiple logos for various organizations and campaigns till date."
+            coords="371,69,409,101,399,119,361,78" shape="poly">
 
-        <area id="fifty-two" target="" alt="" title="" coords="458,401,472,455,559,502,531,424" shape="poly">
+          <area id="fifty" target="" alt="" title="" coords="450,236,449,260,458,283,487,303,464,220" shape="poly">
 
-        <area id="fifty-three" target="" class= "one masterTooltip" alt="" title="I began painting at the age of 3." coords="472,455,501,471,514,505,546,531,538,576,492,556,485,521,490,504" shape="poly">
+          <area id="fifty-one" target="" alt="" class="one masterTooltip"
+            title="My first art and music teacher is my mother. She's SUUPPPERR DUPPPPEEER talented! :D"
+            coords="458,283,485,303,492,322,509,338,519,390,491,384,452,323" shape="poly">
 
-</map>
+          <area id="fifty-two" target="" alt="" title="" coords="458,401,472,455,559,502,531,424" shape="poly">
 
-	</div> <!-div2->
+          <area id="fifty-three" target="" class="one masterTooltip" alt="" title="I began painting at the age of 3."
+            coords="472,455,501,471,514,505,546,531,538,576,492,556,485,521,490,504" shape="poly">
 
-</div> <!-wrapper->
+        </map>
 
-	<div id="div3" class='console-container'>
-        <div class="vertical-info" style="font-stretch: extra-expanded; font-style: normal; font-family: 'Montserrat', sans-serif"><a href="mailto:taniyaseth.sau@gmail.com" style="text-decoration: none; color:white">taniyaseth.sau@gmail.com</a>, <font style="color: grey">&#169Techniya Ghost owned by Taniya Seth</font><div class="vertical-line"></div></div>
-        <span id='text'></span>
-        <div class='console-underscore' id="console">&#95;            
+      </div>
+      <!--div2-->
+
+    </div>
+    <!--wrapper-->
+
+    <div id="div3" class='console-container'>
+      <div class="vertical-info"
+        style="font-stretch: extra-expanded; font-style: normal; font-family: 'Montserrat', sans-serif"><a
+          href="mailto:taniyaseth.sau@gmail.com"
+          style="text-decoration: none; color:white">taniyaseth.sau@gmail.com</a>, <font style="color: grey">
+          &#169Techniya Ghost owned by Taniya Seth</font>
+        <div class="vertical-line"></div>
+      </div>
+      <span id='text'></span>
+      <div class='console-underscore' id="console">&#95;
+      </div>
+      <p></p>
+      <p class='intro-text-one'>I am a Doctoral student in the <a href="http://sau.int/~cilab/tseth.php"
+          style="color: #fff; text-decoration: none" target="_blank">Computational Intelligence Laboratory</a> (CILAB),
+        South Asian University, New Delhi, India. I work in the area of Deep Learning, Computational Linguistics, Fuzzy
+        Logic and Data Science.</p>
+
+      <!--<p class='intro-text-two'>When I am not in my 'Ph.D. mode', I paint, sing, dance, cook and help my mom in doing daily chores. I also stand as a strong advocate of diversity within technology.</p>-->
+
+      <p class='intro-text-three'>To know some interesting facts about me, feel free to interact with the <b>Techniya
+          ghost</b> on the left! :)</p>
+
+      <!--Animated Button: https://codepen.io/natalia-reshetnikova/pen/oRRjPP-->
+
+      <div id="div4" class="box-1">
+        <a class="modal-open" href="#modal-tabbed">
+          <div class="btn btn-one">
+            <span>KNOW ME MORE</span>
+          </div>
+        </a>
+      </div>
+      <!--div4-->
+
+    </div>
+    <!--div3-->
+
+    <a href="https://www.linkedin.com/in/taniyaseth/" target="_blank" style="text-decoration:none">
+      <div id="div5" class="social-links">
+        <div class='social-btn flex-center' id="linkedin">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+          </svg><span>in/taniyaseth</span>
         </div>
-        <p></p>
-        <p class='intro-text-one'>I am a Doctoral student in the <a href="http://sau.int/~cilab/tseth.php" style="color: #fff; text-decoration: none" target="_blank">Computational Intelligence Laboratory</a> (CILAB), South Asian University, New Delhi, India. I work in the area of Deep Learning, Computational Linguistics, Fuzzy Logic and Data Science.</p>
+    </a>
 
-<!--<p class='intro-text-two'>When I am not in my 'Ph.D. mode', I paint, sing, dance, cook and help my mom in doing daily chores. I also stand as a strong advocate of diversity within technology.</p>-->
+    <a href="https://github.com/CodTan" target="_blank" style="text-decoration:none">
+      <div class='social-btn flex-center' id="github">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg><span>CodTan</span>
+      </div>
+    </a>
 
-<p class='intro-text-three'>To know some interesting facts about me, feel free to interact with the <b>Techniya ghost</b> on the left! :)</p>
+    <a href="https://www.researchgate.net/profile/Taniya_Seth" target="_blank" style="text-decoration:none">
+      <div class='social-btn flex-center' id="researchgate">
+        <svg mlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24pt" height="24pt"
+          viewBox="0 0 24 24" version="1.1">
+          <g id="surface1">
+            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(119,136,153);fill-opacity:1;"
+              d="M 3.601562 0 L 20.398438 0 C 22.386719 0 24 1.613281 24 3.601562 L 24 20.398438 C 24 22.386719 22.386719 24 20.398438 24 L 3.601562 24 C 1.613281 24 0 22.386719 0 20.398438 L 0 3.601562 C 0 1.613281 1.613281 0 3.601562 0 Z M 3.601562 0 " />
+            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0,0,0);fill-opacity:1;"
+              d="M 12.703125 17.953125 C 12 17.765625 11.625 17.484375 11.015625 16.734375 C 10.59375 16.171875 9.796875 14.90625 9.375 14.25 L 9.09375 13.734375 L 7.96875 13.734375 L 7.96875 15.328125 C 8.015625 17.34375 7.96875 17.296875 8.859375 17.4375 L 9.328125 17.484375 L 9.328125 17.859375 L 5.578125 17.859375 L 5.578125 17.671875 C 5.578125 17.484375 5.625 17.484375 6 17.390625 C 6.46875 17.296875 6.65625 17.15625 6.703125 16.734375 C 6.75 16.546875 6.75 15.28125 6.75 13.03125 C 6.75 9.75 6.703125 9.65625 6.609375 9.421875 C 6.46875 9.1875 6.28125 9.09375 5.765625 9.046875 C 5.578125 9 5.53125 9 5.53125 8.8125 L 5.53125 8.625 L 7.546875 8.578125 C 10.125 8.53125 10.59375 8.578125 11.34375 9.09375 C 12.046875 9.5625 12.375 10.21875 12.28125 11.109375 C 12.234375 12.09375 11.484375 13.078125 10.546875 13.453125 C 10.359375 13.5 10.21875 13.59375 10.21875 13.59375 C 10.21875 13.6875 11.015625 14.90625 11.53125 15.609375 C 12.234375 16.59375 12.796875 17.109375 13.21875 17.34375 C 13.40625 17.4375 13.640625 17.484375 13.6875 17.484375 C 13.828125 17.484375 13.828125 17.53125 13.828125 17.671875 C 13.828125 17.8125 13.78125 17.90625 13.734375 17.90625 C 13.5 18 12.84375 18 12.515625 17.90625 Z M 10.03125 12.84375 C 10.6875 12.515625 11.0625 12 11.109375 11.203125 C 11.15625 10.59375 11.015625 10.171875 10.640625 9.796875 C 10.21875 9.328125 9.46875 9.140625 8.390625 9.234375 L 7.921875 9.28125 L 7.921875 11.109375 C 7.921875 12.796875 7.921875 12.984375 8.015625 12.984375 C 8.0625 12.984375 8.4375 13.03125 8.859375 12.984375 C 9.515625 12.984375 9.65625 12.9375 9.984375 12.796875 Z M 10.03125 12.84375 " />
+            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0,0,0);fill-opacity:1;"
+              d="M 15.046875 10.6875 C 13.875 10.5 13.453125 9.75 13.546875 7.828125 C 13.59375 6.84375 13.6875 6.421875 14.0625 6.046875 C 14.390625 5.71875 14.671875 5.625 15.234375 5.578125 C 15.84375 5.53125 16.21875 5.671875 16.59375 5.953125 C 16.828125 6.140625 17.015625 6.421875 17.015625 6.5625 C 17.015625 6.609375 16.875 6.65625 16.734375 6.75 L 16.453125 6.890625 L 16.3125 6.75 C 16.078125 6.46875 15.890625 6.328125 15.65625 6.234375 C 15.1875 6.09375 14.71875 6.328125 14.484375 6.75 C 14.34375 6.984375 14.34375 7.03125 14.34375 8.109375 C 14.34375 9.140625 14.34375 9.28125 14.484375 9.46875 C 14.671875 9.796875 15.046875 9.984375 15.46875 9.9375 C 16.078125 9.890625 16.40625 9.46875 16.40625 8.8125 L 16.40625 8.484375 L 15.46875 8.484375 L 15.46875 7.875 L 17.15625 7.875 L 17.15625 8.578125 C 17.15625 9.140625 17.109375 9.328125 17.015625 9.609375 C 16.734375 10.3125 15.9375 10.734375 15.046875 10.640625 Z M 15.046875 10.6875 " />
+          </g>
+        </svg><span>Taniya_Seth</span>
+      </div>
+    </a>
 
-<!--Animated Button: https://codepen.io/natalia-reshetnikova/pen/oRRjPP-->
 
-        <div id="div4" class="box-1">
-            <a class="modal-open" href="#modal-tabbed">
-            <div class="btn btn-one">
-                <span>KNOW ME MORE</span>
-            </div>
-            </a>
-        
-        </div> <!--div4-->
+  </div>
+  <!--absolute-wrapper-->
 
-        </div> <!--div3-->
-        
-<a href="https://www.linkedin.com/in/taniyaseth/" target="_blank" style="text-decoration:none"><div id="div5" class="social-links">
-           <div class='social-btn flex-center' id="linkedin">
-               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg><span>in/taniyaseth</span>
-		</div></a>
-
-           <a href="https://github.com/CodTan" target="_blank" style="text-decoration:none"><div class='social-btn flex-center' id="github">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>CodTan</span>
-	</div></a>
-
-<a href="https://www.researchgate.net/profile/Taniya_Seth" target="_blank" style="text-decoration:none"><div class='social-btn flex-center' id="researchgate">
-			<svg mlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24pt" height="24pt" viewBox="0 0 24 24" version="1.1">
-<g id="surface1">
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(119,136,153);fill-opacity:1;" d="M 3.601562 0 L 20.398438 0 C 22.386719 0 24 1.613281 24 3.601562 L 24 20.398438 C 24 22.386719 22.386719 24 20.398438 24 L 3.601562 24 C 1.613281 24 0 22.386719 0 20.398438 L 0 3.601562 C 0 1.613281 1.613281 0 3.601562 0 Z M 3.601562 0 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0,0,0);fill-opacity:1;" d="M 12.703125 17.953125 C 12 17.765625 11.625 17.484375 11.015625 16.734375 C 10.59375 16.171875 9.796875 14.90625 9.375 14.25 L 9.09375 13.734375 L 7.96875 13.734375 L 7.96875 15.328125 C 8.015625 17.34375 7.96875 17.296875 8.859375 17.4375 L 9.328125 17.484375 L 9.328125 17.859375 L 5.578125 17.859375 L 5.578125 17.671875 C 5.578125 17.484375 5.625 17.484375 6 17.390625 C 6.46875 17.296875 6.65625 17.15625 6.703125 16.734375 C 6.75 16.546875 6.75 15.28125 6.75 13.03125 C 6.75 9.75 6.703125 9.65625 6.609375 9.421875 C 6.46875 9.1875 6.28125 9.09375 5.765625 9.046875 C 5.578125 9 5.53125 9 5.53125 8.8125 L 5.53125 8.625 L 7.546875 8.578125 C 10.125 8.53125 10.59375 8.578125 11.34375 9.09375 C 12.046875 9.5625 12.375 10.21875 12.28125 11.109375 C 12.234375 12.09375 11.484375 13.078125 10.546875 13.453125 C 10.359375 13.5 10.21875 13.59375 10.21875 13.59375 C 10.21875 13.6875 11.015625 14.90625 11.53125 15.609375 C 12.234375 16.59375 12.796875 17.109375 13.21875 17.34375 C 13.40625 17.4375 13.640625 17.484375 13.6875 17.484375 C 13.828125 17.484375 13.828125 17.53125 13.828125 17.671875 C 13.828125 17.8125 13.78125 17.90625 13.734375 17.90625 C 13.5 18 12.84375 18 12.515625 17.90625 Z M 10.03125 12.84375 C 10.6875 12.515625 11.0625 12 11.109375 11.203125 C 11.15625 10.59375 11.015625 10.171875 10.640625 9.796875 C 10.21875 9.328125 9.46875 9.140625 8.390625 9.234375 L 7.921875 9.28125 L 7.921875 11.109375 C 7.921875 12.796875 7.921875 12.984375 8.015625 12.984375 C 8.0625 12.984375 8.4375 13.03125 8.859375 12.984375 C 9.515625 12.984375 9.65625 12.9375 9.984375 12.796875 Z M 10.03125 12.84375 "/>
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0,0,0);fill-opacity:1;" d="M 15.046875 10.6875 C 13.875 10.5 13.453125 9.75 13.546875 7.828125 C 13.59375 6.84375 13.6875 6.421875 14.0625 6.046875 C 14.390625 5.71875 14.671875 5.625 15.234375 5.578125 C 15.84375 5.53125 16.21875 5.671875 16.59375 5.953125 C 16.828125 6.140625 17.015625 6.421875 17.015625 6.5625 C 17.015625 6.609375 16.875 6.65625 16.734375 6.75 L 16.453125 6.890625 L 16.3125 6.75 C 16.078125 6.46875 15.890625 6.328125 15.65625 6.234375 C 15.1875 6.09375 14.71875 6.328125 14.484375 6.75 C 14.34375 6.984375 14.34375 7.03125 14.34375 8.109375 C 14.34375 9.140625 14.34375 9.28125 14.484375 9.46875 C 14.671875 9.796875 15.046875 9.984375 15.46875 9.9375 C 16.078125 9.890625 16.40625 9.46875 16.40625 8.8125 L 16.40625 8.484375 L 15.46875 8.484375 L 15.46875 7.875 L 17.15625 7.875 L 17.15625 8.578125 C 17.15625 9.140625 17.109375 9.328125 17.015625 9.609375 C 16.734375 10.3125 15.9375 10.734375 15.046875 10.640625 Z M 15.046875 10.6875 "/>
-</g></svg><span>Taniya_Seth</span>
-	</div></a>
-
-       </div> <!--div5-->
-
-       
-</div> <!--absolute-wrapper-->
-
-<div class="modal" id="modal-tabbed">
-  <a class="cancel" href="#"></a> 
+  <div class="modal" id="modal-tabbed">
+    <a class="cancel" href="#"></a>
     <div class="modal-content">
-        <a href="#" class="modal-close" title="Close Modal"><button class="butt">Close</button></a>
-        <div class="modal-area">
-           <input id="opentab1" type="radio" name="modaltabs" checked="checked"/>
-           <label for="opentab1">About me</label>
-           <input id="opentab2" type="radio" name="modaltabs"/>
-           <label for="opentab2">Education</label>
-           <input id="opentab3" type="radio" name="modaltabs"/>
-           <label for="opentab3">Publications</label>
-           <input id="opentab4" type="radio" name="modaltabs"/>
-           <label for="opentab4">Awards</label>
-           <input id="opentab5" type="radio" name="modaltabs"/>
-           <label for="opentab5">Extras</label>
-           <input id="opentab6" type="radio" name="modaltabs"/>
-           <label for="opentab6">Resume</label>
-           <input id="opentab7" type="radio" name="modaltabs"/>
-           <label for="opentab7">Connect</label>
-           <ul class="tab-list">
-               <li class="modal-tab tab1">
-                  <div>
-                   <p>I am a Ph.D. student at the Computational Intelligence Laboratory (CILAB), South Asian University, New Delhi, India. My main research areas are deep learning, computational linguistics, fuzzy logic and scientometrics. I research on and develop new models that bring machines closer to humans, either by considering the language or the vision aspect of us humans. Working in the above areas, I gained (and still am gaining) knowledge about linguistic information under uncertainty due to perceptions, deep learning and other real-life processes under uncertainty. Additionally, I work extensively with generative deep models such as Restricted Boltzmann Machines (RBM), variational autoencoders (VAE) and generative adversarial networks (GAN). I also like to study the publication landscapes of important research domains. This study is called the scientometrics and bibliometrics, which is basically a subset of the domain of Data Science.</p>
+      <a href="#" class="modal-close"><button class="butt">Close</button></a>
+      <div class="modal-area">
+        <input id="opentab1" type="radio" name="modaltabs" checked="checked" />
+        <label for="opentab1">About me</label>
+        <input id="opentab2" type="radio" name="modaltabs" />
+        <label for="opentab2">Education</label>
+        <input id="opentab3" type="radio" name="modaltabs" />
+        <label for="opentab3">Publications</label>
+        <input id="opentab4" type="radio" name="modaltabs" />
+        <label for="opentab4">Awards</label>
+        <input id="opentab5" type="radio" name="modaltabs" />
+        <label for="opentab5">Extras</label>
+        <input id="opentab6" type="radio" name="modaltabs" />
+        <label for="opentab6">Resume</label>
+        <input id="opentab7" type="radio" name="modaltabs" />
+        <label for="opentab7">Connect</label>
+        <ul class="tab-list">
+          <li class="modal-tab tab1">
+            <div>
+              <p>I am a Ph.D. student at the Computational Intelligence Laboratory (CILAB), South Asian University,
+                New Delhi, India. My main research areas are deep learning, computational linguistics, fuzzy logic and
+                scientometrics. I research on and develop new models that bring machines closer to humans, either by
+                considering the language or the vision aspect of us humans. Working in the above areas, I gained (and
+                still am gaining) knowledge about linguistic information under uncertainty due to perceptions, deep
+                learning and other real-life processes under uncertainty. Additionally, I work extensively with
+                generative deep models such as Restricted Boltzmann Machines (RBM), variational autoencoders (VAE) and
+                generative adversarial networks (GAN). I also like to study the publication landscapes of important
+                research domains. This study is called the scientometrics and bibliometrics, which is basically a
+                subset of the domain of Data Science.</p>
 
-<p>I am a strong advocate of diversity in technology. Therefore, I contribute to this notion as much as I can. Focussing on the 'Women in Tech' aspect, I have conducted multiple sessions in my current organization, alma-mater as well at various other community events. I am also associated with various such communities like Google WomenTechmakers, Women Who Code, Systers, IEEE Computational Intelligence Society, AnitaBorg etc. I am also thankful to each of them for helping me grow.</p>
+              <p>I am a strong advocate of diversity in technology. Therefore, I contribute to this notion as much as
+                I can. Focussing on the 'Women in Tech' aspect, I have conducted multiple sessions in my current
+                organization, alma-mater as well at various other community events. I am also associated with various
+                such communities like Google WomenTechmakers, Women Who Code, Systers, IEEE Computational Intelligence
+                Society, AnitaBorg etc. I am also thankful to each of them for helping me grow.</p>
 
-<p>Keeping the tech side aside, I am equally into painting, music and dance. Possessing proffessional training in all of these, I spend my off-time from work getting engaged with any of these activities. I have recently entered into the domain of graphic designing and have also designed logos for multiple organizations and campaigns.</p>
+              <p>Keeping the tech side aside, I am equally into painting, music and dance. Possessing proffessional
+                training in all of these, I spend my off-time from work getting engaged with any of these activities.
+                I have recently entered into the domain of graphic designing and have also designed logos for multiple
+                organizations and campaigns.</p>
 
-                  <div>
-               </li>
-               <li class="modal-tab tab2">
-                  <div class="edu">
-                     <p>Scroll down to view my educational information.</p>
-                     <div class="frame1">
-                         <div class="first_frame" style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
-                        <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Bachelors in Science, with Honors</b></p>
-                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Major in Computer Science</p>
-                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px"><b>Shaheed Rajguru College of Applied Sciences for Women</b></p>
-                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px"><b>University of Delhi</b></p>
-                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">2012-15</p>
-                        <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">88.7/100</font>, Equivalent GPA: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.3/4.0</font></p>
-                         </div>
-                     </div><div class="frame2">
-                         <div class="second_frame" style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
-                        <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Masters in Science</b></p>
-                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">Major in Computer Science</p>
-                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px"><b>South Asian University</b></p>
-                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">2015-17</p>
-                        <p  style="font-family: 'Fondamento', cursive; color:orange; font-size: 17px"><b>UNIVERSITY GOLD MEDALLIST</b> &#129351;</p>
-                        <p  style="font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.65/9</font>, Equivalent GPA: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.84/4.0</font></p>
-                         </div>
-                     </div><div class="frame3">
-                         <div class="third_frame" style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
-                        <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Ph.D. in Computer Science</b></p>
-                        <p style="font-family: 'Baloo 2', cursive; font-size: 17px"><b>South Asian University</b></p>
-                        <p style="font-family: 'Baloo 2', cursive; font-size: 17px">2017-ongoing</p>
-                        <p style="font-family: 'Baloo 2', cursive; font-size: 17px">Ph.D. coursework Grade: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.37/9</font>, Equivalent GPA: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.72/4.0</font></p>
-                     </div>    
-                 </div>
-               </li>
-               <li class="modal-tab tab3">
-                 <div class="cols-container"> 
-                   <!--<ol>
+              <div>
+          </li>
+          <li class="modal-tab tab2">
+            <div class="edu">
+              <p>Scroll down to view my educational information.</p>
+              <div class="frame1">
+                <div class="first_frame"
+                  style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                  <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Bachelors in Science, with
+                      Honors</b></p>
+                  <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Major in Computer Science
+                  </p>
+                  <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px"><b>Shaheed Rajguru College
+                      of Applied Sciences for Women</b></p>
+                  <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px"><b>University of Delhi</b>
+                  </p>
+                  <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">2012-15</p>
+                  <p style="margin:0.8; font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <font
+                      style="font-family: 'Permanent Marker', cursive; font-size: 20px">88.7/100</font>, Equivalent
+                    GPA: <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.3/4.0</font>
+                  </p>
+                </div>
+              </div>
+              <div class="frame2">
+                <div class="second_frame"
+                  style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                  <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Masters in Science</b></p>
+                  <p style="font-family: 'Baloo 2', cursive; font-size: 17px">Major in Computer Science</p>
+                  <p style="font-family: 'Baloo 2', cursive; font-size: 17px"><b>South Asian University</b></p>
+                  <p style="font-family: 'Baloo 2', cursive; font-size: 17px">2015-17</p>
+                  <p style="font-family: 'Fondamento', cursive; color:orange; font-size: 17px"><b>UNIVERSITY GOLD
+                      MEDALLIST</b> &#129351;</p>
+                  <p style="font-family: 'Baloo 2', cursive; font-size: 17px">Grade: <font
+                      style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.65/9</font>, Equivalent GPA:
+                    <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.84/4.0</font>
+                  </p>
+                </div>
+              </div>
+              <div class="frame3">
+                <div class="third_frame"
+                  style="background: #fff; padding-top: 1px; padding-left: 30px; padding-right: 30px; padding-bottom: 1px; line-height: 18px; height: auto; width: auto">
+                  <p style="font-family: 'Rouge Script', cursive; font-size: 44px"><b>Ph.D. in Computer Science</b>
+                  </p>
+                  <p style="font-family: 'Baloo 2', cursive; font-size: 17px"><b>South Asian University</b></p>
+                  <p style="font-family: 'Baloo 2', cursive; font-size: 17px">2017-ongoing</p>
+                  <p style="font-family: 'Baloo 2', cursive; font-size: 17px">Ph.D. coursework Grade: <font
+                      style="font-family: 'Permanent Marker', cursive; font-size: 20px">8.37/9</font>, Equivalent GPA:
+                    <font style="font-family: 'Permanent Marker', cursive; font-size: 20px">3.72/4.0</font>
+                  </p>
+                </div>
+              </div>
+          </li>
+          <li class="modal-tab tab3">
+            <div class="cols-container">
+              <!--<ol>
                      <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Perceptual computing with comparative linguistic expressions, <i>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020)</i>, July, Scotland, Glasgow.</li>
                      <li id="item">Priyanka Mehra, <b>Taniya Seth</b>, Pranab K. Muhuri, Generating quality IF-THEN rules for diabetes using linguistic summarization,  <i>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020)</i>, July, Scotland, Glasgow.</li>
                      <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Type-2 fuzzy set based hesitant fuzzy linguistic term sets for linguistic decision making, arXiv preprint, 2020.</li>
@@ -1472,472 +1949,814 @@ cursor:default;
                      <li id="item"><b>Taniya Seth</b>, Pranab K. Muhuri, Hesitant fuzzy linguistic term sets for group decision making in supplier performance evaluation, <i>2018 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2018)</i>, July, Rio de Janeiro, Brazil.</li>
                      <li id="item">Amit K. Shukla, <b>Taniya Seth</b>, Pranab K. Muhuri, Interval type-2 fuzzy sets for enhanced learning in deep belief networks, <i>2017 IEEE International Conference on Fuzzy Systems</i>, July, Naples, Italy.</li>
                    </ol>-->
-                   
-                   <ul class="image-list-small">
-                   <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/9177664/" target="_blank"><img class="papers" src="images/1.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/9177664/" style="color: #fff; text-decoration: none" target="_blank"><b>Perceptual computing with comparative linguistic expressions</b></a></p>
-                     <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/9177662/" target="_blank"><img class="papers" src="images/2.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/9177662/" style="color: #fff; text-decoration: none" target="_blank"><b>Generating quality IF-THEN rules for diabetes using linguistic summarization</b></a></p>
-                     <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="https://arxiv.org/abs/2002.11714" target="_blank"><img class="papers" src="images/3.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://arxiv.org/abs/2002.11714" style="color: #fff; text-decoration: none" target="_blank"><b>Type-2 fuzzy set based hesitant fuzzy linguistic term sets for linguistic decision making</b></a></p>
-                     <p>arXiv preprint, 2020</p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="https://ieeexplore.ieee.org/document/8956101" target="_blank"><img class="papers" src="images/4.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8956101" style="color: #fff; text-decoration: none" target="_blank"><b>A bibliometric overview of the field of type-2 fuzzy sets and systems</b></a></p>
-                     <p>IEEE Computational Intelligence Magazine, 2020 <b>(IF:9.083)</b></p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="https://ieeexplore.ieee.org/document/8858794/" target="_blank"><img class="papers" src="images/5.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8858794/" style="color: #fff; text-decoration: none" target="_blank"><b>A linguistic decision making model for psychometric tests</b></a></p>
-                     <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="https://ieeexplore.ieee.org/abstract/document/8858804/" target="_blank"><img class="papers" src="images/6.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/8858804/" style="color: #fff; text-decoration: none" target="_blank"><b>Interval type-2 fuzzy restricted Boltzmann machine for the enhancement of deep learning</b></a></p>
-                     <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="http://jscires.org/article/304" target="_blank"><img class="papers" src="images/7.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="http://jscires.org/article/304" style="color: #fff; text-decoration: none" target="_blank"><b>Global distribution of google scholar citations: A size-independent institution-based analysis</b></a></p>
-                     <p>Journal of Scientometric Research, 2020</p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="https://ieeexplore.ieee.org/document/8491559" target="_blank"><img class="papers" src="images/8.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8491559" style="color: #fff; text-decoration: none" target="_blank"><b>A novel solution approach for fuzzy linear bilevel multi-follower programming problems</b></a></p>
-                     <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="https://ieeexplore.ieee.org/document/8491537/" target="_blank"><img class="papers" src="images/9.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8491537/" style="color: #fff; text-decoration: none" target="_blank"><b>Hesitant fuzzy linguistic term sets for group decision making in supplier performance evaluation</b></a></p>
-                     <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
-                   </div>
-                   </li>
-                   <li>
-                   <a href="https://ieeexplore.ieee.org/document/8015638" target="_blank"><img class="papers" src="images/10.PNG?"></a>
-                   <div class="details">
-                     <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8015638" style="color: #fff; text-decoration: none" target="_blank"><b>Interval type-2 fuzzy sets for enhanced learning in deep belief networks</b></a></p>
-                     <p>2017 IEEE International Conference on Fuzzy Systems, Naples, Italy</p>
-                   </div>
-                   </li>
-                   </ul>
 
-                 </div>
-               </li>
-               <!-- <li class="modal-tab tab4"><p>Coming Soon</p></li> -->
-               <li  class="modal-tab tab4">
-                   <div>
-                       <div id="timeline">
-                           <ul id="dates">
-                               <li><a href="#award-14" class="selected">June 2020</a></li>
-                               <li><a href="#award-13">February 2020</a></li>
-                               <li><a href="#award-12">July 2019</a></li>
-                               <li><a href="#award-11">May 2019</a></li>
-                               <li><a href="#award-10">September 2018</a></li>
-                               <li><a href="#award-9">May 2018</a></li>
-                               <li><a href="#award-8">May 2018</a></li>
-                               <li><a href="#award-7">July 2017</a></li>
-                               <li><a href="#award-6">July 2017</a></li>
-                               <li><a href="#award-5">June 2017</a></li>
-                               <li><a href="#award-4">May 2017</a></li>
-                               <li><a href="#award-3">September 2016</a></li>
-                               <li><a href="#award-2">July 2016</a></li>
-                               <li><a href="#award-1">April 2015</a></li>
-                           </ul>
-                           <ul id="issues">
-                               <li id="award-14" class="selected">
-                                   <img class="award-14" src="images/final_awards/GHC.png"/>
-                                   <h1>Grace Hopper Celebration 2020 Scholar</h1>
-                                   <p>I am one of the 1300 Grace Hopper Celebration Scholars for the year 2020. My scholarship was generously sponsored by <b style="color:aqua">Nuance Communications</b>. Grace Hopper Celebration Scholars are enthusiastic young women who are committed to grow in their technical careers while contributing to increasing diversity within technology. Grace Hopper Celebration is the flagship event of AnitaB.org that brings interests of women in computing to the forefront. Grace Hopper Celebration went virtual in 2020 for the first time.</p>
-                               </li>
-                               <li id="award-13">
-                                   <img src="images/CIS.png"/>
-                                   <h1>IEEE Computational Intelligence Society 2020 Full Registration Grant</h1>
-                                   <p>The IEEE CIS 2020 full registration grant was awarded to deserving students to cover their entire full registration costs for the 2020 IEEE World Congress on Computational Intelligence, which was held virtually. The students were selected on the basis of paper quality and reviews.</p>
-                               </li>
-                               <li id="award-12">
-                                   <img src="images/final_awards/INSPIRE.png"/>
-                                   <h1>Junior Research Fellowship, INSPIRE</h1>
-                                   <p>The INSPIRE fellowship, under the "Innovation in Science Pursuit for Inspired Research" scheme of the Government of India is awarded to Masters first rank holders, for carrying out doctoral degree in engineering sciences. This fellowship is awarded directly by the Department of Science and Technology, Ministry of Science and Technology, Government of India.</p>
-                               </li>
-                               <li id="award-11">
-                                   <img src="images/CIS.png"/>
-                                   <h1>IEEE Computational Intelligence Society 2019 Travel Grant</h1>
-                                   <p>The IEE CIS 2019 travel grant was awarded to deserving students to cover their travel costs of upto 800 USD for the 2019 IEEE International Conference on Fuzzy Systems, organized at New Orleans, USA. The students were selected on the basis of paper quality and reviews.</p>
-                               </li>
-                               <li id="award-10">
-                                   <img src="images/final_awards/WTM.png"/>
-                                   <h1>Google Women TechMakers APAC Scholar</h1>
-                                   <p>I was one of the ~70 Women Techmakers Scholars from the Asia-Pacific Region, awarded by Google in the year 2018. This scholarship is awarded to young female students within technology to recognize their outstanding contributions towards increasing diversity in technology. The WTM scholarship included a monetary award along with a fully paid trip to the Google APAC headquarters in Singapore to attend the Scholarship retreat.</p>
-                               </li>
-                               <li id="award-9">
-                                   <img src="images/CIS.png"/>
-                                   <h1>IEEE Computational Intelligence Society 2018 Travel Grant</h1>
-                                   <p>The IEEE CIS 2018 travel grant was awarded to deserving students to cover their travel and registration costs of upto 800 USD for the 2018 IEEE World Congress on Computational Intelligence, organized at Rio de Janeiro, Brazil. The students were selected on the basis of paper quality and reviews.</p>
-                               </li>
-                               <li id="award-8">
-                                   <img src="images/award_8_WIE_Travel_Grant_2018.png"/>
-                                   <h1>IEEE Women in Engineering 2018 Travel Grant</h1>
-                                   <p>I was awarded the IEEE WiE 2018 travel grant to cover my travel and registration costs of upto 750 USD for the 2018 IEEE World Congress on Computational Intelligence, organized at Rio de Janeiro, Brazil. The selection criteria was based on my papers' quality, reviews and involvement in technology and engineering.</p>
-                               </li>
-                               <li id="award-7">
-                                   <img src="images/final_awards/YTD.png"/>
-                                   <h1>Winner, Your Thesis in a Dram Contest</h1>
-                                   <p>I was declared as the winner amongst 9 participants, in the YTD contest at the III European Summer School on Fuzzy Logic and Applications (SFLA) organized by University of Santiago de Compostela and European Society for Fuzzy Logic and Technology (EUSFLAT) in 2017. It focussed on the dissemination of the ongoing research of the participants in their course of study. The award, which was generously sponsored by <b style="color: rgb(255, 72, 0); text-shadow: whitesmoke">Vodafone</b>, included a one-month visting research program under the eminent researchers of University of Santiago de Compostela, Spain.</p>
-                               </li>
-                               <li id="award-6">
-                                   <img src="images/final_awards/EUSFLAT.png"/>
-                                   <h1>EUSFLAT Registration Grant</h1>
-                                   <p>I was selected as one of the 9 students worldwide to receive the EUSFLAT registration grant to cover the registration and accomodation expenses towards the III European Summer School on Fuzzy Logic and Applications (SFLA) organized by University of Santiago de Compostela and European Society for Fuzzy Logic and Technology (EUSFLAT) in 2017. The grant was awarded on the basis of merit of research study.</p>
-                               </li>
-                               <li id="award-5">
-                                   <img src="images/final_awards/SAU.png"/>
-                                   <h1>University Masters Gold Medallist</h1>
-                                   <p>I received the Masters Gold Medal for securing the first position in Masters in Science, Computer Science as the University academic topper.</p>
-                               </li>
-                               <li id="award-4">
-                                   <img src="images/final_awards/ACM.png"/>
-                                   <h1>ACM-W Scholarship</h1>
-                                   <p>I received the ACM-W scholarship, an equivalent of 1200 USD to cover miscellaneous expenses while participating in the 2017 IEEE International Conference on Fuzzy Systems, held at Naples, Italy in 2017. The selection was made on the basis of academic merit, as well as contribution towards increasing diversity in technology.</p>
-                               </li>
-                               <li id="award-3">
-                                   <img src="images/final_awards/GHCI.png"/>
-                                   <h1>Grace Hopper Celebration India, Women in Computing Scholar</h1>
-                                   <p>I was one of the recepients of the GHCI 2016 scholarship to attend the Grace Hopper Celebration in Bangalore, India in 2016. The scholars were selected on the basis of multiple criteria such as academic merit, contribution to technology etc.</p>
-                               </li>
-                               <li id="award-2">
-                                   <img src="images/final_awards/SAU.png"/>
-                                   <h1>South Asian University Merit Scholarship</h1>
-                                   <p>I was awarded the Merit Scholarship from South Asian University for securing first position in the first year of Masters in Science, Computer Science.</p>
-                               </li>
-                               <li id="award-1">
-                                   <img src="images/final_awards/SRCASW.png"/>
-                                   <h1>All Rounder Student Award, Shaheed Rajguru College of Applied Sciences for Women</h1>
-                                   <p>I received the all-rounder student award at Shaheed College of Applied Sciences for Women, on the basis of participation in various cultural activities, administrative tasks as well as academic merit.</p>
-                               </li>
-                           </ul>
-                           <div id="grad_top"></div>
-                           <div id="grad_bottom"></div>
-                           <a href="#" id="next">+</a>
-		                   <a href="#" id="prev">-</a>
-                       </div>               
-                   </div>               
-                </li>
-               <!-- <li class="modal-tab tab5"><p>Coming Soon</p></li> -->
-               <li class="modal-tab tab5">
-                  <div class="extras">
-                      <p style="text-align: left">Here's some more information about what I've done outside curricular activites.</p>
-
-                      <button id="Trigger1" class="extras-heading"><h2>Open Source Contribution</h2></button>
-                      <div id="SlideWrapper1" class="height-transition height-transition-hidden">
-                        <!-- <h2>Open Source Contributor</h2> -->
-                      <div class="Actual">
-                      <p><a href="https://github.com/CodTan" target="_blank" class="githubutt">GitHub</a></p>
-                      <p>Recently as a virtual Grace Hopper Celebration (vGHC) 2020 scholar, I participated in the Open Source Day organized at vGHC and contributed to the OpenStreetMap. Since then, I have been an active "Mapper" in the organization.</p>
-                      <p>I also am an active contributor to the <font style="background-color: black; font-family: 'Courier New', Courier, monospace">datascience</font> package which was written for use in Berkeley's DS 8 course.</p>
-                      </div>
-                    </div>
-
-                      <hr width=50 color="darkgrey"/>
-                      
-                      <button id="Trigger2" class="extras-heading"><h2>This Website</h2></button>
-                      <div id="SlideWrapper2" class="height-transition height-transition-hidden">
-                      <!-- <h2>This Website</h2> -->
-                      <div class="Actual">
-                      <p><a href="https://github.com/CodTan/CodTan.github.io" target="_blank" class="githubutt">GitHub</a></p>
-                      <p>I created this website from scratch using basic HTML, CSS, JavaScript and JQuery.</p>
-                      </div>
-                      </div>
-
-                      <hr width=50 color="darkgrey"/>
-
-                      <button id="Trigger3" class="extras-heading"><h2>Artist, Painting Course for National Institute for Open Schooling (NIOS)</h2></button>
-                      <div id="SlideWrapper3" class="height-transition height-transition-hidden">
-                      <!-- <h2>Artist, Painting Course for National Institute for Open Schooling (NIOS)</h2> -->
-                      <div>
-                      <p>Youtube Links</p><p><a href="https://www.youtube.com/watch?v=jwCZXpZa7XU&t=16s&ab_channel=Ch-27SecondarySchoolEducation" target="_blank" class="githubutt">Object Study 1</a> <a href="https://www.youtube.com/watch?v=QgpL5hz4rvc&t=3s&ab_channel=Ch-27SecondarySchoolEducation" target="_blank" class="githubutt">Composition Drawing 1</a> <a href="https://www.youtube.com/watch?v=Dq2njbChR20&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=11&ab_channel=NIOSSeniorSecondaryCourses" target="_blank" class="githubutt">Object Study 2: Pencil</a> <a href="https://www.youtube.com/watch?v=IJ1JFxQobXs&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=12&ab_channel=NIOSSeniorSecondaryCourses" target="_blank" class="githubutt">Object Study 2: Color</a> <a href="https://www.youtube.com/watch?v=k0wAefCRl0s&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=8&ab_channel=NIOSSeniorSecondaryCourses" target="_blank" class="githubutt">Composition Drawing 2</a> </p>
-                      <p>I was responsible for demonstrating various painting techniques as a part of the MOOC for the Painting Course in NIOS. The course instructor is Prof. K.M. Chaudhuri.</p>
-                      </div>
-                      </div>
-                    
-
-                      <hr width=50 color="darkgrey"/>
-                      
-                      <button id="Trigger4" class="extras-heading"><h2>Visiting Researcher, Universidade de Santiago de Compostela, Spain</h2></button>
-                      <div id="SlideWrapper4" class="height-transition height-transition-hidden">
-                      <!-- <h2>Visiting Researcher, Universidade de Santiago de Compostela, Spain</h2> -->
-                      <div>
-                      <p><a href="https://github.com/CodTan/LPP_NLG" target="_blank" class="githubutt">GitHub</a></p>
-                      <p>Being the winner in the Your Thesis in a Dram contest at III European Summer School on Fuzzy Logic and Applications (SFLA) 2017, I worked as a visiting researcher on project based on Natural Language Generation (NLG). Within this project, automatic explanations were generated for solutions to linear programming problems (LPP) using the SimpleNLG API. The project was implemented in JAVA and MATLAB.</p>
-                      </div>
-                      </div>
-
-                      <hr width=50 color="darkgrey"/>
-                      
-                      <button id="Trigger5" class="extras-heading"><h2>Volunteering</h2></button>
-                      <div id="SlideWrapper5" class="height-transition height-transition-hidden">
-                      <!-- <h2>Volunteering</h2> -->
-                      <div>
-                      <p>Volunteering is my passion, and I consider it as one of the best sources for learning. Till date I have volunteered in various kinds of activities and in diverse organzations. A small list of my volunteering experiences is given below:</p>
-                      <ul>
-                        <li><b>Volunteer, Connect 2020, OpenStreetMap US: </b>I am volunteering in this community virtual event of OpenStreetMap US.</li>
-                        <li><b>Student Volunteer, Empirical Methods in Natural Language Processing 2020 (EMNLP): </b>I am volunteering in this upcoming conference. Responsibilities yet to be assigned.</li>
-                        <li><b>Former Chapter Leader, GirlScript: </b>I helped set-up the Delhi Chapter of GirlScript, while representing the same to various outreach events.</li>
-                        <li><b>Former Outreach Manager, Lean In India: </b>I served as the outreach manager for the Indian chapter of the organization to manage the social and outreach aspects.</li>
-                        <li><b>Founder, Lean In, South Asian University Circle: </b>I set-up the Lean In circle for South Asian University to motivate the members to contribute towards diversity in technology.</li>
-                        <li><b>Founder, SAU Programming Club: </b>I founded the SAU Programming Club with a bunch of enthusiastic members that were responsible for contributing to enhance the technical knowledge of everyone within the University.</li>
-                        <li><b>Former Community Head, Women in Machine Learning and Data Science (WiMLDS), Delhi: </b>I served as the Community head for the organization. My responsibilities involved managing the connected community through proper outreach while also organizing successful technical events.</li>
-                        <li><b>Admissions Volunteer, South Asian University: </b>I volunteered for this role twice, where I was responsible for guiding new applicants about the admission process to South Asian University, while helping new aspirants witht their doubts and queries.</li>
-                        <li><b>Volunteer, First Convocation of South Asian University: </b>I was responsible for ensuring the smooth flow of the large scale event that was held in Vigyan Bhawan in 2017.</li>
-                        <li><b>Volunteer, The Role of The Media in South Asia: </b>This was a conference organized at South Asian University, where I was responsible for managing the schedules and whereabouts of high-profile guests such as Subina Shrestha.</li>
-                      </ul>
-                      </div>
-                      </div>
-
-                      <hr width=50 color="darkgrey"/>
-
-                      <button id="Trigger6" class="extras-heading"><h2>Extra-Curricular Activities</h2></button>
-                      <div id="SlideWrapper6" class="height-transition height-transition-hidden">
-                      <!-- <h2>Extra-Curricular Activities</h2> -->
-                      <div>
-                      <p>Since childhood I have been extremely involved with extra-curricular activities (as you might already know by now) like music, fine arts and dance. I have also gained professional training in all of these activities. Additionally, I received professional degrees for completing courses in various Indian styles of music. As a result, I have performed at various events such as the closing ceremony of the XIX Commonwealth Games, 2010 (a dance piece choreographed by Shiamak Davar), inaugural ceremony of the art exhibition of Kirti Chandak (an Indian Classical piece in music, Raag Malkosh), etc.</p>
-                      <p>As an artist, I have participated in multiple art-exhibitions and have also won numerous awards for the same till date. I love to draw pencil-sketches (inanimate objects, especially complex objects and those made of steel), realistic landscapes.</p>
-                      </div>
-                      </div>
-
+              <ul class="image-list-small">
+                <li>
+                  <a href="https://ieeexplore.ieee.org/abstract/document/9177664/" target="_blank"><img class="papers"
+                      src="images/1.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/9177664/"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>Perceptual computing with
+                          comparative linguistic expressions</b></a></p>
+                    <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
                   </div>
                 </li>
-               <li class="modal-tab tab6">
-                  <div class="resume">
-                    <p>Download my current resume below.</p>
-                    <a href="TaniyaS_CV.pdf" target="_blank"><img class="resume-image" style="height: 25%; width: 25%" src="images/CV.png"/></a>
-                    <p><a href="TaniyaS_CV.pdf" target="_blank"><button class="resume-button">Download</button></a></p>
-                    <p style="text-align: left; font-style: italic; font-size: 10px">Last updated: July 2020</p>
-                  </div> 
+                <li>
+                  <a href="https://ieeexplore.ieee.org/abstract/document/9177662/" target="_blank"><img class="papers"
+                      src="images/2.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/9177662/"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>Generating quality IF-THEN rules
+                          for diabetes using linguistic summarization</b></a></p>
+                    <p>2020 IEEE World Congress on Computational Intelligence (FUZZ-IEEE 2020), Glasgow, Scotland</p>
+                  </div>
                 </li>
-               <li class="modal-tab tab7">
-                 <div>
-                  Coming Soon
-                 </div>
-               </li>
-           </ul>
-        </div>
+                <li>
+                  <a href="https://arxiv.org/abs/2002.11714" target="_blank"><img class="papers" src="images/3.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://arxiv.org/abs/2002.11714"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>Type-2 fuzzy set based hesitant
+                          fuzzy linguistic term sets for linguistic decision making</b></a></p>
+                    <p>arXiv preprint, 2020</p>
+                  </div>
+                </li>
+                <li>
+                  <a href="https://ieeexplore.ieee.org/document/8956101" target="_blank"><img class="papers"
+                      src="images/4.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8956101"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>A bibliometric overview of the
+                          field of type-2 fuzzy sets and systems</b></a></p>
+                    <p>IEEE Computational Intelligence Magazine, 2020 <b>(IF:9.083)</b></p>
+                  </div>
+                </li>
+                <li>
+                  <a href="https://ieeexplore.ieee.org/document/8858794/" target="_blank"><img class="papers"
+                      src="images/5.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8858794/"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>A linguistic decision making
+                          model for psychometric tests</b></a></p>
+                    <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
+                  </div>
+                </li>
+                <li>
+                  <a href="https://ieeexplore.ieee.org/abstract/document/8858804/" target="_blank"><img class="papers"
+                      src="images/6.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/abstract/document/8858804/"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>Interval type-2 fuzzy restricted
+                          Boltzmann machine for the enhancement of deep learning</b></a></p>
+                    <p>2019 IEEE International Conference on Fuzzy Systems, New Orleans, USA</p>
+                  </div>
+                </li>
+                <li>
+                  <a href="http://jscires.org/article/304" target="_blank"><img class="papers" src="images/7.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="http://jscires.org/article/304"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>Global distribution of google
+                          scholar citations: A size-independent institution-based analysis</b></a></p>
+                    <p>Journal of Scientometric Research, 2020</p>
+                  </div>
+                </li>
+                <li>
+                  <a href="https://ieeexplore.ieee.org/document/8491559" target="_blank"><img class="papers"
+                      src="images/8.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8491559"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>A novel solution approach for
+                          fuzzy linear bilevel multi-follower programming problems</b></a></p>
+                    <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
+                  </div>
+                </li>
+                <li>
+                  <a href="https://ieeexplore.ieee.org/document/8491537/" target="_blank"><img class="papers"
+                      src="images/9.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8491537/"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>Hesitant fuzzy linguistic term
+                          sets for group decision making in supplier performance evaluation</b></a></p>
+                    <p>2018 IEEE World Congress on Computational Intelligence, Rio de Janeiro, Brazil</p>
+                  </div>
+                </li>
+                <li>
+                  <a href="https://ieeexplore.ieee.org/document/8015638" target="_blank"><img class="papers"
+                      src="images/10.png"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://ieeexplore.ieee.org/document/8015638"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>Interval type-2 fuzzy sets for
+                          enhanced learning in deep belief networks</b></a></p>
+                    <p>2017 IEEE International Conference on Fuzzy Systems, Naples, Italy</p>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </li>
+          <!-- <li class="modal-tab tab4"><p>Coming Soon</p></li> -->
+          <li class="modal-tab tab4">
+            <div>
+              <div id="timeline">
+                <ul id="dates">
+                  <li><a href="#award-14" class="selected">June 2020</a></li>
+                  <li><a href="#award-13">February 2020</a></li>
+                  <li><a href="#award-12">July 2019</a></li>
+                  <li><a href="#award-11">May 2019</a></li>
+                  <li><a href="#award-10">September 2018</a></li>
+                  <li><a href="#award-9">May 2018</a></li>
+                  <li><a href="#award-8">May 2018</a></li>
+                  <li><a href="#award-7">July 2017</a></li>
+                  <li><a href="#award-6">July 2017</a></li>
+                  <li><a href="#award-5">June 2017</a></li>
+                  <li><a href="#award-4">May 2017</a></li>
+                  <li><a href="#award-3">September 2016</a></li>
+                  <li><a href="#award-2">July 2016</a></li>
+                  <li><a href="#award-1">April 2015</a></li>
+                </ul>
+                <ul id="issues">
+                  <li id="award-14" class="selected">
+                    <img class="award-14" src="images/final_awards/GHC.png" />
+                    <h1>Grace Hopper Celebration 2020 Scholar</h1>
+                    <p>I am one of the 1300 Grace Hopper Celebration Scholars for the year 2020. My scholarship was
+                      generously sponsored by <b style="color:aqua">Nuance Communications</b>. Grace Hopper
+                      Celebration Scholars are enthusiastic young women who are committed to grow in their technical
+                      careers while contributing to increasing diversity within technology. Grace Hopper Celebration
+                      is the flagship event of AnitaB.org that brings interests of women in computing to the
+                      forefront. Grace Hopper Celebration went virtual in 2020 for the first time.</p>
+                  </li>
+                  <li id="award-13">
+                    <img src="images/CIS.png" />
+                    <h1>IEEE Computational Intelligence Society 2020 Full Registration Grant</h1>
+                    <p>The IEEE CIS 2020 full registration grant was awarded to deserving students to cover their
+                      entire full registration costs for the 2020 IEEE World Congress on Computational Intelligence,
+                      which was held virtually. The students were selected on the basis of paper quality and reviews.
+                    </p>
+                  </li>
+                  <li id="award-12">
+                    <img src="images/final_awards/INSPIRE.png" />
+                    <h1>Junior Research Fellowship, INSPIRE</h1>
+                    <p>The INSPIRE fellowship, under the "Innovation in Science Pursuit for Inspired Research" scheme
+                      of the Government of India is awarded to Masters first rank holders, for carrying out doctoral
+                      degree in engineering sciences. This fellowship is awarded directly by the Department of Science
+                      and Technology, Ministry of Science and Technology, Government of India.</p>
+                  </li>
+                  <li id="award-11">
+                    <img src="images/CIS.png" />
+                    <h1>IEEE Computational Intelligence Society 2019 Travel Grant</h1>
+                    <p>The IEE CIS 2019 travel grant was awarded to deserving students to cover their travel costs of
+                      upto 800 USD for the 2019 IEEE International Conference on Fuzzy Systems, organized at New
+                      Orleans, USA. The students were selected on the basis of paper quality and reviews.</p>
+                  </li>
+                  <li id="award-10">
+                    <img src="images/final_awards/WTM.png" />
+                    <h1>Google Women TechMakers APAC Scholar</h1>
+                    <p>I was one of the ~70 Women Techmakers Scholars from the Asia-Pacific Region, awarded by Google
+                      in the year 2018. This scholarship is awarded to young female students within technology to
+                      recognize their outstanding contributions towards increasing diversity in technology. The WTM
+                      scholarship included a monetary award along with a fully paid trip to the Google APAC
+                      headquarters in Singapore to attend the Scholarship retreat.</p>
+                  </li>
+                  <li id="award-9">
+                    <img src="images/CIS.png" />
+                    <h1>IEEE Computational Intelligence Society 2018 Travel Grant</h1>
+                    <p>The IEEE CIS 2018 travel grant was awarded to deserving students to cover their travel and
+                      registration costs of upto 800 USD for the 2018 IEEE World Congress on Computational
+                      Intelligence, organized at Rio de Janeiro, Brazil. The students were selected on the basis of
+                      paper quality and reviews.</p>
+                  </li>
+                  <li id="award-8">
+                    <img src="images/award_8_WIE_Travel_Grant_2018.png" />
+                    <h1>IEEE Women in Engineering 2018 Travel Grant</h1>
+                    <p>I was awarded the IEEE WiE 2018 travel grant to cover my travel and registration costs of upto
+                      750 USD for the 2018 IEEE World Congress on Computational Intelligence, organized at Rio de
+                      Janeiro, Brazil. The selection criteria was based on my papers' quality, reviews and involvement
+                      in technology and engineering.</p>
+                  </li>
+                  <li id="award-7">
+                    <img src="images/final_awards/YTD.png" />
+                    <h1>Winner, Your Thesis in a Dram Contest</h1>
+                    <p>I was declared as the winner amongst 9 participants, in the YTD contest at the III European
+                      Summer School on Fuzzy Logic and Applications (SFLA) organized by University of Santiago de
+                      Compostela and European Society for Fuzzy Logic and Technology (EUSFLAT) in 2017. It focussed on
+                      the dissemination of the ongoing research of the participants in their course of study. The
+                      award, which was generously sponsored by <b
+                        style="color: rgb(255, 72, 0); text-shadow: whitesmoke">Vodafone</b>, included a one-month
+                      visting research program under the eminent researchers of University of Santiago de Compostela,
+                      Spain.</p>
+                  </li>
+                  <li id="award-6">
+                    <img src="images/final_awards/EUSFLAT.png" />
+                    <h1>EUSFLAT Registration Grant</h1>
+                    <p>I was selected as one of the 9 students worldwide to receive the EUSFLAT registration grant to
+                      cover the registration and accomodation expenses towards the III European Summer School on Fuzzy
+                      Logic and Applications (SFLA) organized by University of Santiago de Compostela and European
+                      Society for Fuzzy Logic and Technology (EUSFLAT) in 2017. The grant was awarded on the basis of
+                      merit of research study.</p>
+                  </li>
+                  <li id="award-5">
+                    <img src="images/final_awards/SAU.png" />
+                    <h1>University Masters Gold Medallist</h1>
+                    <p>I received the Masters Gold Medal for securing the first position in Masters in Science,
+                      Computer Science as the University academic topper.</p>
+                  </li>
+                  <li id="award-4">
+                    <img src="images/final_awards/ACM.png" />
+                    <h1>ACM-W Scholarship</h1>
+                    <p>I received the ACM-W scholarship, an equivalent of 1200 USD to cover miscellaneous expenses
+                      while participating in the 2017 IEEE International Conference on Fuzzy Systems, held at Naples,
+                      Italy in 2017. The selection was made on the basis of academic merit, as well as contribution
+                      towards increasing diversity in technology.</p>
+                  </li>
+                  <li id="award-3">
+                    <img src="images/final_awards/GHCI.png" />
+                    <h1>Grace Hopper Celebration India, Women in Computing Scholar</h1>
+                    <p>I was one of the recepients of the GHCI 2016 scholarship to attend the Grace Hopper Celebration
+                      in Bangalore, India in 2016. The scholars were selected on the basis of multiple criteria such
+                      as academic merit, contribution to technology etc.</p>
+                  </li>
+                  <li id="award-2">
+                    <img src="images/final_awards/SAU.png" />
+                    <h1>South Asian University Merit Scholarship</h1>
+                    <p>I was awarded the Merit Scholarship from South Asian University for securing first position in
+                      the first year of Masters in Science, Computer Science.</p>
+                  </li>
+                  <li id="award-1">
+                    <img src="images/final_awards/SRCASW.png" />
+                    <h1>All Rounder Student Award, Shaheed Rajguru College of Applied Sciences for Women</h1>
+                    <p>I received the all-rounder student award at Shaheed College of Applied Sciences for Women, on
+                      the basis of participation in various cultural activities, administrative tasks as well as
+                      academic merit.</p>
+                  </li>
+                </ul>
+                <div id="grad_top"></div>
+                <div id="grad_bottom"></div>
+                <a href="#" id="next">+</a>
+                <a href="#" id="prev">-</a>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="modal-tab tab5"><p>Coming Soon</p></li> -->
+          <li class="modal-tab tab5">
+            <div class="extras">
+              <p style="text-align: left">Here's some more information about what I've done outside curricular
+                activites.</p>
+
+              <button id="Trigger6" class="extras-heading">
+                <h2>Extra-Curricular Activities</h2>
+              </button>
+              <div id="SlideWrapper6" class="height-transition1 height-transition-hidden">
+                <!-- <h2>Extra-Curricular Activities</h2> -->
+                <div>
+                  <p><button id="Trigger8" style="border: none; outline: none;" class="githubutt">
+                      <font style="font-family: 'Montserrat',sans-serif; font-style: normal;">View Artworks</font>
+                    </button> <a href="https://www.youtube.com/watch?v=RLLxT_4ES0M&ab_channel=TaniyaSeth"
+                      target="_blank" class="githubutt">Dance 1</a> <a
+                      href="https://www.youtube.com/watch?v=Jen6puh4QL4&ab_channel=TaniyaSeth" target="_blank"
+                      class="githubutt">Dance 2</a></p>
+                  <p>Since childhood I have been extremely involved with extra-curricular activities (as you might
+                    already know by now) like music, fine arts and dance. I have also gained professional training in
+                    all of these activities. Additionally, I have obtained professional degrees for completing courses
+                    in
+                    various Indian styles of music. As a result, I have performed at various events such as the
+                    closing ceremony of the XIX Commonwealth Games, 2010 (a dance piece choreographed by Shiamak
+                    Davar), inaugural ceremony of the art exhibition of Kirti Chandak (an Indian Classical piece in
+                    music, Raag Malkosh), etc.</p>
+                  <p>As an artist, I have participated in multiple art-exhibitions and have also won numerous awards
+                    for the same till date. I love to draw pencil-sketches (inanimate objects, especially complex
+                    objects and those made of steel), realistic landscapes.</p>
+
+                  <div id="SlideWrapper8" class="art-wrapper height-transition height-transition-hidden">
+                    <br>
+                    <div class="masonry">
+                      <div class="masonry-item">
+                        <img style="height: 100%; width: 100%" src="images/sketch_final_1.jpg" loading="lazy" />
+                        <div class="content-details">
+                          <p class="content-text">Charcoal on paper</p>
+                          <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">21 in &#x2715; 26
+                            in</p>
+                        </div>
+                      </div>
+                      <div class="masonry-item">
+                        <img style="height: 100%; width: 100%" src="images/sketch_final_2.jpg" loading="lazy" />
+                        <div class="content-details">
+                          <p class="content-text">Charcoal on paper</p>
+                          <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">21 in &#x2715; 26
+                            in</p>
+                        </div>
+                      </div>
+                      <div class="masonry-item">
+                        <img style="height: 100%; width: 100%" src="images/sketch_final_3.jpg" loading="lazy" />
+                        <div class="content-details">
+                          <p class="content-text">Charcoal on paper</p>
+                          <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">21 in &#x2715; 26
+                            in</p>
+                        </div>
+                      </div>
+                      <!-- <div class="masonry-item">
+                              <img style="height: 100%; width: 100%" src="images/sketch_final_4.jpg" loading="lazy"/>
+                              <div class="content-details">
+                                <p class="content-text">Charcoal on paper</p>
+                              </div>
+                            </div> -->
+                      <div class="masonry-item">
+                        <img style="height: 100%; width: 100%" src="images/sketch_final_5.jpg" loading="lazy" />
+                        <div class="content-details">
+                          <p class="content-text">Charcoal on paper</p>
+                          <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">21 in &#x2715; 26
+                            in</p>
+                        </div>
+                      </div>
+                      <div class="masonry-item">
+                        <img style="height: 100%; width: 100%" src="images/sketch_final_6.jpg" loading="lazy" />
+                        <div class="content-details">
+                          <p class="content-text">Charcoal on paper</p>
+                          <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">21 in &#x2715; 26
+                            in</p>
+                        </div>
+                      </div>
+                      <div class="masonry-item">
+                        <img style="height: 100%; width: 100%" src="images/sketch_final_8.jpg" loading="lazy" />
+                        <div class="content-details">
+                          <p class="content-text">Charcoal on paper</p>
+                          <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">21 in &#x2715; 26
+                            in</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- <div class="masonry2"> -->
+                    <div class="masonry-horizontal">
+                      <img style="height: 80%; width: 80%" src="images/sketch_final_9.jpg" loading="lazy" />
+                      <div class="content-details">
+                        <p class="content-text">Charcoal on paper</p>
+                        <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">21 in &#x2715; 26
+                          in</p>
+                      </div>
+                    </div>
+                    <div class="masonry-horizontal">
+                      <img style="height: 80%; width: 80%" src="images/sketch_final_7.jpg" loading="lazy" />
+                      <div class="content-details">
+                        <p class="content-text">Charcoal on paper</p>
+                        <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">21 in &#x2715; 26
+                          in</p>
+                      </div>
+                    </div>
+                    <div class="masonry-horizontal">
+                      <img style="height: 80%; width: 80%" src="images/Painting_2.jpg" loading="lazy" />
+                      <div class="content-details">
+                        <p class="content-text">Acrylic on canvas</p>
+                        <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">24 in &#x2715; 30
+                          in</p>
+                      </div>
+                    </div>
+                    <div class="masonry-horizontal">
+                      <img style="height: 80%; width: 80%" src="images/Painting_1.jpg" loading="lazy" />
+                      <div class="content-details">
+                        <p class="content-text">Mixed Media on canvas</p>
+                        <p style="text-transform: lowercase; font-size: 1em; letter-spacing: 0.1em;">24 in &#x2715; 30
+                          in</p>
+                      </div>
+                    </div>
+                    <!-- </div> -->
+
+                  </div>
+                </div>
+              </div>
+
+              <hr width=50 color="darkgrey" />
+
+              <button id="Trigger1" class="extras-heading">
+                <h2>Open Source Contribution</h2>
+              </button>
+              <div id="SlideWrapper1" class="height-transition height-transition-hidden">
+                <!-- <h2>Open Source Contributor</h2> -->
+                <div class="Actual">
+                  <p><a href="https://github.com/CodTan" target="_blank" class="githubutt">GitHub</a></p>
+                  <p>Recently as a virtual Grace Hopper Celebration (vGHC) 2020 scholar, I participated in the Open
+                    Source Day organized at vGHC and contributed to the OpenStreetMap. Since then, I have been an
+                    active "Mapper" in the organization.</p>
+                  <p>I also am an active contributor to the <font
+                      style="background-color: black; font-family: 'Courier New', Courier, monospace">datascience</font>
+                    package which was written for use in Berkeley's DS 8 course.</p>
+                </div>
+              </div>
+
+              <hr width=50 color="darkgrey" />
+
+              <button id="Trigger2" class="extras-heading">
+                <h2>This Website</h2>
+              </button>
+              <div id="SlideWrapper2" class="height-transition height-transition-hidden">
+                <!-- <h2>This Website</h2> -->
+                <div class="Actual">
+                  <p><a href="https://github.com/CodTan/CodTan.github.io" target="_blank" class="githubutt">GitHub</a>
+                  </p>
+                  <p>I created this website from scratch using basic HTML, CSS, JavaScript and JQuery.</p>
+                </div>
+              </div>
+
+              <hr width=50 color="darkgrey" />
+
+              <button id="Trigger7" class="extras-heading">
+                <h2>Speaker, Online Alumni Series</h2>
+              </button>
+              <div id="SlideWrapper7" class="height-transition height-transition-hidden">
+                <div class="Actual">
+                  <p>I was a speaker at Shrinkhla 2020, the online alumni series by Shaheed Rajguru College of Applied
+                    Sciences for Women. In this hands-on session of 100+ participants, I introduced the attendees
+                    (including faculty members, sophomores, juniors and seniors) with Google Colaboratory. Additionally,
+                    the attendees were given a hands-on experience on basic Machine Learning and Data Science projects
+                    within the same session.</p>
+                </div>
+              </div>
+
+              <hr width=50 color="darkgrey" />
+
+              <button id="Trigger3" class="extras-heading">
+                <h2>Artist, Painting Course for National Institute for Open Schooling (NIOS)</h2>
+              </button>
+              <div id="SlideWrapper3" class="height-transition height-transition-hidden">
+                <!-- <h2>Artist, Painting Course for National Institute for Open Schooling (NIOS)</h2> -->
+                <div>
+                  <p>Youtube Links</p>
+                  <p><a
+                      href="https://www.youtube.com/watch?v=jwCZXpZa7XU&t=16s&ab_channel=Ch-27SecondarySchoolEducation"
+                      target="_blank" class="githubutt">Object Study 1</a> <a
+                      href="https://www.youtube.com/watch?v=QgpL5hz4rvc&t=3s&ab_channel=Ch-27SecondarySchoolEducation"
+                      target="_blank" class="githubutt">Composition Drawing 1</a> <a
+                      href="https://www.youtube.com/watch?v=Dq2njbChR20&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=11&ab_channel=NIOSSeniorSecondaryCourses"
+                      target="_blank" class="githubutt">Object Study 2: Pencil</a> <a
+                      href="https://www.youtube.com/watch?v=IJ1JFxQobXs&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=12&ab_channel=NIOSSeniorSecondaryCourses"
+                      target="_blank" class="githubutt">Object Study 2: Color</a> <a
+                      href="https://www.youtube.com/watch?v=k0wAefCRl0s&list=PLABiGXP8XkYZCfcbIAX5ec7IZ9nILwxN-&index=8&ab_channel=NIOSSeniorSecondaryCourses"
+                      target="_blank" class="githubutt">Composition Drawing 2</a> </p>
+                  <p>I was responsible for demonstrating various painting techniques as a part of the MOOC for the
+                    Painting Course in NIOS. The course instructor is Prof. K.M. Chaudhuri.</p>
+                </div>
+              </div>
+
+
+              <hr width=50 color="darkgrey" />
+
+              <button id="Trigger4" class="extras-heading">
+                <h2>Visiting Researcher, Universidade de Santiago de Compostela, Spain</h2>
+              </button>
+              <div id="SlideWrapper4" class="height-transition height-transition-hidden">
+                <!-- <h2>Visiting Researcher, Universidade de Santiago de Compostela, Spain</h2> -->
+                <div>
+                  <p><a href="https://github.com/CodTan/LPP_NLG" target="_blank" class="githubutt">GitHub</a></p>
+                  <p>Being the winner in the Your Thesis in a Dram contest at III European Summer School on Fuzzy
+                    Logic and Applications (SFLA) 2017, I worked as a visiting researcher on project based on Natural
+                    Language Generation (NLG). Within this project, automatic explanations were generated for
+                    solutions to linear programming problems (LPP) using the SimpleNLG API. The project was
+                    implemented in JAVA and MATLAB.</p>
+                </div>
+              </div>
+
+              <hr width=50 color="darkgrey" />
+
+              <button id="Trigger5" class="extras-heading">
+                <h2>Volunteering</h2>
+              </button>
+              <div id="SlideWrapper5" class="height-transition height-transition-hidden">
+                <!-- <h2>Volunteering</h2> -->
+                <div>
+                  <p>Volunteering is my passion, and I consider it as one of the best sources for learning. Till date
+                    I have volunteered in various kinds of activities and in diverse organzations. A small list of my
+                    volunteering experiences is given below:</p>
+                  <ul>
+                    <li><b>Volunteer, Connect 2020, OpenStreetMap US: </b>I am volunteering in this community virtual
+                      event of OpenStreetMap US.</li>
+                    <li><b>Student Volunteer, Empirical Methods in Natural Language Processing 2020 (EMNLP): </b>I am
+                      volunteering in this upcoming conference. Responsibilities yet to be assigned.</li>
+                    <li><b>Former Chapter Leader, GirlScript: </b>I helped set-up the Delhi Chapter of GirlScript,
+                      while representing the same to various outreach events.</li>
+                    <li><b>Former Outreach Manager, Lean In India: </b>I served as the outreach manager for the Indian
+                      chapter of the organization to manage the social and outreach aspects.</li>
+                    <li><b>Founder, Lean In, South Asian University Circle: </b>I set-up the Lean In circle for South
+                      Asian University to motivate the members to contribute towards diversity in technology.</li>
+                    <li><b>Founder, SAU Programming Club: </b>I founded the SAU Programming Club with a bunch of
+                      enthusiastic members that were responsible for contributing to enhance the technical knowledge
+                      of everyone within the University.</li>
+                    <li><b>Former Community Head, Women in Machine Learning and Data Science (WiMLDS), Delhi: </b>I
+                      served as the Community head for the organization. My responsibilities involved managing the
+                      connected community through proper outreach while also organizing successful technical events.
+                    </li>
+                    <li><b>Admissions Volunteer, South Asian University: </b>I volunteered for this role twice, where
+                      I was responsible for guiding new applicants about the admission process to South Asian
+                      University, while helping new aspirants witht their doubts and queries.</li>
+                    <li><b>Volunteer, First Convocation of South Asian University: </b>I was responsible for ensuring
+                      the smooth flow of the large scale event that was held in Vigyan Bhawan in 2017.</li>
+                    <li><b>Volunteer, The Role of The Media in South Asia: </b>This was a conference organized at
+                      South Asian University, where I was responsible for managing the schedules and whereabouts of
+                      high-profile guests such as Subina Shrestha.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="modal-tab tab6">
+            <div class="resume">
+              <p>Download my current resume below.</p>
+              <a href="TaniyaS_CV.pdf" target="_blank"><img class="resume-image" style="height: 25%; width: 25%"
+                  src="images/CV.png" /></a>
+              <p><a href="TaniyaS_CV.pdf" target="_blank"><button class="resume-button">Download</button></a></p>
+              <p style="text-align: left; font-style: italic; font-size: 10px">Last updated: July 2020</p>
+            </div>
+          </li>
+          <!-- https://codepen.io/yancy/pen/qyMdod -->
+          <li class="modal-tab tab7">
+            <div class="social">
+              <p>Do we share common interests? Or do you have something to discuss?</p>
+              <br>
+              <div class="social-wrap">
+                <span style="font-weight: 700;">
+                  Let's connect
+                </span>
+                <div class="social-container">
+                  <a style="text-decoration: none; color: white;" href="https://www.facebook.com/taniya.seth.7" target="_blank"><i class="social-button fab fa-facebook-f"></i></a>
+                  <a style="text-decoration: none; color: white;" href="https://www.twitter.com/taniya_seth" target="_blank"><i class="social-button fab fa-twitter"></i></a>
+                  <a style="text-decoration: none; color: white;" href="https://www.linkedin.com/in/taniyaseth" target="_blank"><i class="social-button fab fa-linkedin"></i></a>
+                  <a style="text-decoration: none; color: white;" href="https://www.github.com/CodTan" target="_blank"><i class="social-button fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-</div> <!--modal-tabbed-->
+  </div>
+  <!--modal-tabbed-->
 
 
- <script type="text/javascript">
-/* Delay load div: http://jsfiddle.net/paislee/SQhv4/ */
-        $(document).ready(function() {
-    $('#div3').delay(700).fadeIn(400);
-});
-        </script>
+  <script type="text/javascript">
+    /* Delay load div: http://jsfiddle.net/paislee/SQhv4/ */
+    $(document).ready(function () {
+      $('#div3').delay(700).fadeIn(400);
+    });
+  </script>
 
 
-<script type="text/javascript">
-    
-  $("#Trigger1").click(function () {
+  <script type="text/javascript">
+
+    $("#Trigger1").click(function () {
       if ($("#SlideWrapper1").hasClass("height-transition-hidden"))
-          $("#SlideWrapper1").slideDownTransition();
+        $("#SlideWrapper1").slideDownTransition();
       else
-          $("#SlideWrapper1").slideUpTransition();
-  });
+        $("#SlideWrapper1").slideUpTransition();
+    });
 
   </script>
 
-<script type="text/javascript">
-    
-  $("#Trigger2").click(function () {
+  <script type="text/javascript">
+
+    $("#Trigger2").click(function () {
       if ($("#SlideWrapper2").hasClass("height-transition-hidden"))
-          $("#SlideWrapper2").slideDownTransition();
+        $("#SlideWrapper2").slideDownTransition();
       else
-          $("#SlideWrapper2").slideUpTransition();
-  });
+        $("#SlideWrapper2").slideUpTransition();
+    });
 
   </script>
 
-<script type="text/javascript">
-    
-  $("#Trigger3").click(function () {
+  <script type="text/javascript">
+
+    $("#Trigger3").click(function () {
       if ($("#SlideWrapper3").hasClass("height-transition-hidden"))
-          $("#SlideWrapper3").slideDownTransition();
+        $("#SlideWrapper3").slideDownTransition();
       else
-          $("#SlideWrapper3").slideUpTransition();
-  });
+        $("#SlideWrapper3").slideUpTransition();
+    });
 
   </script>
 
-<script type="text/javascript">
-    
-  $("#Trigger4").click(function () {
+  <script type="text/javascript">
+
+    $("#Trigger4").click(function () {
       if ($("#SlideWrapper4").hasClass("height-transition-hidden"))
-          $("#SlideWrapper4").slideDownTransition();
+        $("#SlideWrapper4").slideDownTransition();
       else
-          $("#SlideWrapper4").slideUpTransition();
-  });
+        $("#SlideWrapper4").slideUpTransition();
+    });
 
   </script>
 
-<script type="text/javascript">
-    
-  $("#Trigger5").click(function () {
+  <script type="text/javascript">
+
+    $("#Trigger5").click(function () {
       if ($("#SlideWrapper5").hasClass("height-transition-hidden"))
-          $("#SlideWrapper5").slideDownTransition();
+        $("#SlideWrapper5").slideDownTransition();
       else
-          $("#SlideWrapper5").slideUpTransition();
-  });
+        $("#SlideWrapper5").slideUpTransition();
+    });
 
   </script>
 
-<script type="text/javascript">
-    
-  $("#Trigger6").click(function () {
+  <script type="text/javascript">
+
+    $("#Trigger6").click(function () {
       if ($("#SlideWrapper6").hasClass("height-transition-hidden"))
-          $("#SlideWrapper6").slideDownTransition();
+        $("#SlideWrapper6").slideDownTransition();
       else
-          $("#SlideWrapper6").slideUpTransition();
-  });
+        $("#SlideWrapper6").slideUpTransition();
+    });
+
+  </script>
+
+  <script type="text/javascript">
+
+    $("#Trigger7").click(function () {
+      if ($("#SlideWrapper7").hasClass("height-transition-hidden"))
+        $("#SlideWrapper7").slideDownTransition();
+      else
+        $("#SlideWrapper7").slideUpTransition();
+    });
 
   </script>
 
 
-<script type="text/javascript">
-
-// Console style text: https://codepen.io/Tbgse/pen/dYaJyJ
-
-        consoleText(['Hello World', 'I am Taniya'], 'text',['white','white']);
-
-function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ['#fff'];
-  var visible = true;
-  var con = document.getElementById('console');
-  var letterCount = 1;
-  var x = 1;
-  var waiting = false;
-  var target = document.getElementById(id)
-  target.setAttribute('style', 'color:' + colors[0])
-  window.setInterval(function() {
-
-    if (letterCount === 0 && waiting === false) {
-      waiting = true;
-      target.innerHTML = words[0].substring(0, letterCount)
-      window.setTimeout(function() {
-        var usedColor = colors.shift();
-        colors.push(usedColor);
-        var usedWord = words.shift();
-        words.push(usedWord);
-        x = 1;
-        target.setAttribute('style', 'color:' + colors[0])
-        letterCount += x;
-        waiting = false;
-      }, 1000) /* Starting to write, wait cursor time*/
-    } else if (letterCount === words[0].length + 1 && waiting === false) {
-      waiting = true;
-      window.setTimeout(function() {
-        x = -1;
-        letterCount += x;
-        waiting = false;
-      }, 1000) /* wait time after finished writing */
-    } else if (waiting === false) {
-      target.innerHTML = words[0].substring(0, letterCount)
-      letterCount += x;
-    }
-  }, 150) /* writing speed */
-  window.setInterval(function() {
-    if (visible === true) {
-      con.className = 'console-underscore hidden'
-      visible = false;
-
-    } else {
-      con.className = 'console-underscore'
-
-      visible = true;
-    }
-  }, 400)
+  <!-- .githubutt {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 1px 3px 1px 3px;
+  /*top right bottom left*/
+  text-align: center;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-style: normal;
+  border-radius: 5px;
 }
-        </script>
 
-	<script type="text/javascript">
-/* rotate Techniya on mousemove throughout the page */
+.githubutt:hover {
+  background-color: rgb(75, 51, 6);
+  box-shadow: 2px 2px black;
+} -->
 
-$(document).ready(function () {
-    var $twoo = $('#div2'),
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      $("#Trigger8").click(function () {
+        var $this = $(this);
+        $this.toggleClass('githubutt');
+        if ($this.hasClass('githubutt')) {
+          $this.text('View Artworks');
+          $this.css({ "background-color": "black", "outline": "none", "border": "none", "color": "white", "padding": "1px 3px 1px 3px", "text-align": "center", "margin": "5px", "text-decoration": "none", "font-size": "15px", "font-style": "normal", "border-radius": "5px", "font-family": "'Montserrat',sans-serif" });
+          $this.hover(function () {
+            $this.css({ "background-color": "rgb(75, 51, 6)", "box-shadow": "2px 2px black" });
+          }, function () {
+            $this.css({ "background-color": "black", "outline": "none", "border": "none", "color": "white", "padding": "1px 3px 1px 3px", "text-align": "center", "margin": "5px", "text-decoration": "none", "font-size": "15px", "font-style": "normal", "border-radius": "5px", "font-family": "'Montserrat',sans-serif" });
+          });
+        } else {
+          $this.text('Hide Artworks');
+          $this.css({ "background-color": "black", "outline": "none", "border": "none", "color": "white", "padding": "1px 3px 1px 3px", "text-align": "center", "margin": "5px", "text-decoration": "none", "font-size": "15px", "font-style": "normal", "border-radius": "5px", "font-family": "'Montserrat',sans-serif" });
+          $this.hover(function () {
+            $this.css({ "background-color": "rgb(75, 51, 6)", "box-shadow": "2px 2px black" });
+          }, function () {
+            $this.css({ "background-color": "black", "outline": "none", "border": "none", "color": "white", "padding": "1px 3px 1px 3px", "text-align": "center", "margin": "5px", "text-decoration": "none", "font-size": "15px", "font-style": "normal", "border-radius": "5px", "font-family": "'Montserrat',sans-serif" });
+          });
+        }
+        var height6 = $("#SlideWrapper6").outerHeight();
+        var height8 = $("#SlideWrapper8").outerHeight();
+        var new_height = height6 + height8;
+        if ($("#SlideWrapper8").hasClass("height-transition-hidden")) {
+          $("#SlideWrapper6").height(4200);
+          $("#SlideWrapper6").slideUpTransition();
+          $("#SlideWrapper6").slideDownTransition();
+          $("#SlideWrapper8").slideDownTransition();
+        }
+        else {
+          $("#SlideWrapper6").height(240);
+          $("#SlideWrapper8").slideUpTransition();
+          $("#SlideWrapper6").slideUpTransition();
+          $("#SlideWrapper6").slideDownTransition();
+        }
+        // $("#Trigger8").toggle(function(){
+        //   $(this).val('Hide Artworks');}, function(){
+        //     $(this).val('View Artworks');
+      });
+      // });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+
+    // Console style text: https://codepen.io/Tbgse/pen/dYaJyJ
+
+    consoleText(['Hello World', 'I am Taniya'], 'text', ['white', 'white']);
+
+    function consoleText(words, id, colors) {
+      if (colors === undefined) colors = ['#fff'];
+      var visible = true;
+      var con = document.getElementById('console');
+      var letterCount = 1;
+      var x = 1;
+      var waiting = false;
+      var target = document.getElementById(id)
+      target.setAttribute('style', 'color:' + colors[0])
+      window.setInterval(function () {
+
+        if (letterCount === 0 && waiting === false) {
+          waiting = true;
+          target.innerHTML = words[0].substring(0, letterCount)
+          window.setTimeout(function () {
+            var usedColor = colors.shift();
+            colors.push(usedColor);
+            var usedWord = words.shift();
+            words.push(usedWord);
+            x = 1;
+            target.setAttribute('style', 'color:' + colors[0])
+            letterCount += x;
+            waiting = false;
+          }, 1000) /* Starting to write, wait cursor time*/
+        } else if (letterCount === words[0].length + 1 && waiting === false) {
+          waiting = true;
+          window.setTimeout(function () {
+            x = -1;
+            letterCount += x;
+            waiting = false;
+          }, 1000) /* wait time after finished writing */
+        } else if (waiting === false) {
+          target.innerHTML = words[0].substring(0, letterCount)
+          letterCount += x;
+        }
+      }, 150) /* writing speed */
+      window.setInterval(function () {
+        if (visible === true) {
+          con.className = 'console-underscore hidden'
+          visible = false;
+
+        } else {
+          con.className = 'console-underscore'
+
+          visible = true;
+        }
+      }, 400)
+    }
+  </script>
+
+  <script type="text/javascript">
+    /* rotate Techniya on mousemove throughout the page */
+
+    $(document).ready(function () {
+      var $twoo = $('#div2'),
         browserPrefix = "",
         usrAg = navigator.userAgent;
-    if(usrAg.indexOf("Chrome") > -1 || usrAg.indexOf("Safari") > -1) {
+      if (usrAg.indexOf("Chrome") > -1 || usrAg.indexOf("Safari") > -1) {
         browserPrefix = "-webkit-";
-    } else if (usrAg.indexOf("Opera") > -1) {
+      } else if (usrAg.indexOf("Opera") > -1) {
         browserPrefix = "-o";
-    } else if (usrAg.indexOf("Firefox") > -1) {
+      } else if (usrAg.indexOf("Firefox") > -1) {
         browserPrefix = "-moz-";
-    } else if (usrAg.indexOf("MSIE") > -1) {
+      } else if (usrAg.indexOf("MSIE") > -1) {
         browserPrefix = "-ms-";
-    }
-    
-    $(document).mouseleave(function (event) {
+      }
+
+      $(document).mouseleave(function (event) {
         $twoo.removeAttr('style');
-    });
-    
-    $(document).mousemove(function (event) {
+      });
+
+      $(document).mousemove(function (event) {
         var cx = Math.ceil(window.innerWidth / 2.0),
-            cy = Math.ceil(window.innerHeight / 2.0),
-            dx = event.pageX - cx,
-            dy = event.pageY - cy,
-            tiltx = (dy / cy),
-            tilty = - (dx / cx),
-            radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2)),
-            degree = (radius * 15);
-         	
-            shadx = degree*tiltx;   /*horizontal shadow*/
-            shady = degree*tilty;   /*vertical shadow*/
+          cy = Math.ceil(window.innerHeight / 2.0),
+          dx = event.pageX - cx,
+          dy = event.pageY - cy,
+          tiltx = (dy / cy),
+          tilty = - (dx / cx),
+          radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2)),
+          degree = (radius * 15);
+
+        shadx = degree * tiltx;   /*horizontal shadow*/
+        shady = degree * tilty;   /*vertical shadow*/
 
         $twoo.css(browserPrefix + 'transform', 'rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
-        
+
+      });
     });
-});
 
 
   </script>
 
   <script type="text/javascript">
-  $(function(){
-			$().timelinr({
-				orientation: 	'vertical',
-				issuesSpeed: 	300,
-				datesSpeed: 	100,
-				arrowKeys: 		'true',
-				startAt:		1
-			})
-		});
+    $(function () {
+      $().timelinr({
+        orientation: 'vertical',
+        issuesSpeed: 300,
+        datesSpeed: 100,
+        arrowKeys: 'true',
+        startAt: 1
+      })
+    });
   </script>
 
- 
+
 
 
 
 </body>
+
 </html>
