@@ -1433,11 +1433,51 @@
       opacity: 0;
       font-size: 28px;
       color: #dcdfff;
-      will-change: transform;
+      /* will-change: transform; */
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
       -webkit-transition: all .3s ease;
       transition: all .3s ease;
+    }
+
+    .social-button[class*="facebook"]:hover {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      color: rgba(59,89,182,1);
+    }
+
+    .social-button[class*="twitter"]:hover {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      color: rgba(0,172,238,1);
+    }
+
+    .social-button[class*="linkedin"]:hover {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      color: rgba(14,118,168,1);
+    }
+
+    .social-button[class*="github"]:hover {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      color:gray;
+    }
+
+    .social-button[class*="envelope"]:hover {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      color:orangered;
     }
 
     /* .social-button:hover {
@@ -2198,8 +2238,7 @@
           <!-- <li class="modal-tab tab5"><p>Coming Soon</p></li> -->
           <li class="modal-tab tab5">
             <div class="extras">
-              <p style="text-align: left">Here's some more information about what I've done outside curricular
-                activites.</p>
+              <p style="text-align: left">Here's some more information about activities that I have involved myself with, beyond my regular curricular activities. Click on the headers to know more about each.</p>
 
               <button id="Trigger6" class="extras-heading">
                 <h2>Extra-Curricular Activities</h2>
@@ -2333,12 +2372,14 @@
                 <!-- <h2>Open Source Contributor</h2> -->
                 <div class="Actual">
                   <p><a href="https://github.com/CodTan" target="_blank" class="githubutt">GitHub</a></p>
+                  <p>I contribute to the New York University's <a href="https://atcold.github.io/pytorch-Deep-Learning/" target="_blank" style ="font-style: bold; text-decoration: none; color: white">Deep Learning</a> course taught by Yann LeCun and Alfredo Canziani, as a language translation volunteer and coordinator. I am responsible for coordinating (the translations) and coordinating the course materials to Bengali language.</p>
+                  <p>I successfully completed the HacktoberFest 2020 challenge.</p>
                   <p>Recently as a virtual Grace Hopper Celebration (vGHC) 2020 scholar, I participated in the Open
                     Source Day organized at vGHC and contributed to the OpenStreetMap. Since then, I have been an
                     active "Mapper" in the organization.</p>
                   <p>I also am an active contributor to the <font
-                      style="background-color: black; font-family: 'Courier New', Courier, monospace">datascience</font>
-                    package which was written for use in Berkeley's DS 8 course.</p>
+                      style="background-color: black; font-family: 'Courier New', Courier, monospace;"><a style="text-decoration: none; color: white" target = "_blank" href="http://data8.org/datascience/">datascience</a></font>
+                    package which was written for use in Berkeley's DS 8 course. Till date I have written numerous doctests for various methods within the package.</p>
                 </div>
               </div>
 
@@ -2462,7 +2503,7 @@
               <a href="TaniyaS_CV.pdf" target="_blank"><img class="resume-image" style="height: 25%; width: 25%"
                   src="images/CV.png" /></a>
               <p><a href="TaniyaS_CV.pdf" target="_blank"><button class="resume-button">Download</button></a></p>
-              <p style="text-align: left; font-style: italic; font-size: 10px">Last updated: July 2020</p>
+              <p style="text-align: left; font-style: italic; font-size: 10px">Last updated: October 2020</p>
             </div>
           </li>
           <!-- https://codepen.io/yancy/pen/qyMdod -->
@@ -2476,9 +2517,12 @@
                 </span>
                 <div class="social-container">
                   <a style="text-decoration: none; color: white;" href="https://www.facebook.com/taniya.seth.7" target="_blank"><i class="social-button fab fa-facebook-f"></i></a>
-                  <a style="text-decoration: none; color: white;" href="https://www.twitter.com/taniya_seth" target="_blank"><i class="social-button fab fa-twitter"></i></a>
-                  <a style="text-decoration: none; color: white;" href="https://www.linkedin.com/in/taniyaseth" target="_blank"><i class="social-button fab fa-linkedin"></i></a>
                   <a style="text-decoration: none; color: white;" href="https://www.github.com/CodTan" target="_blank"><i class="social-button fab fa-github"></i></a>
+                  <a style="text-decoration: none; color: white;" href="https://www.twitter.com/taniya_seth" target="_blank"><i class="social-button fab fa-twitter"></i></a>
+                  <a style="text-decoration: none; color: white;" href="mailto:taniyaseth.sau@gmail.com" target="_blank"><i class="social-button fas fa-envelope"></i></a>
+                  <a style="text-decoration: none; color: white;" href="https://www.linkedin.com/in/taniyaseth" target="_blank"><i class="social-button fab fa-linkedin"></i></a>
+                  <!-- <a style="text-decoration: none; color: white;" href="https://www.researchgate.net/profile/Taniya_Seth" target="_blank"><i class="social-button fab fa-researchgate"></i></a> -->
+                  <!-- <a style="text-decoration: none; color: white;" href="https://scholar.google.com/citations?user=BIFh8OsAAAAJ&hl=en" target="_blank"><i class="social-button fas fa-graduation-cap"></i></a> -->
                 </div>
               </div>
             </div>
