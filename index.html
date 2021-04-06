@@ -1305,7 +1305,7 @@
     }
 
     .masonry-horizontal {
-      background: black;
+      /* background: black; */
       padding: 0.1em;
       /* margin: 0 0 0.05em; */
       -webkit-transition: all 0.4s ease-in-out 0s;
@@ -1657,8 +1657,129 @@
   }
 }
 
-  
+.border-0{
+  border:0;
+}
 
+.width-100 {
+	width:100%;
+}
+
+/********************************************** ONLOAD *****************************************************************/
+  
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.7);
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.cnt223 a{
+text-decoration: none;
+}
+.popup-onload{
+width: 100%;
+margin: 0 auto;
+display: none;
+position: fixed;
+z-index: 101;
+/* border-color: 5px solid white; */
+/* border-color: 10px white; */
+}
+.cnt223{
+min-width: 600px;
+width: 1000px;
+min-height: 100px;
+margin: 100px auto;
+background: black;/* #f3f3f3;*/
+border-width: 5px;
+/* border: 5px solid rgba(255, 255, 255, 0.781); */
+/* border: 5px solid linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); */
+position: relative;
+z-index: 103;
+/* padding: 30px 35px; */
+padding: 80px 10px 80px 10px;
+border-radius: 5px;
+box-shadow: 0 100px 200px #000;
+
+--borderWidth: 5px;
+  border-radius: var(--borderWidth);
+
+}
+
+
+.cnt223:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 12s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.cnt223 p{
+clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align:center;
+}
+.cnt223 p a{
+color: white;
+font-weight: normal;
+}
+.cnt223 .x{
+float: right;
+height: 35px;
+left: 22px;
+position: relative;
+top: -25px;
+width: 34px;
+}
+.cnt223 .x:hover{
+cursor: pointer;
+}
+
+.cent {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
 
 
 
@@ -1693,6 +1814,42 @@
 <!--Slide up down for Extras: http://plnkr.co/edit/Wpcgjs3FS4ryrhQUAOcU?p=preview&preview -->
 
 <body>
+
+  <!-- MODAL ON LOAD -->
+
+  <div class='popup-onload'>
+    <div class='cnt223'>
+    
+    <h1 style="font-family: 'Montserrat', sans-serif; color: black; text-align: center;">&#x1f44b Hello there!</h1>
+
+    <p></p>
+
+    <!-- <p style="font-family: 'Montserrat', sans-serif; font-weight: 2em; color: rgb(221, 181, 129);"> -->
+    <p style="font-family: 'Montserrat', sans-serif; font-weight: bolder; color: black;">
+      Kindly &#x1F43B with me. Contents of this website might not look the best on your browser. I'm still learning, and so will keep updating this site as I learn more about optimizing it.
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <a href='' class='close'>OKAY, LET ME IN!</a>
+    </p>
+
+    <!-- <img src="https://media.giphy.com/media/3oriOdOWPW9shiVuIE/giphy.gif" height=200px width=200px class="cent"> -->
+    </div>
+    </div>
+
+
+
+
+
+
+  <!-- MAIN WEBSITE BEGINS -->
+
+
+
+
+
+
   <div id="absolute-wrapper">
 
     <div id="wrapper">
@@ -1907,7 +2064,7 @@
       </div>
       <!--div4-->
 
-      <div class="diwali">
+      <!-- <div class="diwali"> -->
     
         <!-- <div class="diya">    
           <div class="diya-top"></div>
@@ -1924,10 +2081,10 @@
         <!-- <img height="20%" width="20%" src="https://thumbs.gfycat.com/TeemingPertinentFerret-size_restricted.gif"/> -->
       <!-- <span style="font-style: 'Montserrat', sans-serif; font-size: 1em">Happy Diwali</span> -->
       <!-- <div class="blink"></div> -->
-      <img height="15%" width="15%" src="images/diya.gif" class="diya"/>
-      <p class="happy_diwali">Happy Diwali</p>
+      <!-- <img height="15%" width="15%" src="images/diya.gif" class="diya"/> -->
+      <!-- <p class="happy_diwali">Happy Diwali</p> -->
 
-      </div>
+      <!-- </div> -->
 
     </div>
     <!--div3-->
@@ -2181,6 +2338,15 @@
                     <p>2017 IEEE International Conference on Fuzzy Systems, Naples, Italy</p>
                   </div>
                 </li>
+                <li>
+                  <a href="https://arxiv.org/pdf/2101.07492.pdf" target="_blank"><img class="papers"
+                      src="images/IJCAI_paper.PNG?"></a>
+                  <div class="details">
+                    <p style="font-size:0.95em;"><a href="https://arxiv.org/pdf/2101.07492.pdf"
+                        style="color: #fff; text-decoration: none" target="_blank"><b>Optimizing hyperpameters in CNNs using bilevel programming for time series data</b></a></p>
+                    <p>Data Science Meets Optimization Workshop, IJCAI-PRICAI 2020</p>
+                  </div>
+                </li>
               </ul>
 
             </div>
@@ -2190,7 +2356,8 @@
             <div>
               <div id="timeline">
                 <ul id="dates">
-                  <li><a href="#award-14" class="selected">June 2020</a></li>
+                  <li><a href="#award-15" class="selected">October 2020</a></li>
+                  <li><a href="#award-14">June 2020</a></li>
                   <li><a href="#award-13">February 2020</a></li>
                   <li><a href="#award-12">July 2019</a></li>
                   <li><a href="#award-11">May 2019</a></li>
@@ -2206,6 +2373,12 @@
                   <li><a href="#award-1">April 2015</a></li>
                 </ul>
                 <ul id="issues">
+                  <li id="award-15">
+                    <img src="images/final_awards/INSPIRE.png" />
+                    <h1>Senior Research Fellow, INSPIRE</h1>
+                    <p>I was promoted as a Senior Research Fellow under the INSPIRE Fellowship programme offered by the Department of Science
+                      and Technology, Ministry of Science and Technology, Government of India.</p>
+                  </li>
                   <li id="award-14" class="selected">
                     <img class="award-14" src="images/final_awards/GHC.png" />
                     <h1>Grace Hopper Celebration 2020 Scholar</h1>
@@ -2241,10 +2414,10 @@
                   </li>
                   <li id="award-10">
                     <img src="images/final_awards/WTM.png" />
-                    <h1>Google Women TechMakers APAC Scholar</h1>
-                    <p>I was one of the ~70 Women Techmakers Scholars from the Asia-Pacific Region, awarded by Google
+                    <h1>Generation Google Scholar, APAC</h1>
+                    <p>I was one of the ~70 Generation Google Scholars (previously Women Techmakers Scholars) from the Asia-Pacific Region, awarded by Google
                       in the year 2018. This scholarship is awarded to young female students within technology to
-                      recognize their outstanding contributions towards increasing diversity in technology. The WTM
+                      recognize their outstanding contributions towards increasing diversity in technology. This
                       scholarship included a monetary award along with a fully paid trip to the Google APAC
                       headquarters in Singapore to attend the Scholarship retreat.</p>
                   </li>
@@ -2477,6 +2650,30 @@
 
               <hr width=50 color="darkgrey" />
 
+              <button id="Trigger9" class="extras-heading">
+                <h2>Committee Member, AnitaB.org</h2>
+              </button>
+              <div id="SlideWrapper9" class="height-transition height-transition-hidden">
+                <!-- <h2>Open Source Contributor</h2> -->
+                <div class="Actual">
+                  <p>I have been appointed as a Committee Member at AnitaB.org for organizing the Open Source Day related events at Grace Hopper Celebration 2021. More details to be added with time.</p>
+                  </div>
+              </div>
+
+              <hr width=50 color="darkgrey" />
+
+              <button id="Trigger10" class="extras-heading">
+                <h2>Reviewer, ML Reproducibility Challenge 2020</h2>
+              </button>
+              <div id="SlideWrapper10" class="height-transition height-transition-hidden">
+                <!-- <h2>Open Source Contributor</h2> -->
+                <div class="Actual">
+                  <p>As a reviewer at the ML Reproducibility Challenge 2020, I reviewed the reproducibility reports of two well-known papers from CVPR 2020 and ICLR 2020.</p>
+                  </div>
+              </div>
+
+              <hr width=50 color="darkgrey" />
+
               <button id="Trigger2" class="extras-heading">
                 <h2>This Website</h2>
               </button>
@@ -2559,10 +2756,12 @@
                     I have volunteered in various kinds of activities and in diverse organzations. A small list of my
                     volunteering experiences is given below:</p>
                   <ul>
-                    <li><b>Volunteer, Connect 2020, OpenStreetMap US: </b>I am volunteering in this community virtual
-                      event of OpenStreetMap US.</li>
-                    <li><b>Student Volunteer, Empirical Methods in Natural Language Processing 2020 (EMNLP): </b>I am
-                      volunteering in this upcoming conference. Responsibilities yet to be assigned.</li>
+                    <li><b>Volunteer, Open Data Science Conference (ODSC East 2021): </b>As a volunteer at ODSC East 2021, I was responsible for the EMCEE support provided to speakers during the conference.</li>
+                    <li><b>Volunteer, 29th International Joint Conference on Artificial Intelligence and 17th Pacific Rim International Conference on Artificial Intelligence (IJCAI-PRICAI 20): </b>I
+                      volunteered at IJCAI-PRICAI 2020 where I was responsible for handling miscellaneous logisitics based activities.</li>
+                    <li><b>Volunteer, NeurIPS 2020: </b>I was a volunteer at NeurIPS 2020, where I was responsible for multiple logistics based activities at event, while also being a reviewer for the poster session at the conference.</li>
+                    <li><b>Student Volunteer, Empirical Methods in Natural Language Processing 2020 (EMNLP): </b>I
+                      volunteered at EMNLP 2020 where I was responsible for handling miscellaneous logisitics based activities.</li>
                     <li><b>Former Chapter Leader, GirlScript: </b>I helped set-up the Delhi Chapter of GirlScript,
                       while representing the same to various outreach events.</li>
                     <li><b>Former Outreach Manager, Lean In India: </b>I served as the outreach manager for the Indian
@@ -2595,7 +2794,7 @@
               <a href="TaniyaS_CV.pdf" target="_blank"><img class="resume-image" style="height: 25%; width: 25%"
                   src="images/CV.png" /></a>
               <p><a href="TaniyaS_CV.pdf" target="_blank"><button class="resume-button">Download</button></a></p>
-              <p style="text-align: left; font-style: italic; font-size: 10px">Last updated: October 2020</p>
+              <p style="text-align: left; font-style: italic; font-size: 10px">Last updated: April 2021</p>
             </div>
           </li>
           <!-- https://codepen.io/yancy/pen/qyMdod -->
@@ -2710,6 +2909,51 @@
     });
 
   </script>
+
+<script type="text/javascript">
+
+  $("#Trigger9").click(function () {
+    if ($("#SlideWrapper9").hasClass("height-transition-hidden"))
+      $("#SlideWrapper9").slideDownTransition();
+    else
+      $("#SlideWrapper9").slideUpTransition();
+  });
+
+</script>
+
+<script type="text/javascript">
+
+  $("#Trigger10").click(function () {
+    if ($("#SlideWrapper10").hasClass("height-transition-hidden"))
+      $("#SlideWrapper10").slideDownTransition();
+    else
+      $("#SlideWrapper10").slideUpTransition();
+  });
+
+</script>
+
+<script type="text/javascript">
+
+$(function(){
+var overlay = $('<div id="overlay"></div>');
+overlay.show();
+overlay.appendTo(document.body);
+$('.popup-onload').show();
+$('.close').click(function(){
+$('.popup-onload').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+
+
+$('.x').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+});
+
+</script>
 
 
   <!-- .githubutt {
