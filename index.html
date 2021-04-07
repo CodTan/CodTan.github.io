@@ -1833,7 +1833,7 @@ cursor: pointer;
 
     <!-- <p style="font-family: 'Montserrat', sans-serif; font-weight: 2em; color: rgb(221, 181, 129);"> -->
     <p style="font-family: 'Montserrat', sans-serif; font-weight: bolder; color: black;">
-      Kindly &#x1F43B with me. Contents of this website might not look the best on your browser. I'm still learning, and so will keep updating this site as I learn more about optimizing it.
+      Kindly &#x1F43B with me. Contents of this website might not look the best on every browser. I'm still learning, and so will keep updating this site as I learn more about optimizing it.<br/>Currently, it is best viewed in Google Chrome.
     <br/>
     </p>
     <p style="font-family: 'Montserrat', sans-serif; font-weight: bolder; color: black; text-align: right;">~ Taniya</p>
@@ -2950,7 +2950,8 @@ overlay.show();
 overlay.appendTo(document.body);
 $('.popup-onload').show();
 $('.close').click(function(){
-$('.popup-onload').hide();
+// $('.popup-onload').hide();
+$('.popup-onload').fadeOut(5000);
 overlay.appendTo(document.body).remove();
 return false;
 });
